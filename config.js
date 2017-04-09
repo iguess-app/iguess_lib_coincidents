@@ -20,5 +20,8 @@ module.exports = {
     port: '27017',
     database: 'iguess'
   },
-  routes: []
+  routes: [],
+  managers: {
+    mongo: './Managers/mongoManager'
+  }
 }
