@@ -1,7 +1,6 @@
 {
-  "name": "iguess-api-coincidents",
+  "name": "@iguess-api-coincidents/iguess-api-coincidents",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": ""
@@ -12,5 +11,16 @@
     "bcrypt": "^1.0.2",
     "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.7.6"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuhalvesBR/iGuess-API-Coincidents.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuhalvesBR/iGuess-API-Coincidents/issues"
+  },
+  "homepage": "https://github.com/LuhalvesBR/iGuess-API-Coincidents#readme",
+  "description": ""
 }
