@@ -13,16 +13,5 @@
     "mongoose": "^4.7.6",
     "redis": "^2.6.3",
     "md5": "^2.2.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuhalvesBR/iGuess-API-Coincidents.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuhalvesBR/iGuess-API-Coincidents/issues"
-  },
-  "homepage": "https://github.com/LuhalvesBR/iGuess-API-Coincidents#readme",
-  "description": ""
+  }
 }

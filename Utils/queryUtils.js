@@ -1,7 +1,10 @@
 'use Strict';
 
-module.exports = () => {
-  const makeObject = (queryResult) => queryResult.toObject()
+const makeObject = (queryResult) => queryResult.toObject();
 
-  return { makeObject }
+const makeJSON = (queryResult) => queryResult.toJSON();
+
+module.exports = {
+  makeObject,
+  makeJSON
 }

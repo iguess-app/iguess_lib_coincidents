@@ -5,26 +5,23 @@ const Jwt = require('jsonwebtoken');
 const config = require('./../config');
 const tokenConfig = config.token;
 
-module.exports = () => {
+const generate = () => Jwt.sign({
+  valid: true
+}, tokenConfig.cert, {
+  expiresIn: tokenConfig.expirationTime
+})
 
-  const generate = () => Jwt.sign({
-    valid: true
-  }, tokenConfig.cert, {
-    expiresIn: tokenConfig.expirationTime
+const isValid = (token) =>
+  new Promise((resolve, reject) => {
+    Jwt.verify(token, tokenConfig.cert, (err, decoded) => {
+      if (err) {
+        reject(err)
+      }
+      resolve(decoded)
+    })
   })
 
-  const isValid = (token) =>
-    new Promise((resolve, reject) => {
-      Jwt.verify(token, tokenConfig.cert, (err, decoded) => {
-        if (err) {
-          reject(err)
-        }
-        resolve(decoded)
-      })
-    })
-
-  return {
-    generate,
-    isValid
-  }
+module.exports = {
+  generate,
+  isValid
 }
