@@ -2,9 +2,11 @@
 
 const mongoose = require('mongoose');
 
-module.exports = (app) => {
+const Managers = require('./../Managers/export');
+const db = Managers.mongoManager;
+
+module.exports = () => {
   const Schema = mongoose.Schema;
-  const db = app.src.managers.mongoManager;
 
   const notificationsSchema = new Schema({
     description: {

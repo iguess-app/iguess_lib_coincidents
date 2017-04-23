@@ -2,10 +2,11 @@
 
 const bcrypt = require('bcrypt');
 
-module.exports = (app) => {
-  const userErrors = app.src.utils.errorUtils.userErrors;
-  const config = app.src.config;
+const errorUtils = require('./errorUtils.js');
+const config = require('./../config');
+const userErrors = errorUtils.userErrors;
 
+module.exports = () => {
   const checkPasswordRestrict = (userData) =>
     new Promise((resolve, reject) => {
       //TO DO

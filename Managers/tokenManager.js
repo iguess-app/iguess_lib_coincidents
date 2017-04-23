@@ -2,8 +2,10 @@
 
 const Jwt = require('jsonwebtoken');
 
-module.exports = (app) => {
-  const tokenConfig = app.src.config.token;
+const config = require('./../config');
+const tokenConfig = config.token;
+
+module.exports = () => {
 
   const generate = () => Jwt.sign({
     valid: true

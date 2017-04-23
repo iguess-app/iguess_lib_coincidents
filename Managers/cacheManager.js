@@ -3,7 +3,9 @@
 const redis = require('redis');
 const md5 = require('md5');
 
-const CacheManager = (config) => {
+const config = require('./../config');
+
+const CacheManager = () => {
 
   // get() {
   //   return this.client.getAsync('foo').then((res) => {
