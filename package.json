@@ -1,5 +1,5 @@
 {
-  "name": "@iguess-api-coincidents/iguess-api-coincidents",
+  "name": "iguess-api-coincidents",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
