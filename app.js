@@ -1,7 +1,15 @@
 'use strict';
 
-const config = require('./config')
+const Managers = require('./Managers/export');
+const Translate = require('./Translate/export');
+const Utils = require('./Utils/export');
+const Schemas = require('./Schemas/export');
+const Config = require('./config')
 
-const init = () => config;
-
-init();
+module.exports = {
+  Managers,
+  Translate,
+  Utils,
+  Schemas,
+  Config
+}
