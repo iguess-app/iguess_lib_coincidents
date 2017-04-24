@@ -36,6 +36,17 @@ const guessesLeaguesSchema = new Schema({
   }
 })
 
+const guessesLinesSchema = new Schema({
+  championship: {
+    type: String,
+    required: true
+  },
+  pontuation: {
+    type: Number,
+    required: true
+  }
+})
+
 const profileSchema = new Schema({
   _id: {
     type: String,
@@ -63,9 +74,7 @@ const profileSchema = new Schema({
     required: true,
     unique: true
   },
-  guessesLines: {
-    type: Array
-  },
+  guessesLines: [guessesLinesSchema],
   guessesLeagues: [guessesLeaguesSchema],
   notifications: [notificationsSchema],
   friendList: {
