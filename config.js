@@ -12,9 +12,18 @@ module.exports = {
     clientID: '1839068873039445'
   },
   redis: {
-    host: 'localhost',
-    port: '??'
+    host: '104.196.159.131',
+    port: 6379,
+    key: 'GDdoLu6N',
+    defaultExpireTime: 60 //1Minute (in Seconds)
   },
+  // mongo: {
+  //   user: 'luhalvesbr',
+  //   password: 'qsePx1k4TYPjhEfF',
+  //   address: 'zerocluster-shard-00-00-mfooh.mongodb.net:27017,zerocluster-shard-00-01-mfooh.mongodb.net:27017,zerocluster-shard-00-02-mfooh.mongodb.net:27017',
+  //   port: null,
+  //   database: 'iguess'
+  // },
   mongo: {
     host: 'localhost',
     port: '27017',
