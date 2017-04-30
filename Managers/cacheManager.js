@@ -6,14 +6,23 @@ const md5 = require('md5');
 const config = require('./../config');
 
 const clientOptions = {
-  'auth_pass': config.redis.key
+  'auth_pass': config.redis.key,
+  'retry_strategy': (options) => {
+    if (options.error) {
+      console.error(options.error.message);
+    }
+  }
 };
 const redisClient = redis.createClient(config.redis.port, config.redis.host, clientOptions);
 
-redisClient.on('connect', (err) => {
+redisClient.on('connect', () => {
   if (redisClient.connected === true) {
     console.info(`Redis at ${redisClient.address} Connected`)
   }
+});
+
+redisClient.on('error', (err) => {
+  return true;
 });
 
 const CacheManager = {

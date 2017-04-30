@@ -17,17 +17,17 @@ module.exports = {
     key: 'GDdoLu6N',
     defaultExpireTime: 60 //1Minute (in Seconds)
   },
-  mongo: {
-    user: 'luhalvesbr',
-    password: 'xSxotVAFrlegS2yJ',
-    address: 'zerocluster-shard-00-00-mfooh.mongodb.net:27017,zerocluster-shard-00-01-mfooh.mongodb.net:27017,zerocluster-shard-00-02-mfooh.mongodb.net:27017',
-    port: null,
-    database: 'iguess'
-  },
   // mongo: {
-  //   host: 'localhost',
-  //   port: '27017',
+  //   user: 'luhalvesbr',
+  //   password: 'xSxotVAFrlegS2yJ',
+  //   address: 'zerocluster-shard-00-00-mfooh.mongodb.net:27017,zerocluster-shard-00-01-mfooh.mongodb.net:27017,zerocluster-shard-00-02-mfooh.mongodb.net:27017',
+  //   port: null,
   //   database: 'iguess'
   // },
+  mongo: {
+    host: 'localhost',
+    port: '27017',
+    database: 'iguess'
+  },
   routes: []
 }
