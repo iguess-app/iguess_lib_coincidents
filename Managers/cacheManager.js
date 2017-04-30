@@ -5,24 +5,44 @@ const md5 = require('md5');
 
 const config = require('./../config');
 
-const CacheManager = () => {
+const clientOptions = {
+  'auth_pass': config.redis.key
+};
+const redisClient = redis.createClient(config.redis.port, config.redis.host, clientOptions);
 
-  // get() {
-  //   return this.client.getAsync('foo').then((res) => {
+redisClient.on('connect', (err) => {
+  if (redisClient.connected === true) {
+    console.info(`Redis at ${redisClient.address} Connected`)
+  }
+});
 
-  //   });
-  // }
+const CacheManager = {
 
-  // set() {
+  get: (key) => {
+    if (!key) {
+      throw 'key is a mandatory field to get on Cache.'
+    }
+    const md5Key = _generateKey(key);
 
-  //   this._generateKey(key, value)
-  //     .then(() => client.setAsync())
-  // }
+    return new Promise((resolve, reject) =>
+      redisClient.get(md5Key, (err, value) =>
+        resolve(value)
+      )
+    )
+  },
 
-  // _generateKey(key, value) {
-  //   //md5
-  // }
+  set: (key, value, expireTime) => {
+    if (!key || !value) {
+      throw 'key and value are mandatory fields to set on Cache.'
+    }
+
+    const expire = expireTime || config.redis.defaultExpireTime;
+    const md5Key = _generateKey(key);
+    redisClient.setex(md5Key, expire, value)
+  }
 
 };
+
+const _generateKey = (key) => md5(key)
 
 module.exports = CacheManager;
