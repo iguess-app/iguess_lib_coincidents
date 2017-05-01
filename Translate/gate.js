@@ -1,7 +1,7 @@
 'use Strict'
 
-const americanEnglish = require('./enUS');
-const brazilianPortuguese = require('./ptBR');
+const americanEnglish = require('./enUS.js');
+const brazilianPortuguese = require('./ptBR.js');
 
 const selectLanguage = (language) => {
   switch (language) {
