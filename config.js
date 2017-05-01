@@ -12,22 +12,22 @@ module.exports = {
     clientID: '1839068873039445'
   },
   redis: {
-    host: '104.196.159.131',
+    host: '130.211.171.212',
     port: 6379,
-    key: 'GDdoLu6N',
+    key: 'wAMK4Hig',
     defaultExpireTime: 60 //1Minute (in Seconds)
   },
-  // mongo: {
-  //   user: 'luhalvesbr',
-  //   password: 'xSxotVAFrlegS2yJ',
-  //   address: 'zerocluster-shard-00-00-mfooh.mongodb.net:27017,zerocluster-shard-00-01-mfooh.mongodb.net:27017,zerocluster-shard-00-02-mfooh.mongodb.net:27017',
-  //   port: null,
-  //   database: 'iguess'
-  // },
   mongo: {
-    host: 'localhost',
-    port: '27017',
+    user: 'luhalvesbr',
+    password: 'xSxotVAFrlegS2yJ',
+    address: 'zerocluster-shard-00-00-mfooh.mongodb.net:27017,zerocluster-shard-00-01-mfooh.mongodb.net:27017,zerocluster-shard-00-02-mfooh.mongodb.net:27017',
+    port: null,
     database: 'iguess'
   },
+  // mongo: {
+  //   host: 'localhost',
+  //   port: '27017',
+  //   database: 'iguess'
+  // },
   routes: []
 }
