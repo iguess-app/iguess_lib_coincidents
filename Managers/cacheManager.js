@@ -29,7 +29,9 @@ const CacheManager = {
 
   get: (key) => {
     if (!key) {
-      throw 'key is a mandatory field to get on Cache.'
+      throw {
+        error: 'key is a mandatory field to get on Cache.'
+      }
     }
     const md5Key = _generateKey(key);
 
@@ -42,7 +44,9 @@ const CacheManager = {
 
   set: (key, value, expireTime) => {
     if (!key || !value) {
-      throw 'key and value are mandatory fields to set on Cache.'
+      throw {
+        error: 'key and value are mandatory fields to set on Cache.'
+      }
     }
 
     const expire = expireTime || config.redis.defaultExpireTime;
