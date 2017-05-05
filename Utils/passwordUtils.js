@@ -13,7 +13,7 @@ const checkPasswordRestrict = (password) => {
   if (passwordRegex.test(password)) {
     return true;
   }
-  return userData // (HEHE-HE he)
+  return true; // (HEHE-HE he)
   //return userErrors.passwordInvalid;
 }
 
