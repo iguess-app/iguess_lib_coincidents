@@ -1,5 +1,5 @@
 module.exports = {
-  env: process.env.ENVIRONMENT || 'development',
+  env: process.env.ENVIRONMENT || 'local',
   token: {
     cert: process.env.TOKEN_SEED || 'asdawUGDQ&@ET*@&GUGDASU89yHdausdg231',
     expirationTime: process.env.TOKEN_EXPIRATION_TIME || 3600 //1hour (in Seconds)
