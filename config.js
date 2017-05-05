@@ -2,14 +2,14 @@ module.exports = {
   env: process.env.ENVIRONMENT || 'local',
   token: {
     cert: process.env.TOKEN_SEED || 'asdawUGDQ&@ET*@&GUGDASU89yHdausdg231',
-    expirationTime: process.env.TOKEN_EXPIRATION_TIME || 3600 //1hour (in Seconds)
+    expirationTime: parseInt(process.env.TOKEN_EXPIRATION_TIME) || 3600 //1hour (in Seconds)
   },
   salt: process.env.SALT || '$2a$10$5PMJupkGGUJ22DxQC4UoUe',
   redis: {
     host: process.env.REDIS_HOST || '130.211.171.212',
     port: process.env.REDIS_PORT || 6379,
     key: process.env.REDIS_KEY || 'wAMK4Hig',
-    defaultExpireTime: process.env.REDIS_EXPIRE_TIME || 60 //1Minute (in Seconds)
+    defaultExpireTime: parseInt(process.env.REDIS_EXPIRE_TIME) || 60 //1Minute (in Seconds)
   },
   mongo: {
     user: process.env.MONGO_USER || 'luhalvesbr',
