@@ -8,7 +8,7 @@ const mongo = config.mongo;
 
 let uri = `mongodb://${mongo.host}:${mongo.port}/${mongo.database}`;
 
-if(mongo.atlas) {
+if (mongo.atlas) {
   uri = `mongodb://${mongo.user}:${mongo.password}@${mongo.address}/${mongo.database}?ssl=true&replicaSet=ZeroCluster-shard-0&authSource=admin`;
 }
 
@@ -18,7 +18,7 @@ const options = {
 const db = mongoose.createConnection(uri, options);
 
 db.on('open', () => {
-  console.info(`Mongo (database:${db.name}) Connected`)
+  console.info(`Mongo at ${uri} Connected`)
 });
 
 module.exports = db;
