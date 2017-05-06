@@ -17,13 +17,9 @@ const checkPasswordRestrict = (password) => {
   //return userErrors.passwordInvalid;
 }
 
-const cryptPassword = (userData) =>
-  bcrypt.hash(userData.password, config.salt)
-  .then((hash) => {
-    userData.password = hash;
-
-    return userData;
-  })
+const cryptPassword = (password) =>
+  bcrypt.hash(password, config.salt)
+  .then((hash) => hash)
   .catch((err) => err)
 
 const checkPassword = (password, cryptedPassword) =>
