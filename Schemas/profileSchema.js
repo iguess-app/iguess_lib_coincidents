@@ -48,9 +48,10 @@ const guessesLinesSchema = new Schema({
 })
 
 const profileSchema = new Schema({
-  _id: {
+  userName: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   name: {
     type: String,
