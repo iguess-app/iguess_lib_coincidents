@@ -5,7 +5,7 @@ const leagueSchema = require('./leagueSchema.js');
 const profileSchema = require('./profileSchema.js');
 const roundSchema = require('./roundSchema.js');
 const teamSchema = require('./teamSchema.js');
-const notificationsSchema = require('./profileNotificationsSchema.js');
+const notificationsSchema = require('./notificationsSchema.js');
 
 module.exports = {
   championshipSchema,
