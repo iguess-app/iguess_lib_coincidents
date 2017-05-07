@@ -37,7 +37,7 @@ const CacheManager = {
 
     return new Promise((resolve, reject) =>
       redisClient.get(md5Key, (err, value) =>
-        resolve(value)
+        resolve(JSON.parse(value))
       )
     )
   },
@@ -51,7 +51,7 @@ const CacheManager = {
 
     const expire = expireTime || config.redis.defaultExpireTime;
     const md5Key = _generateKey(key);
-    redisClient.setex(md5Key, expire, value)
+    redisClient.setex(md5Key, expire, JSON.stringify(value))
   }
 
 };
