@@ -3,8 +3,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const Utils = require('./../Utils/export');
 const Managers = require('./../Managers/export');
-const db = Managers.mongoManager;
+
+const userErrors = Utils.errorUtils.userErrors
+const db = Managers.mongoManager
+const USERNAME_MAX_SIZE = 20
+const NAME_MAX_SIZE = 20
+
+const checkUserNameSize = (name) => name.length <= USERNAME_MAX_SIZE
+const checkNameSize = (name) => name.length <= NAME_MAX_SIZE
 
 const notificationsSchema = new Schema({
   messageType: {
@@ -38,11 +46,13 @@ const profileSchema = new Schema({
   userName: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    validate: [checkUserNameSize, String(userErrors.userNameSizeExplode)]
   },
   name: {
     type: String,
-    required: true
+    required: true,
+    validate: [checkNameSize, String(userErrors.nameSizeExplode)]
   },
   avatar: {
     type: String
