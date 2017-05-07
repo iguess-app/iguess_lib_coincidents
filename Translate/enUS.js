@@ -8,7 +8,9 @@ const usEnDictionary = {
   invalidLogin: 'User or Password incorrect, try again',
   notAEmail: 'Not is a valid email',
   invalidPassword: 'Password incorrect, try again',
-  tooManyInvalidPassword: 'You did some many requests with wrong passwords, wait 1 hour to try it again'
+  tooManyInvalidPassword: 'You did some many requests with wrong passwords, wait 1 hour to try it again',
+  tooLongUserName: 'Too long UserName, please use a smaller one',
+  tooLongName: 'Too long name, please use a smaller one'
 }
 
 module.exports = usEnDictionary
