@@ -14,23 +14,6 @@ const NAME_MAX_SIZE = 20
 const checkUserNameSize = (name) => name.length <= USERNAME_MAX_SIZE
 const checkNameSize = (name) => name.length <= NAME_MAX_SIZE
 
-const notificationsSchema = new Schema({
-  messageType: {
-    type: Number,
-    required: true
-  },
-  messageUserRef: {
-    type: String
-  },
-  messageGuessLeagueRef: {
-    type: String
-  },
-  saw: {
-    type: Boolean,
-    required: true
-  }
-});
-
 const guessesLinesSchema = new Schema({
   championshipRef: {
     type: String,
@@ -79,7 +62,6 @@ const profileSchema = new Schema({
   guessesLeagues: {
     type: Array
   },
-  notifications: [notificationsSchema],
   friendList: {
     type: Array
   }

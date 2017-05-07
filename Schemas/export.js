@@ -5,6 +5,7 @@ const leagueSchema = require('./leagueSchema.js');
 const profileSchema = require('./profileSchema.js');
 const roundSchema = require('./roundSchema.js');
 const teamSchema = require('./teamSchema.js');
+const notificationsSchema = require('./profileNotificationsSchema.js');
 
 module.exports = {
   championshipSchema,
@@ -13,5 +14,6 @@ module.exports = {
   leagueSchema,
   profileSchema,
   roundSchema,
-  teamSchema
+  teamSchema,
+  notificationsSchema
 }
