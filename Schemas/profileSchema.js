@@ -7,17 +7,15 @@ const Managers = require('./../Managers/export');
 const db = Managers.mongoManager;
 
 const notificationsSchema = new Schema({
-  description: {
-    type: String,
+  messageType: {
+    type: Number,
     required: true
   },
-  positiveChoice: {
-    type: String,
-    required: true
+  messageUserRef: {
+    type: String
   },
-  negativeChoice: {
-    type: String,
-    required: true
+  messageGuessLeagueRef: {
+    type: String
   },
   saw: {
     type: Boolean,
@@ -25,19 +23,8 @@ const notificationsSchema = new Schema({
   }
 });
 
-const guessesLeaguesSchema = new Schema({
-  leagueName: {
-    type: String,
-    required: true
-  },
-  status: {
-    type: String,
-    required: true
-  }
-})
-
 const guessesLinesSchema = new Schema({
-  championship: {
+  championshipRef: {
     type: String,
     required: true
   },
@@ -75,8 +62,13 @@ const profileSchema = new Schema({
     required: true,
     unique: true
   },
+  confirmedEmail: {
+    type: Boolean
+  },
   guessesLines: [guessesLinesSchema],
-  guessesLeagues: [guessesLeaguesSchema],
+  guessesLeagues: {
+    type: Array
+  },
   notifications: [notificationsSchema],
   friendList: {
     type: Array
