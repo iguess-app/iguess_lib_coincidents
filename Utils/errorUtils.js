@@ -7,7 +7,9 @@ const mongoErrors = Object.freeze({
 const userErrors = Object.freeze({
   passwordInvalid: 20000,
   notEmail: 20001,
-  tooManyPasswordsWrong: 20003
+  tooManyPasswordsWrong: 20003,
+  userNameSizeExplode: 20004,
+  nameSizeExplode: 20005
 })
 
 module.exports = {
