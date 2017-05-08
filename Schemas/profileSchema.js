@@ -10,9 +10,11 @@ const userErrors = Utils.errorUtils.userErrors
 const db = Managers.mongoManager
 const USERNAME_MAX_SIZE = 20
 const NAME_MAX_SIZE = 20
+const DESCRIPTIONS_MAX_SIZE = 100
 
 const checkUserNameSize = (name) => name.length <= USERNAME_MAX_SIZE
 const checkNameSize = (name) => name.length <= NAME_MAX_SIZE
+const checkDescriptionSize = (name) => name.length <= DESCRIPTIONS_MAX_SIZE
 
 const guessesLinesSchema = new Schema({
   championshipRef: {
@@ -34,7 +36,6 @@ const profileSchema = new Schema({
   },
   name: {
     type: String,
-    required: true,
     validate: [checkNameSize, String(userErrors.nameSizeExplode)]
   },
   avatar: {
@@ -44,7 +45,8 @@ const profileSchema = new Schema({
     type: Array
   },
   description: {
-    type: String
+    type: String,
+    validate: [checkDescriptionSize, String(userErrors.descriptionSizeExplode)]
   },
   password: {
     type: String,

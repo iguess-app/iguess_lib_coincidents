@@ -28,6 +28,8 @@ const treatErrors = (err, dictionary) => {
       throw Boom.notAcceptable(`${dictionary.tooLongUserName}.`);
     case userErrors.nameSizeExplode:
       throw Boom.notAcceptable(`${dictionary.tooLongName}.`);
+    case userErrors.descriptionSizeExplode:
+      throw Boom.notAcceptable(`${dictionary.tooLongDescription}.`);
     default:
       throw Boom.badData(err.message)
   }

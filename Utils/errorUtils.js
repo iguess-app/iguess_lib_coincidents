@@ -9,7 +9,8 @@ const userErrors = Object.freeze({
   notEmail: 20001,
   tooManyPasswordsWrong: 20003,
   userNameSizeExplode: 20004,
-  nameSizeExplode: 20005
+  nameSizeExplode: 20005,
+  descriptionSizeExplode: 20006
 })
 
 module.exports = {

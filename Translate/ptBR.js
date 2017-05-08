@@ -10,7 +10,8 @@ const ptBrDictionary = {
   invalidPassword: 'Senha incorreta, tente novamente',
   tooManyInvalidPassword: 'Você fez muitas requisições com senhas erradas, espere 1 hora para tentar novamente',
   tooLongUserName: 'UserName muito longo, por favor use um menor',
-  tooLongName: 'Nome muito longo, por favor use um menor'
+  tooLongName: 'Nome muito longo, por favor use um menor',
+  tooLongDescription: 'Descrição muito longa, por favor use uma menor'
 }
 
 module.exports = ptBrDictionary
