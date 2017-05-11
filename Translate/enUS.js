@@ -11,7 +11,9 @@ const usEnDictionary = {
   tooManyInvalidPassword: 'You did some many requests with wrong passwords, wait 1 hour to try it again',
   tooLongUserName: 'Too long UserName, please use a smaller one',
   tooLongName: 'Too long name, please use a smaller one',
-  tooLongDescription: 'Too long description, please use a smaller one'
+  tooLongDescription: 'Too long description, please use a smaller one',
+  friendshipRequest: '{{userName}} wants to be your friend',
+  guessLeagueRequest: '{{userName}} is inviting you to participate of the {{guessLeagueName}} GuessLeague'
 }
 
 module.exports = usEnDictionary
