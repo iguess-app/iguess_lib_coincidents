@@ -22,6 +22,7 @@ redisClient.on('connect', () => {
 });
 
 redisClient.on('error', (err) => {
+  console.error(err);
   return true;
 });
 
