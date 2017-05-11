@@ -7,16 +7,13 @@ const Managers = require('./../Managers/export');
 const db = Managers.mongoManager;
 
 const guessesLeaguesSchema = new Schema({
-  _id: {
-    type: String,
-    required: true
-  },
   administrator: {
     type: String,
     required: true
   },
-  avatar: {
-    type: String
+  guessLeagueName: {
+    type: String,
+    required: true
   },
   players: {
     type: Array,
