@@ -13,7 +13,9 @@ const usEnDictionary = {
   tooLongName: 'Too long name, please use a smaller one',
   tooLongDescription: 'Too long description, please use a smaller one',
   friendshipRequest: '{{userName}} wants to be your friend',
-  guessLeagueRequest: '{{userName}} is inviting you to participate of the {{guessLeagueName}} GuessLeague'
+  guessLeagueRequest: '{{userName}} is inviting you to participate of the {{guessLeagueName}} GuessLeague',
+  userNotFound: '{{userName}} not found',
+  notificationExists: 'Already sent'
 }
 
 module.exports = usEnDictionary

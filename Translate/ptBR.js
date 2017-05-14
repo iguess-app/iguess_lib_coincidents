@@ -13,7 +13,9 @@ const ptBrDictionary = {
   tooLongName: 'Nome muito longo, por favor use um menor',
   tooLongDescription: 'Descrição muito longa, por favor use uma menor',
   friendshipRequest: '{{userName}} quer começar uma amizade',
-  guessLeagueRequest: '{{userName}} esta te convidando para participar da GuessLeague {{guessLeagueName}}'
+  guessLeagueRequest: '{{userName}} esta te convidando para participar da GuessLeague {{guessLeagueName}}',
+  userNotFound: '{{userName}} não encontrado',
+  notificationExists: 'Já enviado'
 }
 
 module.exports = ptBrDictionary
