@@ -16,7 +16,8 @@ const ptBrDictionary = {
   guessLeagueRequest: '{{userName}} esta te convidando para participar da GuessLeague {{guessLeagueName}}',
   userNotFound: '{{userName}} não encontrado',
   notificationExists: 'Notificação já enviada',
-  alreadyFriends: 'Você já são amigos'
+  alreadyFriends: 'Você já são amigos',
+  teamNotFound: 'Equipe não encontrada'
 }
 
 module.exports = ptBrDictionary

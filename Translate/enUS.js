@@ -16,7 +16,8 @@ const usEnDictionary = {
   guessLeagueRequest: '{{userName}} is inviting you to participate of the {{guessLeagueName}} GuessLeague',
   userNotFound: '{{userName}} not found',
   notificationExists: 'Notification already sent',
-  alreadyFriends: 'You are already friends'
+  alreadyFriends: 'You are already friends',
+  teamNotFound: 'Team not found'
 }
 
 module.exports = usEnDictionary
