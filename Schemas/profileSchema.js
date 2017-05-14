@@ -27,6 +27,29 @@ const guessesLinesSchema = new Schema({
   }
 })
 
+const teamSchema = new Schema({
+  id: {
+    type: String,
+    required: true
+  },
+  league: {
+    type: String,
+    required: true
+  },
+  fullName: {
+    type: String,
+    required: true
+  },
+  shortName: {
+    type: String,
+    required: true
+  },
+  logo: {
+    type: String,
+    required: true
+  }
+})
+
 const profileSchema = new Schema({
   userName: {
     type: String,
@@ -41,12 +64,8 @@ const profileSchema = new Schema({
   avatar: {
     type: String
   },
-  supportedTeam: {
-    type: String
-  },
-  appreciateTeams: {
-    type: Array
-  },
+  supportedTeam: teamSchema,
+  appreciateTeams: [teamSchema],
   description: {
     type: String,
     validate: [checkDescriptionSize, String(userErrors.descriptionSizeExplode)]
