@@ -66,6 +66,9 @@ const profileSchema = new Schema({
   },
   friendList: {
     type: Array
+  },
+  invitedFriendList: {
+    type: Array
   }
 })
 
