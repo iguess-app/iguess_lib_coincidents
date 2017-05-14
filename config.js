@@ -24,7 +24,7 @@ module.exports = {
     clientSecret: '4bea584f60c0cf37b5b037b1c4bc8590',
     clientID: '1839068873039445'
   },
-  maxTeamToSupportAllowed: 3,
+  maxTeamToAppreciateAllowed: 2,
   notificationTypes: {
     friendShipRequest: 1,
     guessLeagueRequest: 2

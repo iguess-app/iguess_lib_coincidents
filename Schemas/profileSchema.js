@@ -41,7 +41,10 @@ const profileSchema = new Schema({
   avatar: {
     type: String
   },
-  teamsSupported: {
+  supportedTeam: {
+    type: String
+  },
+  appreciateTeams: {
     type: Array
   },
   description: {
