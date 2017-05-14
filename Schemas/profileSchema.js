@@ -65,7 +65,7 @@ const profileSchema = new Schema({
     type: String
   },
   supportedTeam: teamSchema,
-  appreciateTeams: [teamSchema],
+  appreciatedTeams: [teamSchema],
   description: {
     type: String,
     validate: [checkDescriptionSize, String(userErrors.descriptionSizeExplode)]
