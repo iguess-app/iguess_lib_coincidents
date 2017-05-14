@@ -18,11 +18,15 @@ module.exports = {
     database: process.env.MONGO_DB || 'iguess',
     atlas: process.env.MONGO_ATLAS || false,
     port: process.env.MONGO_PORT || 27017,
-    host: process.env.MONGO_HOST || 'localhost',
+    host: process.env.MONGO_HOST || 'localhost'
   },
   facebook: {
     clientSecret: '4bea584f60c0cf37b5b037b1c4bc8590',
     clientID: '1839068873039445'
   },
-  maxTeamToSupportAllowed: 3
+  maxTeamToSupportAllowed: 3,
+  notificationTypes: {
+    friendShipRequest: 1,
+    guessLeagueRequest: 2
+  }
 }
