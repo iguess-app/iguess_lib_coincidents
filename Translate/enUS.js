@@ -17,7 +17,8 @@ const usEnDictionary = {
   userNotFound: '{{userName}} not found',
   notificationExists: 'Notification already sent',
   alreadyFriends: 'You are already friends',
-  teamNotFound: 'Team not found'
+  teamNotFound: 'Team not found',
+  sameTeams: 'You cannot repeat the teams that you support'
 }
 
 module.exports = usEnDictionary

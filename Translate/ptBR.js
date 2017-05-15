@@ -17,7 +17,8 @@ const ptBrDictionary = {
   userNotFound: '{{userName}} não encontrado',
   notificationExists: 'Notificação já enviada',
   alreadyFriends: 'Você já são amigos',
-  teamNotFound: 'Equipe não encontrada'
+  teamNotFound: 'Equipe não encontrada',
+  sameTeams: 'Vocâ não pode repetir as equipes que você torce'
 }
 
 module.exports = ptBrDictionary
