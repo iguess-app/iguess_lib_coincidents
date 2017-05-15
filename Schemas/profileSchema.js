@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const Config = require('./../config')
 const Utils = require('./../Utils/export');
 const Managers = require('./../Managers/export');
 
@@ -11,10 +12,12 @@ const db = Managers.mongoManager
 const USERNAME_MAX_SIZE = 20
 const NAME_MAX_SIZE = 20
 const DESCRIPTIONS_MAX_SIZE = 100
+const TEAM_TO_APPRECIATE_MAX_SIZE = Config.maxTeamToAppreciateAllowed
 
 const checkUserNameSize = (name) => name.length <= USERNAME_MAX_SIZE
 const checkNameSize = (name) => name.length <= NAME_MAX_SIZE
 const checkDescriptionSize = (name) => name.length <= DESCRIPTIONS_MAX_SIZE
+const checkAppreciatedTeamsArraySize = (array) => array.length <= TEAM_TO_APPRECIATE_MAX_SIZE
 
 const guessesLinesSchema = new Schema({
   championshipRef: {
@@ -28,7 +31,7 @@ const guessesLinesSchema = new Schema({
 })
 
 const teamSchema = new Schema({
-  id: {
+  teamId: {
     type: String,
     required: true
   },
@@ -65,7 +68,10 @@ const profileSchema = new Schema({
     type: String
   },
   supportedTeam: teamSchema,
-  appreciatedTeams: [teamSchema],
+  appreciatedTeams: {
+    type: [teamSchema],
+    validate: [checkAppreciatedTeamsArraySize, String(userErrors.nameSizeExplode)]
+  },
   description: {
     type: String,
     validate: [checkDescriptionSize, String(userErrors.descriptionSizeExplode)]
