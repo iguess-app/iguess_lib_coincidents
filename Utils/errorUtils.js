@@ -10,7 +10,8 @@ const userErrors = Object.freeze({
   tooManyPasswordsWrong: 20003,
   userNameSizeExplode: 20004,
   nameSizeExplode: 20005,
-  descriptionSizeExplode: 20006
+  descriptionSizeExplode: 20006,
+  numberOfAppreciatedTeamsExplode: 20007 //Not Treat anywhere
 })
 
 module.exports = {
