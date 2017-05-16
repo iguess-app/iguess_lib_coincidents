@@ -67,10 +67,12 @@ const profileSchema = new Schema({
   avatar: {
     type: String
   },
-  supportedTeam: teamSchema,
-  appreciatedTeams: {
-    type: [teamSchema],
-    validate: [checkAppreciatedTeamsArraySize, String(userErrors.nameSizeExplode)]
+  footballSupportedTeams: {
+    supportedTeam: teamSchema,
+    appreciatedTeams: {
+      type: [teamSchema],
+      validate: [checkAppreciatedTeamsArraySize, String(userErrors.nameSizeExplode)]
+    }
   },
   description: {
     type: String,
