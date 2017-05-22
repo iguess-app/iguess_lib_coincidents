@@ -18,6 +18,10 @@ const guessesLeaguesSchema = new Schema({
   players: {
     type: Array,
     required: true
+  },
+  championship: {
+    type: Array,
+    required: true
   }
 })
 
