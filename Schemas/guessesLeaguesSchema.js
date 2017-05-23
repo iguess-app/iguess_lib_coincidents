@@ -22,6 +22,10 @@ const guessesLeaguesSchema = new Schema({
   championship: {
     type: Array,
     required: true
+  },
+  inviteads: {
+    type: Array,
+    required: true
   }
 })
 
