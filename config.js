@@ -20,6 +20,11 @@ module.exports = {
     port: process.env.MONGO_PORT || 27017,
     host: process.env.MONGO_HOST || '127.0.0.1'
   },
+  apis: {
+    holiUrl: process.env.HOLI_URL || 'http://0.0.0.0:9001',
+    personalUrl: process.env.PERSONAL_URL || 'http://0.0.0.0:9002',
+    guessUrl: process.env.GUESS_URL || 'http://0.0.0.0:9003'
+  },
   facebook: {
     clientSecret: '4bea584f60c0cf37b5b037b1c4bc8590',
     clientID: '1839068873039445'
