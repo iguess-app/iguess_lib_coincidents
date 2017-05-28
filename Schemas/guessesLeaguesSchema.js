@@ -6,6 +6,25 @@ const Schema = mongoose.Schema;
 const Managers = require('./../Managers/export');
 const db = Managers.mongoManager;
 
+const championshipSchema = new Schema({
+  _id: {
+    type: String,
+    required: true    
+  },
+  league: {
+    type: String,
+    required: true
+  },
+  season: {
+    type: String,
+    required: true
+  },
+  championship: {
+    type: String,
+    required: true
+  }
+})
+
 const guessesLeaguesSchema = new Schema({
   administrator: {
     type: String,
@@ -19,10 +38,7 @@ const guessesLeaguesSchema = new Schema({
     type: Array,
     required: true
   },
-  championship: {
-    type: String,
-    required: true
-  },
+  championship: championshipSchema,
   inviteads: {
     type: Array,
     required: true
