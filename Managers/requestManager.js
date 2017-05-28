@@ -3,9 +3,10 @@
 const requestPromise = require('request-promise');
 
 const requestManager = {
-  post: (uri, headers, body) => {
-    if (!headers) {
-      headers = {};
+  post: (uri, reqHeaders, body) => {
+    const headers = {};
+    if (reqHeaders) {
+      headers.language = reqHeaders.language
     }
 
     const options = {
@@ -19,9 +20,10 @@ const requestManager = {
     return requestPromise(options)
   },
 
-  put: (uri, headers, body) => {
-    if (!headers) {
-      headers = {};
+  put: (uri, reqHeaders, body) => {
+    const headers = {};
+    if (reqHeaders) {
+      headers.language = reqHeaders.language
     }
 
     const options = {
@@ -35,9 +37,10 @@ const requestManager = {
     return requestPromise(options)
   },
 
-  get: (uri, headers) => {
-    if (!headers) {
-      headers = {};
+  get: (uri, reqHeaders) => {
+    const headers = {};
+    if (reqHeaders) {
+      headers.language = reqHeaders.language
     }
 
     const options = {

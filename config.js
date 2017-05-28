@@ -21,9 +21,9 @@ module.exports = {
     host: process.env.MONGO_HOST || '127.0.0.1'
   },
   apis: {
-    holiUrl: process.env.HOLI_URL || 'http://0.0.0.0:9001',
-    personalUrl: process.env.PERSONAL_URL || 'http://0.0.0.0:9002',
-    guessUrl: process.env.GUESS_URL || 'http://0.0.0.0:9003'
+    holiUrl: process.env.HOLI_URL || 'http://127.0.0.1:9001',
+    personalUrl: process.env.PERSONAL_URL || 'http://127.0.0.1:9002',
+    guessUrl: process.env.GUESS_URL || 'http://127.0.0.1:9003'
   },
   facebook: {
     clientSecret: '4bea584f60c0cf37b5b037b1c4bc8590',
