@@ -2,7 +2,6 @@
 
 const requestPromise = require('request-promise');
 
-
 const requestManager = {
   post: (uri, headers, body) => {
     if (!headers) {
@@ -18,8 +17,22 @@ const requestManager = {
     };
 
     return requestPromise(options)
-      .then((result) => result)
+  },
 
+  put: (uri, headers, body) => {
+    if (!headers) {
+      headers = {};
+    }
+
+    const options = {
+      method: 'PUT',
+      uri,
+      headers,
+      body,
+      json: true
+    };
+
+    return requestPromise(options)
   },
 
   get: (uri, headers) => {
@@ -35,8 +48,6 @@ const requestManager = {
     };
 
     return requestPromise(options)
-      .then((result) => result)
-
   }
 
 }
