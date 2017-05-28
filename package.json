@@ -7,12 +7,13 @@
   },
   "author": "{{Lucas Alves L.A.}}",
   "dependencies": {
-    "bluebird": "3.5.0",
     "bcrypt": "1.0.2",
+    "bluebird": "3.5.0",
     "boom": "4.2.0",
     "jsonwebtoken": "7.2.1",
+    "md5": "2.2.1",
     "mongoose": "4.7.6",
     "redis": "2.6.3",
-    "md5": "2.2.1"
+    "request-promise": "4.2.1"
   }
 }
