@@ -6,6 +6,10 @@ const Schema = mongoose.Schema;
 const Managers = require('./../Managers/export');
 const db = Managers.mongoManager;
 
+const optionsSchema = {
+  versionKey: false
+}
+
 const championshipSchema = new Schema({
   _id: {
     type: String,
@@ -23,7 +27,7 @@ const championshipSchema = new Schema({
     type: String,
     required: true
   }
-})
+}, optionsSchema)
 
 const guessesLeaguesSchema = new Schema({
   administrator: {
@@ -43,6 +47,6 @@ const guessesLeaguesSchema = new Schema({
     type: Array,
     required: true
   }
-})
+}, optionsSchema)
 
 module.exports = db.model('guessesleagues', guessesLeaguesSchema);

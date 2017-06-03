@@ -6,6 +6,10 @@ const Schema = mongoose.Schema;
 const Managers = require('./../Managers/export');
 const db = Managers.mongoManager;
 
+const optionsSchema = {
+  versionKey: false
+}
+
 const guessSchema = new Schema({
   homeTeam: {
     type: String,
@@ -22,7 +26,7 @@ const guessSchema = new Schema({
   pontuation: {
     type: Number
   }
-})
+}, optionsSchema)
 
 const userGuessSchema = new Schema({
   userID: {
@@ -48,6 +52,6 @@ const guessesLinesSchema = new Schema({
   pontuationSetted: {
     type: Boolean
   }
-})
+}, optionsSchema)
 
 module.exports = db.model('guesseslines', guessesLinesSchema);

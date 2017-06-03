@@ -6,6 +6,10 @@ const Schema = mongoose.Schema;
 const Managers = require('./../Managers/export');
 const db = Managers.mongoManager;
 
+const optionsSchema = {
+  versionKey: false
+}
+
 const leagueSchema = new Schema({
   country: {
     type: String,
@@ -22,6 +26,6 @@ const leagueSchema = new Schema({
   serie: {
     type: Number
   }
-})
+}, optionsSchema)
 
 module.exports = db.model('leagues', leagueSchema);

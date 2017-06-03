@@ -6,6 +6,10 @@ const Schema = mongoose.Schema;
 const Managers = require('./../Managers/export');
 const db = Managers.mongoManager;
 
+const optionsSchema = {
+  versionKey: false
+}
+
 const roundSchema = new Schema({
   championship: {
     type: String,
@@ -19,6 +23,6 @@ const roundSchema = new Schema({
     type: Array,
     required: true
   }
-})
+}, optionsSchema)
 
 module.exports = db.model('rounds', roundSchema)

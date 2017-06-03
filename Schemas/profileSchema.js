@@ -19,6 +19,11 @@ const checkNameSize = (name) => name.length <= NAME_MAX_SIZE
 const checkDescriptionSize = (name) => name.length <= DESCRIPTIONS_MAX_SIZE
 const checkAppreciatedTeamsArraySize = (array) => array.length <= TEAM_TO_APPRECIATE_MAX_SIZE
 
+const optionsEmbbededDocsSchema = {
+  versionKey: false,
+  _id: false
+}
+
 const guessesLinesSchema = new Schema({
   championshipRef: {
     type: String,
@@ -28,7 +33,7 @@ const guessesLinesSchema = new Schema({
     type: Number,
     required: true
   }
-})
+}, optionsEmbbededDocsSchema)
 
 const teamSchema = new Schema({
   teamId: {
@@ -51,7 +56,14 @@ const teamSchema = new Schema({
     type: String,
     required: true
   }
-})
+}, optionsEmbbededDocsSchema)
+
+const optionsProfileSchema = {
+  versionKey: false,
+  timestamps: {
+    createdAt: 'created_at'
+  }
+}
 
 const profileSchema = new Schema({
   userName: {
@@ -100,6 +112,6 @@ const profileSchema = new Schema({
   invitedFriendList: {
     type: Array
   }
-})
+}, optionsProfileSchema)
 
 module.exports = db.model('profiles', profileSchema);

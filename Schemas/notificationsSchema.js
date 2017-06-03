@@ -6,6 +6,10 @@ const Schema = mongoose.Schema;
 const Managers = require('./../Managers/export')
 const db = Managers.mongoManager
 
+const optionsSchema = {
+  versionKey: false
+}
+
 const notificationsArraySchema = new Schema({
   messageType: {
     type: Number,
@@ -21,7 +25,7 @@ const notificationsArraySchema = new Schema({
     type: Boolean,
     required: true
   }
-});
+}, optionsSchema)
 
 const notificationsSchema = new Schema({
   user: {
@@ -29,7 +33,7 @@ const notificationsSchema = new Schema({
     required: true
   },
   notifications: [notificationsArraySchema]
-});
+}, optionsSchema)
 
 
 module.exports = db.model('profilenotifications', notificationsSchema);
