@@ -32,6 +32,8 @@ module.exports = {
   maxTeamToAppreciateAllowed: 2,
   notificationTypes: {
     friendShipRequest: 1,
-    guessLeagueRequest: 2
+    guessLeagueRequest: 2,
+    nowFriendsResponse: 3,
+    nowGuessLeagueAdded: 4
   }
 }
