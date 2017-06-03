@@ -6,12 +6,14 @@ module.exports = {
   },
   salt: process.env.SALT || '$2a$10$5PMJupkGGUJ22DxQC4UoUe',
   redis: {
+    needConnection: parseInt(process.env.REDIS_CONNECTION) || 1,
     host: process.env.REDIS_HOST || '130.211.171.212',
     port: process.env.REDIS_PORT || 6379,
     key: process.env.REDIS_KEY || 'wAMK4Hig',
     defaultExpireTime: parseInt(process.env.REDIS_EXPIRE_TIME) || 60 //1Minute (in Seconds)
   },
   mongo: {
+    needConnection: parseInt(process.env.MONGO_CONNECTION) || 1,
     user: process.env.MONGO_USER || 'luhalvesbr',
     password: process.env.MONGO_KEY || 'xSxotVAFrlegS2yJ',
     address: process.env.MONGO_ADDRESS || 'zerocluster-shard-00-00-mfooh.mongodb.net:27017,zerocluster-shard-00-01-mfooh.mongodb.net:27017,zerocluster-shard-00-02-mfooh.mongodb.net:27017',
