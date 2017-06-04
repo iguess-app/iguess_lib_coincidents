@@ -1,14 +1,15 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 const Config = require('./../config')
 const Utils = require('./../Utils/export');
 const Managers = require('./../Managers/export');
 
+const Schema = mongoose.Schema;
 const userErrors = Utils.errorUtils.userErrors
 const db = Managers.mongoManager
+
 const USERNAME_MAX_SIZE = 20
 const NAME_MAX_SIZE = 20
 const DESCRIPTIONS_MAX_SIZE = 100
