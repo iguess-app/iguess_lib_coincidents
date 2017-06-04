@@ -31,7 +31,12 @@ module.exports = {
     clientSecret: '4bea584f60c0cf37b5b037b1c4bc8590',
     clientID: '1839068873039445'
   },
-  maxTeamToAppreciateAllowed: 2,
+  profile: {
+    maxTeamToAppreciateAllowed: 2,
+    userNameMaxSize: 20,
+    nameMaxSize: 20,
+    descriptionMaxSize: 100
+  },
   notificationTypes: {
     friendShipRequest: 1,
     guessLeagueRequest: 2,

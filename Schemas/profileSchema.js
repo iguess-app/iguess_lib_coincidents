@@ -10,14 +10,14 @@ const Schema = mongoose.Schema;
 const userErrors = Utils.errorUtils.userErrors
 const db = Managers.mongoManager
 
-const USERNAME_MAX_SIZE = 20
-const NAME_MAX_SIZE = 20
-const DESCRIPTIONS_MAX_SIZE = 100
-const TEAM_TO_APPRECIATE_MAX_SIZE = Config.maxTeamToAppreciateAllowed
+const USERNAME_MAX_SIZE = Config.profile.userNameMaxSize
+const NAME_MAX_SIZE = Config.profile.nameMaxSize
+const DESCRIPTION_MAX_SIZE = Config.profile.descriptionMaxSize
+const TEAM_TO_APPRECIATE_MAX_SIZE = Config.profile.maxTeamToAppreciateAllowed
 
 const checkUserNameSize = (name) => name.length <= USERNAME_MAX_SIZE
 const checkNameSize = (name) => name.length <= NAME_MAX_SIZE
-const checkDescriptionSize = (name) => name.length <= DESCRIPTIONS_MAX_SIZE
+const checkDescriptionSize = (name) => name.length <= DESCRIPTION_MAX_SIZE
 const checkAppreciatedTeamsArraySize = (array) => array.length <= TEAM_TO_APPRECIATE_MAX_SIZE
 
 const optionsEmbbededDocsSchema = {
