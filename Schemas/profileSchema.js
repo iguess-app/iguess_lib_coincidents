@@ -62,7 +62,7 @@ const teamSchema = new Schema({
 const optionsProfileSchema = {
   versionKey: false,
   timestamps: {
-    createdAt: 'created_at'
+    createdAt: 'createdAt'
   }
 }
 
