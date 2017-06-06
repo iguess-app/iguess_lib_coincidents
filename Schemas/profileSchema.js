@@ -112,6 +112,9 @@ const profileSchema = new Schema({
   },
   invitedFriendList: {
     type: Array
+  },
+  lastSignInAt: {
+    type: Date
   }
 }, optionsProfileSchema)
 
