@@ -40,18 +40,20 @@ const userGuessSchema = new Schema({
 });
 
 const guessesLinesSchema = new Schema({
-  championship: {
+  championshipRef: {
     type: String,
     required: true
   },
-  fixture: {
-    type: Number,
-    required: true
-  },
-  users: [userGuessSchema],
-  pontuationSetted: {
-    type: Boolean
-  }
+  fixture: [{
+    fixtureNumber: {
+      type: Number,
+      required: true
+    },
+    users: [userGuessSchema],
+    pontuationSetted: {
+      type: Boolean
+    }
+  }]
 }, optionsSchema)
 
 module.exports = db.model('guesseslines', guessesLinesSchema);
