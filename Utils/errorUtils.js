@@ -16,13 +16,13 @@ const userErrors = Object.freeze({
   numberOfAppreciatedTeamsExplode: 20007
 })
 
-const _errDictionary = (dictionary) => ({
+const _errDictionary = () => ({
   [mongoErrors._idAlreadyUsed]: (dictionary) => {
     throw Boom.notAcceptable(`${dictionary.alreadyAdd}.`)
   }
 })
 
-const treatErrors = (err, dictionary) => _errDictionary(dictionary)[err]()
+const treatErrors = (err, dictionary) => _errDictionary()[err.code](dictionary)
 
 module.exports = {
   mongoErrors,
