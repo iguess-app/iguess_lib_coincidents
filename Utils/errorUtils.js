@@ -1,5 +1,7 @@
 'use Strict';
 
+const Boom = require('boom');
+
 const mongoErrors = Object.freeze({
   _idAlreadyUsed: 11000
 })
@@ -11,10 +13,19 @@ const userErrors = Object.freeze({
   userNameSizeExplode: 20004,
   nameSizeExplode: 20005,
   descriptionSizeExplode: 20006,
-  numberOfAppreciatedTeamsExplode: 20007 //Not Treat anywhere
+  numberOfAppreciatedTeamsExplode: 20007
 })
+
+const _errDictionary = (dictionary) => ({
+  [mongoErrors._idAlreadyUsed]: (dictionary) => {
+    throw Boom.notAcceptable(`${dictionary.alreadyAdd}.`)
+  }
+})
+
+const treatErrors = (err, dictionary) => _errDictionary(dictionary)[err]()
 
 module.exports = {
   mongoErrors,
-  userErrors
+  userErrors,
+  treatErrors
 }
