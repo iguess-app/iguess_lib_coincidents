@@ -42,7 +42,8 @@ const userGuessSchema = new Schema({
 const guessesLinesSchema = new Schema({
   championshipRef: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   fixtures: [{
     fixtureNumber: {
