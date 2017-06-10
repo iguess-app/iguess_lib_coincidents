@@ -19,7 +19,8 @@ const ptBrDictionary = {
   notificationExists: 'Notificação já enviada',
   alreadyFriends: 'Você já são amigos',
   teamNotFound: 'Equipe não encontrada',
-  sameTeams: 'Vocâ não pode repetir as equipes que você torce'
+  sameTeams: 'Vocâ não pode repetir as equipes que você torce',
+  alreadyAdd: 'Já adicionado'
 }
 
 module.exports = ptBrDictionary

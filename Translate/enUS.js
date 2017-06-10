@@ -19,7 +19,8 @@ const usEnDictionary = {
   notificationExists: 'Notification already sent',
   alreadyFriends: 'You are already friends',
   teamNotFound: 'Team not found',
-  sameTeams: 'You cannot repeat the teams that you support'
+  sameTeams: 'You cannot repeat the teams that you support',
+  alreadyAdd: 'Already add'
 }
 
 module.exports = usEnDictionary
