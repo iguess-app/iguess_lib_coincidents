@@ -44,7 +44,7 @@ const guessesLinesSchema = new Schema({
     type: String,
     required: true
   },
-  fixture: [{
+  fixtures: [{
     fixtureNumber: {
       type: Number,
       required: true
