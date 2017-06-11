@@ -9,6 +9,10 @@ const db = Managers.mongoManager;
 const optionsSchema = {
   versionKey: false
 }
+const optionsSchemaNoIdNoVersion = {
+  versionKey: false,
+  _id: false
+}
 
 const guessSchema = new Schema({
   homeTeam: {
@@ -30,7 +34,7 @@ const guessSchema = new Schema({
   pontuation: {
     type: Number
   }
-}, optionsSchema)
+}, optionsSchemaNoIdNoVersion)
 
 const userGuessSchema = new Schema({
   userId: {
@@ -41,12 +45,7 @@ const userGuessSchema = new Schema({
   totalPontuation: {
     type: Number
   }
-});
-
-const optionsChampionshipSchema = {
-  versionKey: false,
-  _id: false
-}
+}, optionsSchemaNoIdNoVersion);
 
 const championshipSchema = new Schema({
   league: {
@@ -61,7 +60,18 @@ const championshipSchema = new Schema({
     type: String,
     required: true
   }
-}, optionsChampionshipSchema)
+}, optionsSchemaNoIdNoVersion)
+
+const fixturesSchema = new Schema({
+  fixtureNumber: {
+    type: Number,
+    required: true
+  },
+  users: [userGuessSchema],
+  pontuationSetted: {
+    type: Boolean
+  }
+}, optionsSchemaNoIdNoVersion)
 
 const guessesLinesSchema = new Schema({
   championshipRef: {
@@ -70,16 +80,7 @@ const guessesLinesSchema = new Schema({
     required: true
   },
   championship: championshipSchema,
-  fixtures: [{
-    fixtureNumber: {
-      type: Number,
-      required: true
-    },
-    users: [userGuessSchema],
-    pontuationSetted: {
-      type: Boolean
-    }
-  }]
+  fixtures: [fixturesSchema]
 }, optionsSchema)
 
 module.exports = db.model('guesseslines', guessesLinesSchema);
