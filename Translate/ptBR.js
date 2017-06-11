@@ -19,6 +19,7 @@ const ptBrDictionary = {
   notificationExists: 'Notificação já enviada',
   alreadyFriends: 'Você já são amigos',
   teamNotFound: 'Equipe não encontrada',
+  championshipNotFound: 'Campeonato não encontrado',
   sameTeams: 'Vocâ não pode repetir as equipes que você torce',
   alreadyAdd: 'Já adicionado'
 }
