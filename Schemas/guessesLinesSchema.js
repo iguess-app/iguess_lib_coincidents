@@ -39,6 +39,11 @@ const userGuessSchema = new Schema({
   }
 });
 
+const optionsChampionshipSchema = {
+  versionKey: false,
+  _id: false
+}
+
 const championshipSchema = new Schema({
   league: {
     type: String,
@@ -52,9 +57,13 @@ const championshipSchema = new Schema({
     type: String,
     required: true
   }
-}, optionsSchema)
+}, optionsChampionshipSchema)
 
 const guessesLinesSchema = new Schema({
+  championshipRef: {
+    unique: true,
+    required: true
+  },
   championship: championshipSchema,
   fixtures: [{
     fixtureNumber: {
