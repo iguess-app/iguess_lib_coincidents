@@ -61,6 +61,7 @@ const championshipSchema = new Schema({
 
 const guessesLinesSchema = new Schema({
   championshipRef: {
+    type: String,
     unique: true,
     required: true
   },

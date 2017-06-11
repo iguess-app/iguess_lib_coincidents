@@ -22,13 +22,7 @@ const _errDictionary = () => ({
   }
 })
 
-const treatErrors = (err, dictionary) => {
-  try {
-    return _errDictionary()[err.code](dictionary)
-  } catch (err) {
-    throw Boom.badData(err)
-  }
-}
+const treatErrors = (err, dictionary) => _errDictionary()[err.code](dictionary)
 
 module.exports = {
   mongoErrors,
