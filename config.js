@@ -38,7 +38,7 @@ module.exports = {
     minPossibleScore: 0
   },
   holi: {
-    minRoundRobinFixtures: 0,
+    minRoundRobinFixtures: 1,
     maxRoundRobinFixtures: 50,
     knockoutTournamentRoundNames: [
       'Final',
