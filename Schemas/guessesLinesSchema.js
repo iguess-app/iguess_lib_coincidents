@@ -19,8 +19,12 @@ const guessSchema = new Schema({
     type: String,
     required: true
   },
-  finalScore: {
-    type: String,
+  homeTeamScore: {
+    type: Number,
+    required: true
+  },
+  awayTeamScore: {
+    type: Number,
     required: true
   },
   pontuation: {
@@ -29,7 +33,7 @@ const guessSchema = new Schema({
 }, optionsSchema)
 
 const userGuessSchema = new Schema({
-  userID: {
+  userId: {
     type: String,
     required: true
   },
