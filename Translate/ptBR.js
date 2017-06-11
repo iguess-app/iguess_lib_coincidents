@@ -20,6 +20,7 @@ const ptBrDictionary = {
   alreadyFriends: 'Você já são amigos',
   teamNotFound: 'Equipe não encontrada',
   championshipNotFound: 'Campeonato não encontrado',
+  guessLineNotFound: 'GuessLine não encontrada',
   sameTeams: 'Vocâ não pode repetir as equipes que você torce',
   alreadyAdd: 'Já adicionado'
 }

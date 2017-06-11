@@ -20,6 +20,7 @@ const usEnDictionary = {
   alreadyFriends: 'You are already friends',
   teamNotFound: 'Team not found',
   championshipNotFound: 'Championship not found',
+  guessLineNotFound: 'GuessLine not found',
   sameTeams: 'You cannot repeat the teams that you support',
   alreadyAdd: 'Already add'
 }
