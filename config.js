@@ -34,6 +34,22 @@ module.exports = {
     nameMaxSize: 20,
     descriptionMaxSize: 100
   },
+  guess: {
+    minPossibleScore: 0
+  },
+  holi: {
+    minRoundRobinFixtures: 0,
+    maxRoundRobinFixtures: 50,
+    knockoutTournamentRoundNames: [
+      'Final',
+      'SemiFinals',
+      'Quarterfinals',
+      'Round of 16',
+      'Round of 32',
+      'Round of 64',
+      'Round of 128'
+    ]
+  },
   notificationTypes: {
     friendShipRequest: 1,
     guessLeagueRequest: 2,
