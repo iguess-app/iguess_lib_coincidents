@@ -15,6 +15,10 @@ const optionsSchemaNoIdNoVersion = {
 }
 
 const guessSchema = new Schema({
+  matchRef: {
+    type: String,
+    required: true
+  },
   homeTeam: {
     type: String,
     required: true

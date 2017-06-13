@@ -1,12 +1,12 @@
 'use strict';
 
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-const Mixed = Schema.Types.Mixed
 
 const Config = require('./../config')
 const Managers = require('./../Managers/export')
 
+const Schema = mongoose.Schema
+const Mixed = Schema.Types.Mixed
 const db = Managers.mongoManager
 const MAX_ROUND_ROBIN_FIXTURES = Config.holi.maxRoundRobinFixtures
 const MIN_ROUND_ROBIN_FIXTURES = Config.holi.minRoundRobinFixtures
