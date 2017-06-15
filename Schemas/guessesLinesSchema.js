@@ -78,8 +78,7 @@ const guessesLinesSchema = new Schema({
   championship: championshipSchema,
   fixtures: [fixturesSchema],
   users: {
-    type: Array,
-    required: true
+    type: Array
   }
 }, optionsSchema)
 
