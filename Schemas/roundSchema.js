@@ -4,18 +4,11 @@ const mongoose = require('mongoose')
 
 const Config = require('./../config')
 const Managers = require('./../Managers/export')
+const validateFixture = require('./subValidations/fixture')
 
 const Schema = mongoose.Schema
 const Mixed = Schema.Types.Mixed
 const db = Managers.mongoManager
-const MAX_ROUND_ROBIN_FIXTURES = Config.holi.maxRoundRobinFixtures
-const MIN_ROUND_ROBIN_FIXTURES = Config.holi.minRoundRobinFixtures
-const KNOCKOUT_TOURNAMENT_ROUND_NAMES = Config.holi.knockoutTournamentRoundNames
-
-const _ifIsKnockoutTournament = (fixture) => KNOCKOUT_TOURNAMENT_ROUND_NAMES.includes(fixture)
-const _ifIsRoundRobinTournament = (fixture) => fixture >= MIN_ROUND_ROBIN_FIXTURES && fixture <= MAX_ROUND_ROBIN_FIXTURES
-
-const validateFixture = (fixture) => _ifIsKnockoutTournament || _ifIsRoundRobinTournament
 
 const optionsSchema = {
   versionKey: false
@@ -64,7 +57,7 @@ const gamesSchema = new Schema({
 }, optionsSchema)
 
 const roundSchema = new Schema({
-  championship: {
+  championshipRef: {
     type: String,
     required: true
   },

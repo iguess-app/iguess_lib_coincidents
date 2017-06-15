@@ -1,10 +1,13 @@
 'use strict';
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Managers = require('./../Managers/export')
+const validateFixture = require('./subValidations/fixture')
 
-const Managers = require('./../Managers/export');
-const db = Managers.mongoManager;
+const mongoose = require('mongoose')
+
+const Schema = mongoose.Schema
+const db = Managers.mongoManager
+const Mixed = Schema.Types.Mixed
 
 const optionsSchema = {
   versionKey: false
@@ -59,9 +62,10 @@ const championshipSchema = new Schema({
 }, optionsSchemaNoIdNoVersion)
 
 const fixturesSchema = new Schema({
-  fixtureNumber: {
-    type: Number,
-    required: true
+  fixture: {
+    type: Mixed,
+    required: true,
+    validate: [validateFixture, 'Not a valid fixture type']
   },
   users: [userGuessSchema],
   pontuationSetted: {
