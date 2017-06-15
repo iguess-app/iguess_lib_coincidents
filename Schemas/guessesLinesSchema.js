@@ -19,14 +19,6 @@ const guessSchema = new Schema({
     type: String,
     required: true
   },
-  homeTeam: {
-    type: String,
-    required: true
-  },
-  awayTeam: {
-    type: String,
-    required: true
-  },
   homeTeamScore: {
     type: Number,
     required: true
@@ -84,7 +76,11 @@ const guessesLinesSchema = new Schema({
     required: true
   },
   championship: championshipSchema,
-  fixtures: [fixturesSchema]
+  fixtures: [fixturesSchema],
+  users: {
+    type: Array,
+    required: true
+  }
 }, optionsSchema)
 
 module.exports = db.model('guesseslines', guessesLinesSchema);
