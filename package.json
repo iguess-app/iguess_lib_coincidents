@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": ""
+    "test": "lab -v",
+    "test-cov": "lab -v -t 70 NODE_ENV=test",
+    "test-cov-html": "lab -r html -o coverage.html"
   },
   "author": "{{Lucas Alves L.A.}}",
   "dependencies": {
@@ -11,6 +13,7 @@
     "bluebird": "3.5.0",
     "boom": "4.2.0",
     "jsonwebtoken": "7.2.1",
+    "lab": "^14.1.1",
     "md5": "2.2.1",
     "mongoose": "4.7.6",
     "redis": "2.6.3",
