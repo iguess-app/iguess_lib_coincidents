@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const Boom = require('boom');
 const Errors = require('./errorUtils.js');

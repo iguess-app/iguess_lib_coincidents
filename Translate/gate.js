@@ -1,19 +1,19 @@
-'use Strict'
+'use strict'
 
-const americanEnglish = require('./enUS.js');
-const brazilianPortuguese = require('./ptBR.js');
+const americanEnglish = require('./enUS.js')
+const brazilianPortuguese = require('./ptBR.js')
 
 const selectLanguage = (language) => {
   switch (language) {
     case 'en-us':
-      return americanEnglish;
+      return americanEnglish
     case 'pt-br':
-      return brazilianPortuguese;
+      return brazilianPortuguese
     default:
-      return americanEnglish;
+      return americanEnglish
   }
 }
 
 module.exports = {
   selectLanguage
-};
+}

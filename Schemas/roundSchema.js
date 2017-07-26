@@ -1,8 +1,7 @@
-'use strict';
+'use strict'
 
 const mongoose = require('mongoose')
 
-const Config = require('./../config')
 const Managers = require('./../Managers/export')
 const validateFixture = require('./subValidations/fixture')
 
@@ -41,10 +40,10 @@ const gamesSchema = new Schema({
   homeTeam: teamSchema,
   awayTeam: teamSchema,
   homeTeamScore: {
-    type: Number,
+    type: Number
   },
   awayTeamScore: {
-    type: Number,
+    type: Number
   },
   initTime: {
     type: Date,

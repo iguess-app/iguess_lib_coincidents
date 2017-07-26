@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const Managers = require('./../Managers/export')
 const validateFixture = require('./subValidations/fixture')
@@ -44,7 +44,7 @@ const userGuessSchema = new Schema({
   totalPontuation: {
     type: Number
   }
-}, optionsSchemaNoIdNoVersion);
+}, optionsSchemaNoIdNoVersion)
 
 const championshipSchema = new Schema({
   league: {
@@ -86,4 +86,4 @@ const guessesLinesSchema = new Schema({
   }
 }, optionsSchema)
 
-module.exports = db.model('guesseslines', guessesLinesSchema);
+module.exports = db.model('guesseslines', guessesLinesSchema)

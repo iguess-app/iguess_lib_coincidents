@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const mongoose = require('mongoose');
 
@@ -66,7 +66,7 @@ const optionsProfileSchema = {
   }
 }
 
-const profileSchema = new Schema({
+const profileDefinitionSchema = {
   userName: {
     type: String,
     required: true,
@@ -116,6 +116,8 @@ const profileSchema = new Schema({
   lastSignInAt: {
     type: Date
   }
-}, optionsProfileSchema)
+}
+
+const profileSchema = new Schema(profileDefinitionSchema, optionsProfileSchema)
 
 module.exports = db.model('profiles', profileSchema);

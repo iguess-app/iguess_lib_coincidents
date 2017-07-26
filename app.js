@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const Managers = require('./Managers/export');
 const Translate = require('./Translate/export');
