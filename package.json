@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "lab -v",
+    "test": "set ENV=test&&lab -v",
     "test-cov": "lab -v -t 70",
     "test-cov-html": "lab -r html -o coverage.html"
   },
@@ -16,6 +16,7 @@
     "lab": "^14.1.1",
     "md5": "2.2.1",
     "mongoose": "4.7.6",
+    "pino": "^4.7.1",
     "redis": "2.6.3",
     "request-promise": "4.2.1"
   }

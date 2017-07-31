@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const promise = require('bluebird');
+const pino = require('pino')();
 
 const config = require('./../config');
 const mongo = config.mongo;
@@ -19,7 +20,7 @@ if (mongo.needConnection) {
   const db = mongoose.createConnection(uri, options);
 
   db.on('open', () => {
-    console.info(`Mongo at ${uri} Connected`)
+    pino.info(`Mongo at ${uri} Connected`)
   });
 
   module.exports = db;

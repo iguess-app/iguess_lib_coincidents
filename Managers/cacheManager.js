@@ -2,15 +2,16 @@
 
 const redis = require('redis');
 const md5 = require('md5');
+const pino = require('pino')();
 
 const config = require('./../config');
 
-if (config.redis.needConnection) {
+if (config.redis.needConnection && !config.isEnv('test')) {
   const clientOptions = {
     'auth_pass': config.redis.key,
     'retry_strategy': (options) => {
       if (options.error) {
-        console.error(options.error.message);
+        pino.error(options.error.message);
       }
     }
   };
@@ -18,12 +19,13 @@ if (config.redis.needConnection) {
 
   redisClient.on('connect', () => {
     if (redisClient.connected === true) {
-      console.info(`Redis at ${redisClient.address} Connected`)
+      pino.info(`Redis at ${redisClient.address} Connected`)
     }
   });
 
   redisClient.on('error', (err) => {
-    console.error(err);
+    pino.error(err);
+
     return true;
   });
 
@@ -31,9 +33,7 @@ if (config.redis.needConnection) {
 
     get: (key) => {
       if (!key) {
-        throw {
-          error: 'key is a mandatory field to get on Cache.'
-        }
+        throw new Error('key is a mandatory field to get on Cache.')
       }
       const md5Key = _generateKey(key);
 
@@ -46,9 +46,7 @@ if (config.redis.needConnection) {
 
     set: (key, value, expireTime) => {
       if (!key || !value) {
-        throw {
-          error: 'key and value are mandatory fields to set on Cache.'
-        }
+        throw new Error('key and value are mandatory fields to set on Cache.')
       }
 
       const expire = expireTime || config.redis.defaultExpireTime;

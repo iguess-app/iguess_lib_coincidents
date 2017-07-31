@@ -1,5 +1,6 @@
 module.exports = {
   env: process.env.ENV || 'local',
+  isEnv: (envSent) => process.env.ENV === envSent,
   token: {
     cert: process.env.TOKEN_SEED || 'asdawUGDQ&@ET*@&GUGDASU89yHdausdg231', //Open just before send the project to Prod
     expirationTime: parseInt(process.env.TOKEN_EXPIRATION_TIME) || 3600 //1hour (in Seconds)
