@@ -1,6 +1,6 @@
 'use strict'
 
-const Managers = require('./../Managers/export')
+const Managers = require('../Managers/export')
 const validateFixture = require('./subValidations/fixture')
 
 const mongoose = require('mongoose')

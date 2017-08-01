@@ -3,8 +3,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Managers = require('./../Managers/export');
+const mongo = require('../config').mongo
+const Managers = require('../Managers/export');
+const Utils = require('../Utils/export')
+
 const db = Managers.mongoManager;
+const serverErrors = Utils.errorUtils.serverErrors
 
 const optionsSchema = {
   versionKey: false
@@ -13,11 +17,13 @@ const optionsSchema = {
 const championshipSchema = new Schema({
   _id: {
     type: String,
-    required: true    
+    required: true,
+    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
   },
   league: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
   },
   season: {
     type: String,
@@ -42,7 +48,10 @@ const guessesLeaguesSchema = new Schema({
     type: Array,
     required: true
   },
-  championship: championshipSchema,
+  championship: {
+    type: championshipSchema,
+    required: true
+  },
   inviteads: {
     type: Array,
     required: true

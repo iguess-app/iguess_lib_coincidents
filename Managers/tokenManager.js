@@ -2,7 +2,7 @@
 
 const Jwt = require('jsonwebtoken');
 
-const config = require('./../config');
+const config = require('../config');
 const tokenConfig = config.token;
 
 const generate = () => Jwt.sign({

@@ -7,7 +7,7 @@ const PasswordUtils = app.Utils.passwordUtils
 
 lab.experiment('Password Utils Tests', () => {
 
-  lab.test('Check Password Crypted', (done) => {
+  lab.test('Check Password Crypted - Success', (done) => {
     const testPassword = 'MyP@ssW0rdd'
     PasswordUtils.cryptPassword(testPassword)
       .then((hash) => PasswordUtils.checkPassword(testPassword, hash))
@@ -15,6 +15,15 @@ lab.experiment('Password Utils Tests', () => {
         expect(bool).to.equal(true)
         done()
       })
+  })
 
-  });
-});
+  lab.test('Check Password Crypted - Failing', (done) => {
+    const testPassword = 'MyP@ssW0rdd'
+    PasswordUtils.cryptPassword(testPassword)
+      .then((hash) => PasswordUtils.checkPassword(testPassword, `${hash}GONEFAIL`))
+      .then((bool) => {
+        expect(bool).to.equal(false)
+        done()
+      })
+  })
+})

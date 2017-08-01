@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose')
 
-const Managers = require('./../Managers/export')
+const Managers = require('../Managers/export')
 const validateFixture = require('./subValidations/fixture')
 
 const Schema = mongoose.Schema

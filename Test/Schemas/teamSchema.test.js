@@ -4,8 +4,9 @@ const expect = Lab.expect
 
 const app = require('../../app')
 const Team = app.Schemas.teamSchema
+const serverErrors = app.Utils.errorUtils.serverErrors
 
-lab.experiment('TeamSchema Assert', () => {
+lab.experiment('TeamSchema Validator', () => {
 
   lab.test('TeamSchema HappyPath', (done) => {
     const avai = new Team({
@@ -28,6 +29,7 @@ lab.experiment('TeamSchema Assert', () => {
     })
     avai.validate((err) => {
       expect(err.errors.fullName).to.exists();
+      expect(err.errors.fullName.message).to.be.equal('Path `fullName` is required.')
       done();
     })
   });
@@ -36,11 +38,12 @@ lab.experiment('TeamSchema Assert', () => {
     const avai = new Team({
       'league': null,
       'fullName': 'Avaí Futebol Clube',
-      'shortName': 'Avai',
       'logo': 'Link'
     })
     avai.validate((err) => {
       expect(err.errors.league).to.exists();
+      expect(err.errors.league.message).to.be.equal('Path `league` is required.')
+      expect(err.errors.shortName.message).to.be.equal('Path `shortName` is required.')
       done();
     })
   });
@@ -54,6 +57,7 @@ lab.experiment('TeamSchema Assert', () => {
     })
     avai.validate((err) => {
       expect(err.errors.league).to.exists();
+      expect(err.errors.league.message).to.be.equal(String(serverErrors.notMongoIdSize))
       done();
     })
   });

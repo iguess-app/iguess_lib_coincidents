@@ -1,10 +1,14 @@
 'use strict'
 
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const Managers = require('./../Managers/export');
+const mongo = require('../config').mongo
+const Managers = require('../Managers/export');
+const Utils = require('../Utils/export')
+
+const Schema = mongoose.Schema;
 const db = Managers.mongoManager;
+const serverErrors = Utils.errorUtils.serverErrors
 
 const optionsSchema = {
   versionKey: false
@@ -13,7 +17,8 @@ const optionsSchema = {
 const championshipSchema = new Schema({
   league: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
   },
   season: {
     type: String,

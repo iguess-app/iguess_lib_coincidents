@@ -2,9 +2,9 @@
 
 const mongoose = require('mongoose');
 
-const Config = require('./../config')
-const Utils = require('./../Utils/export');
-const Managers = require('./../Managers/export');
+const Config = require('../config')
+const Utils = require('../Utils/export');
+const Managers = require('../Managers/export');
 
 const Schema = mongoose.Schema;
 const userErrors = Utils.errorUtils.userErrors

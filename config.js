@@ -1,5 +1,9 @@
-module.exports = {
-  env: process.env.ENV || 'local',
+/* eslint-disable */
+
+const checkMongoIdSize = (id) => configObject.mongo.idStringSize === id.length
+
+const configObject = {
+  env: process.env.ENV || 'local', 
   isEnv: (envSent) => process.env.ENV === envSent,
   token: {
     cert: process.env.TOKEN_SEED || 'asdawUGDQ&@ET*@&GUGDASU89yHdausdg231', //Open just before send the project to Prod
@@ -22,7 +26,8 @@ module.exports = {
     atlas: process.env.MONGO_ATLAS || false,
     port: process.env.MONGO_PORT || 27017,
     host: process.env.MONGO_HOST || '127.0.0.1',
-    idStringSize: 24
+    idStringSize: 24,
+    checkMongoIdSize
   },
   apis: {
     holiUrl: process.env.HOLI_URL || 'http://127.0.0.1:9001',
@@ -58,3 +63,5 @@ module.exports = {
     nowGuessLeagueAdded: 4
   }
 }
+
+module.exports = configObject
