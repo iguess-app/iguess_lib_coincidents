@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 const promise = require('bluebird');
-const pino = require('pino')();
+const pino = require('./logManager')
 
 const config = require('../config');
 const mongo = config.mongo;

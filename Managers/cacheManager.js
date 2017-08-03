@@ -2,7 +2,7 @@
 
 const redis = require('redis');
 const md5 = require('md5');
-const pino = require('pino')();
+const pino = require('./logManager')
 
 const config = require('../config');
 
