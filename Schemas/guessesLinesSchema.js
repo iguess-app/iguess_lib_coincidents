@@ -1,13 +1,16 @@
 'use strict'
 
+const mongoose = require('mongoose')
+
+const mongo = require('../config').mongo
 const Managers = require('../Managers/export')
 const validateFixture = require('./subValidations/fixture')
-
-const mongoose = require('mongoose')
+const Utils = require('../Utils/export')
 
 const Schema = mongoose.Schema
 const db = Managers.mongoManager
 const Mixed = Schema.Types.Mixed
+const serverErrors = Utils.errorUtils.serverErrors
 
 const optionsSchema = {
   versionKey: false
@@ -20,7 +23,8 @@ const optionsSchemaNoIdNoVersion = {
 const guessSchema = new Schema({
   matchRef: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
   },
   homeTeamScore: {
     type: Number,
@@ -38,9 +42,13 @@ const guessSchema = new Schema({
 const userGuessSchema = new Schema({
   userId: {
     type: String,
+    required: true,
+    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
+  },
+  guesses: {
+    type: [guessSchema],
     required: true
   },
-  guesses: [guessSchema],
   totalPontuation: {
     type: Number
   }
@@ -49,7 +57,8 @@ const userGuessSchema = new Schema({
 const championshipSchema = new Schema({
   league: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
   },
   season: {
     type: String,
@@ -62,7 +71,7 @@ const championshipSchema = new Schema({
 }, optionsSchemaNoIdNoVersion)
 
 const fixturesSchema = new Schema({
-  fixture: {
+  fixtureNumber: {
     type: Mixed,
     required: true,
     validate: [validateFixture, 'Not a valid fixture type']
@@ -77,9 +86,13 @@ const guessesLinesSchema = new Schema({
   championshipRef: {
     type: String,
     unique: true,
+    required: true,
+    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
+  },
+  championship: {
+    type: championshipSchema,
     required: true
   },
-  championship: championshipSchema,
   fixtures: [fixturesSchema],
   users: {
     type: Array

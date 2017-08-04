@@ -1,0 +1,102 @@
+{
+  "correctSchema": {
+    "championshipRef": "5872a8d2ed1b02314e088291",
+    "championship": {
+      "league": "5872467bed1b02314e08828a",
+      "season": "2016",
+      "championship": "Campeonato Brasileiro"
+    },
+    "users": [
+      "591df6c78d1fdc0bb4eba371"
+    ],
+    "fixtures": [{
+      "fixtureNumber": 7,
+      "users": [{
+        "userId": "591df6c78d1fdc0bb4eba371",
+        "totalPontuation": 15,
+        "guesses": [{
+            "matchRef": "591df6c78d1fdc0bb4e00000",
+            "homeTeamScore": 3,
+            "awayTeamScore": 0
+          },
+          {
+            "matchRef": "591df6c78d1fdc0bb4e00000",
+            "homeTeamScore": 2,
+            "awayTeamScore": 4
+          },
+          {
+            "matchRef": "591df6c78d1fdc0bb4e00000",
+            "homeTeamScore": 2,
+            "awayTeamScore": 1
+          }
+        ]
+      }]
+    }]
+  },
+  "userDataWrong": {
+    "championshipRef": "5872a8d2ed1b02314e088291",
+    "championship": {
+      "league": "5872467bed1b02314e08828a",
+      "season": "2016",
+      "championship": "Campeonato Brasileiro"
+    },
+    "users": [
+      "591df6c78d1fdc0bb4eba371"
+    ],
+    "fixtures": [{
+      "fixtureNumber": 7,
+      "users": [{
+        "userId": "591df6c78d1fdc0bb4eba371",
+        "totalPontuation": "Not a Number",
+        "guesses": [{
+            "matchRef": "Wrong MATCH ID1",
+            "homeTeamScore": 3,
+            "awayTeamScore": 0
+          },
+          {
+            "matchRef": "Wrong MATCH ID2",
+            "homeTeamScore": 2,
+            "awayTeamScore": 4
+          },
+          {
+            "matchRef": "Wrong MATCH ID3",
+            "awayTeamScore": 1
+          }
+        ]
+      }]
+    }]
+  },
+  "championshipDataWrong": {
+    "championshipRef": "5872a8d2ed1b02314e0882",
+    "championship": {
+      "league": "5872467bed1b02314e08828a",
+      "championship": "Campeonato Brasileiro"
+    },
+    "users": [
+      "591df6c78d1fdc0bb4eba371"
+    ],
+    "fixtures": [{
+      "fixtureNumber": 7,
+      "users": [{
+        "userId": "591df6c78d1fdc0bb4eba371",
+        "totalPontuation": 15,
+        "guesses": [{
+            "matchRef": "591df6c78d1fdc0bb4e00000",
+            "homeTeamScore": 3,
+            "awayTeamScore": 0
+          },
+          {
+            "matchRef": "591df6c78d1fdc0bb4e00000",
+            "homeTeamScore": 2,
+            "awayTeamScore": 4
+          },
+          {
+            "matchRef": "591df6c78d1fdc0bb4e00000",
+            "homeTeamScore": 2,
+            "awayTeamScore": 1
+          }
+        ]
+      }]
+    }]
+  }
+}
