@@ -7,7 +7,7 @@ const app = require('../../app')
 const GuessLine = app.Schemas.guessesLinesSchema
 const serverErrors = app.Utils.errorUtils.serverErrors
 
-const guessLinesSchemas = JSON.parse(fs.readFileSync('Test/Schemas/SchemaFiles/guessLineSchemaFile.json'))
+const guessLinesSchemas = JSON.parse(fs.readFileSync('Test/Schemas/SchemaFiles/guessLineSchemasFile.json'))
 
 lab.experiment('GuessLineSchema Validator', () => {
 
