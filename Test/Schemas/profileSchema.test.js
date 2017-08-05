@@ -17,4 +17,5 @@ lab.experiment('ProfileSchema Validator', () => {
       done()
     })
   })
+  //TODO Fazer o happyPath com invitedFriendList, guessesLeagues e guessesLines populados
 })
