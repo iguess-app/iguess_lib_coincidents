@@ -1,10 +1,14 @@
 'use strict'
 
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
+const mongo = require('../config').mongo
 const Managers = require('../Managers/export')
+const Utils = require('../Utils/export')
+
+const Schema = mongoose.Schema
 const db = Managers.mongoManager
+const serverErrors = Utils.errorUtils.serverErrors
 
 const optionsSchema = {
   versionKey: false
@@ -30,7 +34,8 @@ const notificationsArraySchema = new Schema({
 const notificationsSchema = new Schema({
   user: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   notifications: [notificationsArraySchema]
 }, optionsSchema)

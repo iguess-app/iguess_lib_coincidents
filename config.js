@@ -1,6 +1,7 @@
 /* eslint-disable */
 
-const checkMongoIdSize = (id) => configObject.mongo.idStringSize === id.length
+const ObjectId = require('mongoose').Types.ObjectId;
+const checkObjectId = (id) => ObjectId.isValid(id)
 
 const configObject = {
   env: process.env.ENV || 'local', 
@@ -27,7 +28,7 @@ const configObject = {
     port: process.env.MONGO_PORT || 27017,
     host: process.env.MONGO_HOST || '127.0.0.1',
     idStringSize: 24,
-    checkMongoIdSize
+    checkObjectId
   },
   apis: {
     holiUrl: process.env.HOLI_URL || 'http://127.0.0.1:9001',

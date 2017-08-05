@@ -18,7 +18,7 @@ const teamSchema = new Schema({
   league: {
     type: String,
     required: true,
-    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   fullName: {
     type: String,

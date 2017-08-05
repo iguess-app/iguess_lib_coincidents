@@ -1,0 +1,42 @@
+{
+  "correctSchema": {
+    "userName": "toniKross",
+    "password": "$2a$10$5PMJupkGGUJ22DxQC4UoUeUJYoDmg89vIEZ4v23KpkuHu1XcIPutK",
+    "email": "kross@madrid.com",
+    "confirmedEmail": false,
+    "invitedFriendList": [],
+    "friendList": [
+      "591e5ccca8634f1f9880e8ca"
+    ],
+    "guessesLeagues": [],
+    "guessesLines": [],
+    "footballSupportedTeams": {
+      "appreciatedTeams": [{
+          "teamId": "5872a51a4db3fb378bc7ee15",
+          "fullName": "Clube Atlético Mineiro",
+          "shortName": "Atlético-MG",
+          "logo": "nothing =(",
+          "league": "5872467bed1b02314e08828a"
+        },
+        {
+          "teamId": "5872420ded1b02314e088289",
+          "fullName": "Santos Futebol Clube",
+          "shortName": "Santos",
+          "logo": "nothing =(",
+          "league": "5872467bed1b02314e08828a"
+        }
+      ],
+      "supportedTeam": {
+        "teamId": "587261c5ed1b02314e08828c",
+        "fullName": "Real Madrid Club de Fútbol",
+        "shortName": "Real Madrid",
+        "logo": "nothing =[",
+        "league": "58726176ed1b02314e08828b"
+      }
+    },
+    "description": "Insta: TONY",
+    "createdAt": ISODate("2017-06-03T15:46:03.963Z"),
+    "updatedAt": ISODate("2017-06-06T02:22:51.286Z"),
+    "lastSignInAt": ISODate("2017-06-06T02:22:51.000Z")
+  }
+}

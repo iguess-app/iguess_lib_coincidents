@@ -24,7 +24,7 @@ const guessSchema = new Schema({
   matchRef: {
     type: String,
     required: true,
-    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   homeTeamScore: {
     type: Number,
@@ -43,7 +43,7 @@ const userGuessSchema = new Schema({
   userId: {
     type: String,
     required: true,
-    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   guesses: {
     type: [guessSchema],
@@ -58,7 +58,7 @@ const championshipSchema = new Schema({
   league: {
     type: String,
     required: true,
-    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   season: {
     type: String,
@@ -87,7 +87,7 @@ const guessesLinesSchema = new Schema({
     type: String,
     unique: true,
     required: true,
-    validate: [mongo.checkMongoIdSize, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   championship: {
     type: championshipSchema,
