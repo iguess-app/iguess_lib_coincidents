@@ -9,7 +9,7 @@ const serverErrors = app.Utils.errorUtils.serverErrors
 
 const notificationsSchemas = JSON.parse(fs.readFileSync('Test/Schemas/SchemaFiles/notificationsSchemasFile.json'))
 
-lab.experiment.only('NotificationsSchema Validator', () => {
+lab.experiment('NotificationsSchema Validator', () => {
 
   lab.test('NotificationsSchema HappyPath', (done) => {
     const correctSchema = new Notifications(notificationsSchemas.correctSchema)

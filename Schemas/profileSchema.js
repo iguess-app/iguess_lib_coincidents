@@ -1,14 +1,17 @@
 'use strict'
 
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const Config = require('../config')
-const Utils = require('../Utils/export');
-const Managers = require('../Managers/export');
+const Utils = require('../Utils/export')
+const Managers = require('../Managers/export')
 
-const Schema = mongoose.Schema;
-const userErrors = Utils.errorUtils.userErrors
+const Schema = mongoose.Schema
+const mongo = Config.mongo
 const db = Managers.mongoManager
+const serverErrors = Utils.errorUtils.serverErrors
+const userErrors = Utils.errorUtils.userErrors
+
 
 const USERNAME_MAX_SIZE = Config.profile.userNameMaxSize
 const NAME_MAX_SIZE = Config.profile.nameMaxSize
@@ -28,7 +31,8 @@ const optionsEmbbededDocsSchema = {
 const guessesLinesSchema = new Schema({
   championshipRef: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   pontuation: {
     type: Number,
@@ -39,11 +43,13 @@ const guessesLinesSchema = new Schema({
 const teamSchema = new Schema({
   teamId: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   league: {
     type: String,
-    required: true
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   fullName: {
     type: String,

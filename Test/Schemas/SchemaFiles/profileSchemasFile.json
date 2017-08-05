@@ -35,8 +35,6 @@
       }
     },
     "description": "Insta: TONY",
-    "createdAt": ISODate("2017-06-03T15:46:03.963Z"),
-    "updatedAt": ISODate("2017-06-06T02:22:51.286Z"),
-    "lastSignInAt": ISODate("2017-06-06T02:22:51.000Z")
+    "lastSignInAt": "2017-06-06T02:22:51.000Z"
   }
 }
