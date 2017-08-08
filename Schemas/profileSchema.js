@@ -114,15 +114,16 @@ const profileDefinitionSchema = {
     type: Array
   },
   friendList: {
-    type: Array
+    type: [Schema.Types.ObjectId]
   },
   invitedFriendList: {
-    type: Array
+    type: [Schema.Types.ObjectId]
   },
   lastSignInAt: {
     type: Date
   }
 }
+
 
 const profileSchema = new Schema(profileDefinitionSchema, optionsProfileSchema)
 
