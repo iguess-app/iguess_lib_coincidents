@@ -4,7 +4,6 @@ const expect = Lab.expect
 
 const app = require('../../app')
 const GuessLeague = app.Schemas.guessesLeaguesSchema
-const serverErrors = app.Utils.errorUtils.serverErrors
 
 lab.experiment('GuessLeagueSchema Validator', () => {
 
@@ -100,7 +99,7 @@ lab.experiment('GuessLeagueSchema Validator', () => {
       'administrator': 'cristianoRonaldo',
       'championship': {
         '_id': '5872a8d2ed1b02314e088291',
-        'league': 'not id size',
+        'league': 'notObjectID',
         'championship': 'Campeonato Brasileiro'
       },
       'players': [{
@@ -109,7 +108,7 @@ lab.experiment('GuessLeagueSchema Validator', () => {
       'inviteads': ['1', '1']
     })
     losBlancos.validate((err) => {
-      expect(err.errors.championship.errors.league.message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors.championship.errors.league.message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "league"')
       expect(err.errors.championship.errors.season.message).to.be.equal('Path `season` is required.')
       done()
     })

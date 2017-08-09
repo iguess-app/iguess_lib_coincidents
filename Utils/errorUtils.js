@@ -13,11 +13,8 @@ const userErrors = Object.freeze({
   userNameSizeExplode: 20004,
   nameSizeExplode: 20005,
   descriptionSizeExplode: 20006,
-  numberOfAppreciatedTeamsExplode: 20007
-})
-
-const serverErrors = Object.freeze({
-  notMongoIdSize: 30000
+  numberOfAppreciatedTeamsExplode: 20007,
+  notValidFixture: 20008
 })
 
 const _errDictionary = () => ({
@@ -31,6 +28,5 @@ const treatErrors = (err, dictionary) => _errDictionary()[err.code](dictionary)
 module.exports = {
   mongoErrors,
   userErrors,
-  treatErrors,
-  serverErrors
+  treatErrors
 }

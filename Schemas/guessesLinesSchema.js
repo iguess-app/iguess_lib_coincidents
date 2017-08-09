@@ -2,7 +2,6 @@
 
 const mongoose = require('mongoose')
 
-const mongo = require('../config').mongo
 const Managers = require('../Managers/export')
 const validateFixture = require('./subValidations/fixture')
 const Utils = require('../Utils/export')
@@ -10,7 +9,8 @@ const Utils = require('../Utils/export')
 const Schema = mongoose.Schema
 const db = Managers.mongoManager
 const Mixed = Schema.Types.Mixed
-const serverErrors = Utils.errorUtils.serverErrors
+const ObjectId = Schema.Types.ObjectId
+const userErrors = Utils.errorUtils.userErrors
 
 const optionsSchema = {
   versionKey: false
@@ -22,9 +22,8 @@ const optionsSchemaNoIdNoVersion = {
 
 const guessSchema = new Schema({
   matchRef: {
-    type: String,
-    required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    type: ObjectId,
+    required: true
   },
   homeTeamScore: {
     type: Number,
@@ -41,9 +40,8 @@ const guessSchema = new Schema({
 
 const userGuessSchema = new Schema({
   userId: {
-    type: String,
-    required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    type: ObjectId,
+    required: true
   },
   guesses: {
     type: [guessSchema],
@@ -56,9 +54,8 @@ const userGuessSchema = new Schema({
 
 const championshipSchema = new Schema({
   league: {
-    type: String,
-    required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    type: ObjectId,
+    required: true
   },
   season: {
     type: String,
@@ -74,7 +71,7 @@ const fixturesSchema = new Schema({
   fixtureNumber: {
     type: Mixed,
     required: true,
-    validate: [validateFixture, 'Not a valid fixture type']
+    validate: [validateFixture, String(userErrors.notValidFixture)]
   },
   users: [userGuessSchema],
   pontuationSetted: {
@@ -84,10 +81,9 @@ const fixturesSchema = new Schema({
 
 const guessesLinesSchema = new Schema({
   championshipRef: {
-    type: String,
+    type: ObjectId,
     unique: true,
-    required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    required: true
   },
   championship: {
     type: championshipSchema,

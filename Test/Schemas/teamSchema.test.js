@@ -4,7 +4,6 @@ const expect = Lab.expect
 
 const app = require('../../app')
 const Team = app.Schemas.teamSchema
-const serverErrors = app.Utils.errorUtils.serverErrors
 
 lab.experiment('TeamSchema Validator', () => {
 
@@ -50,14 +49,14 @@ lab.experiment('TeamSchema Validator', () => {
 
   lab.test('TeamSchema with league Ref on wrong size', (done) => {
     const avai = new Team({
-      'league': '5872467bed',
+      'league': 'notObjectID',
       'fullName': 'Avaí Futebol Clube',
       'shortName': 'Avai',
       'logo': 'Link'
     })
     avai.validate((err) => {
       expect(err.errors.league).to.exists();
-      expect(err.errors.league.message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors.league.message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "league"')
       done();
     })
   });

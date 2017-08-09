@@ -4,7 +4,7 @@
     "notifications" : []
 },
   "userRefIncorrect": {
-    "user" : "========================",
+    "user" : "notObjectID",
     "notifications" : []
   },
   "notificationArrayIncorrect": {
