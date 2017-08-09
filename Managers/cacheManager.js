@@ -41,7 +41,8 @@ if (config.redis.needConnection && !config.isEnv('test')) {
       return new Promise((resolve) =>
         redisClient.get(md5Key, (err, value) => {
           if (err) {
-            throw new Error(err)
+            pino.error(err)
+            resolve(null)
           }
           resolve(JSON.parse(value))
         }
