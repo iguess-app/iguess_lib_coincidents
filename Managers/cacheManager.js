@@ -39,8 +39,12 @@ if (config.redis.needConnection && !config.isEnv('test')) {
       const md5Key = _generateKey(key);
 
       return new Promise((resolve) =>
-        redisClient.get(md5Key, (err, value) =>
+        redisClient.get(md5Key, (err, value) => {
+          if (err) {
+            throw new Error(err)
+          }
           resolve(JSON.parse(value))
+        }
         )
       )
     },
