@@ -43,10 +43,10 @@
     ]
   },
   "someErrorsSchema": {
-    "championshipRef": "5872a8d2ed1b02314e088291",
+    "championshipRef": "notObjectID",
     "fixture": 8578,
     "games": [{
-        "_id": "5872467bed1b02314e08828b",
+        "_id": "notObjectID",
         "homeTeam": {
           "teamRef": "5872a51a4db3fb378bc7ee15",
           "league": "5872467bed1b02314e08828a",
@@ -61,8 +61,8 @@
           "shortName": "Atlético-PR",
           "logo": "nothing =("
         },
-        "initTime": "2017-06-06T02:22:51.000Z",
-        "stadium": "INDEPENDÊNCIA"
+        "initTime": "21/11/2011",
+        "stadium": null
       },
       {
         "_id": "5872467bed1b02314e08828b",
