@@ -19,12 +19,13 @@ lab.experiment('ProfileSchema Validator', () => {
     })
   })
 
-  lab.test('ProfileSchema Description, UserName TooLoong', (done) => {
+  lab.test('ProfileSchema Description, UserName TooLoong and too many number of team appreciated', (done) => {
     const textsTooLoongSchema = new Profile(profileSchemas.textsTooLoong)
     textsTooLoongSchema.validate((err) => {
       expect(err.errors.name.message).to.equal(String(userErrors.nameSizeExplode))
       expect(err.errors.description.message).to.equal(String(userErrors.descriptionSizeExplode))
       expect(err.errors.userName.message).to.equal(String(userErrors.userNameSizeExplode))
+      expect(err.errors['footballSupportedTeams.appreciatedTeams'].message).to.equal(String(userErrors.numberOfAppreciatedTeamsExplode))
       done()
     })
   })
