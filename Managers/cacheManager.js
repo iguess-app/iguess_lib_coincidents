@@ -7,7 +7,7 @@ const pino = require('./logManager')
 const config = require('../config');
 
 if (config.redis.needConnection && !config.isEnv('test')) {
-  
+
   const clientOptions = {
     'auth_pass': config.redis.key,
     'retry_strategy': (options) => {
@@ -31,6 +31,16 @@ if (config.redis.needConnection && !config.isEnv('test')) {
     return true;
   });
 
+  const isConnected = () => {
+    if (!redisClient.connected) {
+      pino.error(`Redis ${redisClient.address} not connected`)
+
+      return false
+    }
+
+    return true
+  }
+
   const CacheManager = {
     get: (key) => {
       if (!key) {
@@ -38,25 +48,33 @@ if (config.redis.needConnection && !config.isEnv('test')) {
       }
       const md5Key = _generateKey(key);
 
-      return new Promise((resolve) =>
-        redisClient.get(md5Key, (err, value) => {
+      return new Promise((resolve) => {
+        if (!isConnected(redisClient)) {
+          return resolve(null)
+        }
+
+        return redisClient.get(md5Key, (err, value) => {
           if (err) {
             pino.error(err)
-            resolve(null)
+
+            return resolve(null)
           }
           resolve(JSON.parse(value))
-        }
-        )
-      )
+        })
+      })
     },
     set: (key, value, expireTime) => {
+      if (!isConnected(redisClient)) {
+        return null
+      }
       if (!key || !value) {
         throw new Error('key and value are mandatory fields to set on Cache.')
       }
 
-      const expire = expireTime || config.redis.defaultExpireTime;
-      const md5Key = _generateKey(key);
-      redisClient.setex(md5Key, expire, JSON.stringify(value))
+      const expire = expireTime || config.redis.defaultExpireTime
+      const md5Key = _generateKey(key)
+
+      return redisClient.setex(md5Key, expire, JSON.stringify(value))
     }
   };
 
