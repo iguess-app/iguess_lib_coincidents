@@ -5,6 +5,7 @@ const expect = Lab.expect
 
 const app = require('../../app')
 const GuessLine = app.Schemas.guessesLinesSchema
+const serverErrors = app.Utils.errorUtils.serverErrors
 
 const guessLinesSchemas = JSON.parse(fs.readFileSync('Test/Schemas/SchemaFiles/guessLineSchemasFile.json'))
 
@@ -20,9 +21,9 @@ lab.experiment('GuessLineSchema Validator', () => {
   lab.test('GuessLineSchema userData Wrong', (done) => {
     const userDataWrongSchema = new GuessLine(guessLinesSchemas.userDataWrong)
     userDataWrongSchema.validate((err) => {
-      expect(err.errors['fixtures.0.users.0.guesses.0.matchRef'].message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "matchRef"')
-      expect(err.errors['fixtures.0.users.0.guesses.1.matchRef'].message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "matchRef"')
-      expect(err.errors['fixtures.0.users.0.guesses.2.matchRef'].message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "matchRef"')
+      expect(err.errors['fixtures.0.users.0.guesses.0.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors['fixtures.0.users.0.guesses.1.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors['fixtures.0.users.0.guesses.2.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
       expect(err.errors['fixtures.0.users.0.guesses.2.homeTeamScore'].message).to.be.equal('Path `homeTeamScore` is required.')
       expect(err.errors['fixtures.0.users.0.totalPontuation'].message).to.be.equal('Cast to Number failed for value "Not a Number" at path "totalPontuation"')
       done()
@@ -31,7 +32,7 @@ lab.experiment('GuessLineSchema Validator', () => {
   lab.test('GuessLineSchema championshipData Wrong', (done) => {
     const championshipDataSchema = new GuessLine(guessLinesSchemas.championshipDataWrong)
     championshipDataSchema.validate((err) => {
-      expect(err.errors.championshipRef.message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "championshipRef"')
+      expect(err.errors.championshipRef.message).to.be.equal(String(serverErrors.notMongoIdSize))
       expect(err.errors['championship.season'].message).to.be.equal('Path `season` is required.')
       done()
     })

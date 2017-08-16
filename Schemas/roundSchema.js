@@ -5,13 +5,14 @@ const mongoose = require('mongoose')
 const Managers = require('../Managers/export')
 const validateFixture = require('./subValidations/fixture')
 const Utils = require('../Utils/export')
+const mongo = require('../config').mongo
 
 const Schema = mongoose.Schema
 const Mixed = Schema.Types.Mixed
-const ObjectId = Schema.Types.ObjectId
 const db = Managers.mongoManager
 
 const userErrors = Utils.errorUtils.userErrors
+const serverErrors = Utils.errorUtils.serverErrors
 
 const optionsSchema = {
   versionKey: false
@@ -19,12 +20,14 @@ const optionsSchema = {
 
 const teamSchema = new Schema({
   teamRef: {
-    type: ObjectId,
-    required: true
+    type: String,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   league: {
-    type: ObjectId,
-    required: true
+    type: String,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   fullName: {
     type: String,
@@ -67,8 +70,9 @@ const gamesSchema = new Schema({
 
 const roundSchema = new Schema({
   championshipRef: {
-    type: ObjectId,
-    required: true
+    type: String,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   fixture: {
     type: Mixed,

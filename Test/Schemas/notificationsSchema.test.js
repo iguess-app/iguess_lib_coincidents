@@ -5,6 +5,7 @@ const expect = Lab.expect
 
 const app = require('../../app')
 const Notifications = app.Schemas.notificationsSchema
+const serverErrors = app.Utils.errorUtils.serverErrors
 
 const notificationsSchemas = JSON.parse(fs.readFileSync('Test/Schemas/SchemaFiles/notificationsSchemasFile.json'))
 
@@ -20,7 +21,7 @@ lab.experiment('NotificationsSchema Validator', () => {
   lab.test('NotificationsSchema userRefIncorrect', (done) => {
     const userRefIncorrectSchema = new Notifications(notificationsSchemas.userRefIncorrect)
     userRefIncorrectSchema.validate((err) => {
-      expect(err.errors.user.message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "user"')
+      expect(err.errors.user.message).to.be.equal(String(serverErrors.notMongoIdSize))
       done()
     })
   })

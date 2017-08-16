@@ -3,10 +3,13 @@
 const mongoose = require('mongoose');
 
 const Managers = require('../Managers/export');
+const Utils = require('../Utils/export')
+const mongo = require('../config').mongo
 
 const Schema = mongoose.Schema;
 const db = Managers.mongoManager;
-const ObjectId = Schema.Types.ObjectId
+const serverErrors = Utils.errorUtils.serverErrors
+
 
 const optionsSchema = {
   versionKey: false
@@ -14,8 +17,9 @@ const optionsSchema = {
 
 const championshipSchema = new Schema({
   league: {
-    type: ObjectId,
-    required: true
+    type: String,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   season: {
     type: String,

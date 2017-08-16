@@ -4,6 +4,7 @@ const expect = Lab.expect
 
 const app = require('../../app')
 const Team = app.Schemas.teamSchema
+const serverErrors = app.Utils.errorUtils.serverErrors
 
 lab.experiment('TeamSchema Validator', () => {
 
@@ -56,7 +57,7 @@ lab.experiment('TeamSchema Validator', () => {
     })
     avai.validate((err) => {
       expect(err.errors.league).to.exists();
-      expect(err.errors.league.message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "league"')
+      expect(err.errors.league.message).to.be.equal(String(serverErrors.notMongoIdSize))
       done();
     })
   });

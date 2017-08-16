@@ -17,6 +17,10 @@ const userErrors = Object.freeze({
   notValidFixture: 20008
 })
 
+const serverErrors = Object.freeze({
+  notMongoIdSize: 30000
+})
+
 const _errDictionary = () => ({
   [mongoErrors._idAlreadyUsed]: (dictionary) => {
     throw Boom.notAcceptable(`${dictionary.alreadyAdd}.`)
@@ -28,5 +32,6 @@ const treatErrors = (err, dictionary) => _errDictionary()[err.code](dictionary)
 module.exports = {
   mongoErrors,
   userErrors,
-  treatErrors
+  treatErrors,
+  serverErrors
 }

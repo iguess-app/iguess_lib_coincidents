@@ -12,7 +12,7 @@
     "fixtures": [{
       "fixtureNumber": 7,
       "users": [{
-        "userId": "591df6c78d1fdc0bb4eba371",
+        "userRef": "591df6c78d1fdc0bb4eba371",
         "totalPontuation": 15,
         "guesses": [{
             "matchRef": "591df6c78d1fdc0bb4e00000",
@@ -46,7 +46,7 @@
     "fixtures": [{
       "fixtureNumber": 7,
       "users": [{
-        "userId": "591df6c78d1fdc0bb4eba371",
+        "userRef": "591df6c78d1fdc0bb4eba371",
         "totalPontuation": "Not a Number",
         "guesses": [{
             "matchRef": "notObjectID",
@@ -78,7 +78,7 @@
     "fixtures": [{
       "fixtureNumber": 7,
       "users": [{
-        "userId": "591df6c78d1fdc0bb4eba371",
+        "userRef": "591df6c78d1fdc0bb4eba371",
         "totalPontuation": 15,
         "guesses": [{
             "matchRef": "591df6c78d1fdc0bb4e00000",

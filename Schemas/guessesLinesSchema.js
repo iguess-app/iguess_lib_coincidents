@@ -9,8 +9,10 @@ const Utils = require('../Utils/export')
 const Schema = mongoose.Schema
 const db = Managers.mongoManager
 const Mixed = Schema.Types.Mixed
-const ObjectId = Schema.Types.ObjectId
 const userErrors = Utils.errorUtils.userErrors
+
+const mongo = require('../config').mongo
+const serverErrors = Utils.errorUtils.serverErrors
 
 const optionsSchema = {
   versionKey: false
@@ -22,8 +24,9 @@ const optionsSchemaNoIdNoVersion = {
 
 const guessSchema = new Schema({
   matchRef: {
-    type: ObjectId,
-    required: true
+    type: String,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   homeTeamScore: {
     type: Number,
@@ -39,9 +42,10 @@ const guessSchema = new Schema({
 }, optionsSchemaNoIdNoVersion)
 
 const userGuessSchema = new Schema({
-  userId: {
-    type: ObjectId,
-    required: true
+  userRef: {
+    type: String,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   guesses: {
     type: [guessSchema],
@@ -54,8 +58,9 @@ const userGuessSchema = new Schema({
 
 const championshipSchema = new Schema({
   league: {
-    type: ObjectId,
-    required: true
+    type: String,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   season: {
     type: String,
@@ -81,9 +86,10 @@ const fixturesSchema = new Schema({
 
 const guessesLinesSchema = new Schema({
   championshipRef: {
-    type: ObjectId,
+    type: String,
     unique: true,
-    required: true
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
   },
   championship: {
     type: championshipSchema,
