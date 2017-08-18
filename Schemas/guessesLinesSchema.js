@@ -57,6 +57,12 @@ const userGuessSchema = new Schema({
 }, optionsSchemaNoIdNoVersion)
 
 const championshipSchema = new Schema({
+  championshipRef: {
+    type: String,
+    unique: true,
+    required: true,
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+  },
   league: {
     type: String,
     required: true,
@@ -72,32 +78,19 @@ const championshipSchema = new Schema({
   }
 }, optionsSchemaNoIdNoVersion)
 
-const fixturesSchema = new Schema({
-  fixtureNumber: {
-    type: Mixed,
-    required: true,
-    validate: [validateFixture, String(userErrors.notValidFixture)]
-  },
-  users: [userGuessSchema],
-  pontuationSetted: {
-    type: Boolean
-  }
-}, optionsSchemaNoIdNoVersion)
+const fixturesSchema = {
+  type: Object,
+  required: true
+}
 
 const guessesLinesSchema = new Schema({
-  championshipRef: {
-    type: String,
-    unique: true,
-    required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
-  },
   championship: {
     type: championshipSchema,
     required: true
   },
-  fixtures: [fixturesSchema],
+  fixtures: fixturesSchema,
   users: {
-    type: Array
+    type: [String]
   }
 }, optionsSchema)
 

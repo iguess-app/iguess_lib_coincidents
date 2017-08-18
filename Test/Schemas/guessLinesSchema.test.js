@@ -21,20 +21,31 @@ lab.experiment('GuessLineSchema Validator', () => {
   lab.test('GuessLineSchema userData Wrong', (done) => {
     const userDataWrongSchema = new GuessLine(guessLinesSchemas.userDataWrong)
     userDataWrongSchema.validate((err) => {
-      expect(err.errors['fixtures.0.users.0.guesses.0.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
-      expect(err.errors['fixtures.0.users.0.guesses.1.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
-      expect(err.errors['fixtures.0.users.0.guesses.2.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
-      expect(err.errors['fixtures.0.users.0.guesses.2.homeTeamScore'].message).to.be.equal('Path `homeTeamScore` is required.')
-      expect(err.errors['fixtures.0.users.0.totalPontuation'].message).to.be.equal('Cast to Number failed for value "Not a Number" at path "totalPontuation"')
+      expect(err.errors.fixtures.message).to.be.equal('Path `fixtures` is required.')
       done()
     })
   })
   lab.test('GuessLineSchema championshipData Wrong', (done) => {
     const championshipDataSchema = new GuessLine(guessLinesSchemas.championshipDataWrong)
     championshipDataSchema.validate((err) => {
-      expect(err.errors.championshipRef.message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors['championship.championshipRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
       expect(err.errors['championship.season'].message).to.be.equal('Path `season` is required.')
       done()
     })
   })
 })
+
+
+
+//Use this validations to predictionSchema
+/* lab.test('GuessLineSchema userData Wrong', (done) => {
+  const userDataWrongSchema = new GuessLine(guessLinesSchemas.userDataWrong)
+  userDataWrongSchema.validate((err) => {
+    expect(err.errors['fixtures.0.users.0.guesses.0.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
+    expect(err.errors['fixtures.0.users.0.guesses.1.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
+    expect(err.errors['fixtures.0.users.0.guesses.2.matchRef'].message).to.be.equal(String(serverErrors.notMongoIdSize))
+    expect(err.errors['fixtures.0.users.0.guesses.2.homeTeamScore'].message).to.be.equal('Path `homeTeamScore` is required.')
+    expect(err.errors['fixtures.0.users.0.totalPontuation'].message).to.be.equal('Cast to Number failed for value "Not a Number" at path "totalPontuation"')
+    done()
+  })
+}) */
