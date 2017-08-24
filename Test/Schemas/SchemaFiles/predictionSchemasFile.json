@@ -1,0 +1,64 @@
+{
+  "correctSchema":{
+    "championshipFixtureUserKey" : "591df6c78d1fdc0bb4eba371_1_5872a8d2ed1b02314e088291",
+    "fixturePontuation" : 15,
+    "guesses" : [ 
+        {
+            "matchRef" : "591df6c78d1fdc0bb4eba371",
+            "homeTeamScore" : 3,
+            "awayTeamScore" : 0
+        }, 
+        {
+            "matchRef" : "591df6c78d1fdc0bb4eba371",
+            "homeTeamScore" : 2,
+            "awayTeamScore" : 4
+        }, 
+        {
+            "matchRef" : "591df6c78d1fdc0bb4eba371",
+            "homeTeamScore" : 2,
+            "awayTeamScore" : 1
+        }
+    ]
+  },
+  "wrongChampionshipFixtureUserKey":{
+    "championshipFixtureUserKey" : "591df6c78d1fdc0bb4eba371_HEHE_5872a8d2ed1b02314e088291",
+    "fixturePontuation" : 15,
+    "guesses" : [ 
+        {
+            "matchRef" : "591df6c78d1fdc0bb4eba371",
+            "homeTeamScore" : 3,
+            "awayTeamScore" : 0
+        }, 
+        {
+            "matchRef" : "591df6c78d1fdc0bb4eba371",
+            "homeTeamScore" : 2,
+            "awayTeamScore" : 4
+        }, 
+        {
+            "matchRef" : "591df6c78d1fdc0bb4eba371",
+            "homeTeamScore" : 2,
+            "awayTeamScore" : 1
+        }
+    ]
+  },
+  "guessesDataWrong":{
+    "championshipFixtureUserKey" : "591df6c78d1fdc0bb4eba371_1_5872a8d2ed1b02314e088291",
+    "fixturePontuation" : "Not a Number",
+    "guesses" : [ 
+        {
+            "matchRef" : "591df6ceba371",
+            "homeTeamScore" : 3,
+            "awayTeamScore" : 0
+        }, 
+        {
+            "matchRef" : "591df6c78d1fdc0bb4eba37bb4eba371",
+            "homeTeamScore" : 2,
+            "awayTeamScore" : 4
+        }, 
+        {
+            "matchRef" : 2006,
+            "awayTeamScore" : 1
+        }
+    ]
+  }
+}
