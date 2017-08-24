@@ -46,8 +46,7 @@ const predictionsSchema = new Schema({
     validate: [championshipFixtureUserKeyValidator, String(serverErrors.notchampionshipFixtureUserKeyValid)]
   },
   fixturePontuation: {
-    type: Number,
-    required: true
+    type: Number
   },
   guesses: {
     type: [guessSchema],
