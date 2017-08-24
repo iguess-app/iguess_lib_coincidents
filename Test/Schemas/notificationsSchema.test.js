@@ -21,7 +21,7 @@ lab.experiment('NotificationsSchema Validator', () => {
   lab.test('NotificationsSchema userRefIncorrect', (done) => {
     const userRefIncorrectSchema = new Notifications(notificationsSchemas.userRefIncorrect)
     userRefIncorrectSchema.validate((err) => {
-      expect(err.errors.user.message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors.user.message).to.be.equal(String(serverErrors.notMongoIdValid))
       done()
     })
   })

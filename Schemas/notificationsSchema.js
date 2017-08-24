@@ -35,7 +35,7 @@ const notificationsSchema = new Schema({
   user: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   notifications: [notificationsArraySchema]
 }, optionsSchema)

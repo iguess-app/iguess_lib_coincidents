@@ -109,7 +109,7 @@ lab.experiment('GuessLeagueSchema Validator', () => {
       'inviteads': ['1', '1']
     })
     losBlancos.validate((err) => {
-      expect(err.errors.championship.errors.league.message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors.championship.errors.league.message).to.be.equal(String(serverErrors.notMongoIdValid))
       expect(err.errors.championship.errors.season.message).to.be.equal('Path `season` is required.')
       done()
     })

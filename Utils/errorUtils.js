@@ -18,7 +18,8 @@ const userErrors = Object.freeze({
 })
 
 const serverErrors = Object.freeze({
-  notMongoIdSize: 30000
+  notMongoIdValid: 30000,
+  notchampionshipFixtureUserKeyValid: 30001
 })
 
 const _errDictionary = () => ({

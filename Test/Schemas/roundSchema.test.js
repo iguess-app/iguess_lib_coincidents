@@ -24,7 +24,7 @@ lab.experiment('NotificationsSchema Validator', () => {
     const someErrorsSchema = new Notifications(roundSchemas.someErrorsSchema)
     someErrorsSchema.validate((err) => {
       expect(err.errors.fixture.message).to.be.equal(String(userErrors.notValidFixture))
-      expect(err.errors.championshipRef.message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors.championshipRef.message).to.be.equal(String(serverErrors.notMongoIdValid))
       expect(err.errors['games.0._id'].message).to.be.equal('Cast to ObjectID failed for value "notObjectID" at path "_id"')
       expect(err.errors['games.0.initTime'].message).to.be.equal('Cast to Date failed for value "21/11/2011" at path "initTime"')
       expect(err.errors['games.0.stadium'].message).to.be.equal('Path `stadium` is required.')

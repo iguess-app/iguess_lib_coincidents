@@ -22,12 +22,12 @@ const teamSchema = new Schema({
   teamRef: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   league: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   fullName: {
     type: String,
@@ -72,7 +72,7 @@ const roundSchema = new Schema({
   championshipRef: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   fixture: {
     type: Mixed,

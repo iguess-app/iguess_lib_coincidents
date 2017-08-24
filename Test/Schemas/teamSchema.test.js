@@ -57,7 +57,7 @@ lab.experiment('TeamSchema Validator', () => {
     })
     avai.validate((err) => {
       expect(err.errors.league).to.exists();
-      expect(err.errors.league.message).to.be.equal(String(serverErrors.notMongoIdSize))
+      expect(err.errors.league.message).to.be.equal(String(serverErrors.notMongoIdValid))
       done();
     })
   });

@@ -19,12 +19,12 @@ const championshipSchema = new Schema({
   _id: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   league: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   season: {
     type: String,

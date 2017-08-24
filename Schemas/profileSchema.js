@@ -31,7 +31,7 @@ const guessesLinesSchema = new Schema({
   championshipRef: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   pontuation: {
     type: Number,
@@ -43,12 +43,12 @@ const teamSchema = new Schema({
   teamId: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   league: {
     type: String,
     required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdSize)]
+    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
   },
   fullName: {
     type: String,
