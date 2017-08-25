@@ -1,6 +1,6 @@
 {
   "correctSchema":{
-    "championshipFixtureUserKey" : "591df6c78d1fdc0bb4eba371_1_5872a8d2ed1b02314e088291",
+    "championshipFixtureUserKey" : "5872a8d2ed1b02314e088291_1_591df6c78d1fdc0bb4eba371",
     "fixturePontuation" : 15,
     "guesses" : [ 
         {
@@ -41,7 +41,7 @@
     ]
   },
   "guessesDataWrong":{
-    "championshipFixtureUserKey" : "591df6c78d1fdc0bb4eba371_1_5872a8d2ed1b02314e088291",
+    "championshipFixtureUserKey" : "5872a8d2ed1b02314e088291_1_591df6c78d1fdc0bb4eba371",
     "fixturePontuation" : "Not a Number",
     "guesses" : [ 
         {

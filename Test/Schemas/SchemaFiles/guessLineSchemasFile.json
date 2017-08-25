@@ -6,18 +6,30 @@
       "season": "2016",
       "championship": "Campeonato Brasileiro"
     },
-    "users": [
+    "usersAddedAtGuessLine": [
       "591df6c78d1fdc0bb4eba371"
     ],
-    "fixtures": {
-      "1": [
-        "591df6c78d1fdc0bb4eba371_1_5872a8d2ed1b02314e088291",
-        "591df6c78d1fdc0bb4eba371_1_5872a8d2ed1b02314e088299"
-      ],
-      "2": [],
-      "3": [],
-      "4": []
+    "fixtures": [{
+      "fixture": "1",
+      "usersWhoAlreadySentGuesses": [
+        "5872a8d2ed1b02314e088291_1_591df6c78d1fdc0bb4eba371",
+        "5872a8d2ed1b02314e088291_1_591df6c78d1fdc0bb4eba372",
+        "5872a8d2ed1b02314e088291_1_591df6c78d1fdc0bb4eba380"
+      ]
+    },
+    {
+      "fixture": "2",
+      "usersWhoAlreadySentGuesses": []
+    },
+    {
+      "fixture": "3",
+      "usersWhoAlreadySentGuesses": []
+    },
+    {
+      "fixture": "4",
+      "usersWhoAlreadySentGuesses": []
     }
+  ]
   },
   "userDataWrong": {
     "championship": {
@@ -26,7 +38,7 @@
       "season": "2016",
       "championship": "Campeonato Brasileiro"
     },
-    "users": [
+    "usersAddedAtGuessLine": [
       "591df6c78d1fdc0bb4eba371"
     ],
     "fixtures": null
@@ -37,7 +49,7 @@
       "league": "5872467bed1b02314e08828a",
       "championship": "Campeonato Brasileiro"
     },
-    "users": [
+    "usersAddedAtGuessLine": [
       "591df6c78d1fdc0bb4eba371"
     ],
     "fixtures": {
