@@ -28,7 +28,11 @@ const championshipSchema = new Schema({
   championship: {
     type: String,
     required: true
-  }
+  },
+  championshipActive: {
+    type: Boolean,
+    required: true
+  },
 }, optionsSchema)
 
 module.exports = db.model('championships', championshipSchema);

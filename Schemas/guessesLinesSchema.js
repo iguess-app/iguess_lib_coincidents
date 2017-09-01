@@ -63,6 +63,10 @@ const guessesLinesSchema = new Schema({
   championship: {
     type: championshipSchema,
     required: true
+  },  
+  guessLineActive: {
+    type: Boolean,
+    required: true
   },
   fixtures: {
     type: [fixturesSchema],
