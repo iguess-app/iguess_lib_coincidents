@@ -45,7 +45,7 @@ const championshipSchema = new Schema({
 }, optionsSchemaNoIdNoVersion)
 
 
-const fixturesSchema = {
+const fixturesSchema = new Schema({
   fixture: {
     type: Mixed,
     required: true,
@@ -57,7 +57,7 @@ const fixturesSchema = {
       validate: [championshipFixtureUserKeyValidator, String(serverErrors.notchampionshipFixtureUserKeyValid)]
     }]
   }
-}
+}, optionsSchemaNoIdNoVersion)
 
 const guessesLinesSchema = new Schema({
   championship: {
