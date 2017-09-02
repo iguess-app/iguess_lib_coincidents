@@ -69,7 +69,8 @@ const guessesLinesSchema = new Schema({
     required: true
   },
   fixtures: {
-    type: [fixturesSchema]
+    type: [fixturesSchema],
+    required: true
   },
   usersAddedAtGuessLine: {
     type: [{

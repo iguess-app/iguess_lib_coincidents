@@ -5,14 +5,22 @@ const mongoose = require('mongoose');
 const Managers = require('../Managers/export');
 const Utils = require('../Utils/export')
 const mongo = require('../config').mongo
+const validateFixture = require('./subValidations/fixture')
 
-const Schema = mongoose.Schema;
-const db = Managers.mongoManager;
+const Schema = mongoose.Schema
+const Mixed = Schema.Types.Mixed
+const db = Managers.mongoManager
 const serverErrors = Utils.errorUtils.serverErrors
-
+const userErrors = Utils.errorUtils.userErrors
 
 const optionsSchema = {
   versionKey: false
+}
+
+const fixtureName = {
+  type: Mixed,
+  required: true,
+  validate: [validateFixture, String(userErrors.notValidFixture)]
 }
 
 const championshipSchema = new Schema({
@@ -33,6 +41,10 @@ const championshipSchema = new Schema({
     type: Boolean,
     required: true
   },
+  fixturesNames: {
+    type: [fixtureName],
+    required: true
+  }
 }, optionsSchema)
 
 module.exports = db.model('championships', championshipSchema);

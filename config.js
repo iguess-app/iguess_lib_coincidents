@@ -51,10 +51,17 @@ const configObject = {
       'Final',
       'SemiFinals',
       'Quarterfinals',
+      
+      '8th-finals',
       'Round of 16',
+      
       'Round of 32',
       'Round of 64',
-      'Round of 128'
+      'Round of 128',
+      '4th round',
+      '3rd round',
+      '2nd round',
+      '1st round'
     ]
   },
   notificationTypes: {

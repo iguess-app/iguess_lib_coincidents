@@ -12,7 +12,13 @@ lab.experiment('ChampionshipSchema Validator', () => {
       'league': '5872467bed1b02314e08828a',
       'season': '2017',
       'championship': 'Campeonato Brasileiro',
-      'championshipActive': true
+      'championshipActive': true,
+      'fixturesNames': [
+        1,
+        2,
+        3,
+        4
+      ]
     })
     campBR.validate((err) => {
       expect(err).to.equal(null)
@@ -22,10 +28,20 @@ lab.experiment('ChampionshipSchema Validator', () => {
 
   lab.test('ChampionshipSchema Wrong League Id Ref Size', (done) => {
     const campBR = new Championship({
-      'league': '5872467bed1b02314e0882',
+      'league': '5872467bed1b02314e088',
       'season': '2017',
-      'championship': 'Campeonato Brasileiro',
-      'championshipActive': true
+      'championship': 'Copa do Brasil',
+      'championshipActive': false,
+      'fixturesNames': [
+        '1st round',
+        '2nd round',
+        '3rd round',
+        '4th round',
+        '8th-finals',
+        'Quarterfinals',
+        'SemiFinals',
+        'Final'
+      ]
     })
     campBR.validate((err) => {
       expect(err.errors.league).to.exists()
@@ -36,7 +52,13 @@ lab.experiment('ChampionshipSchema Validator', () => {
   lab.test('ChampionshipSchema without Season', (done) => {
     const campBR = new Championship({
       'league': '5872467bed1b02314e0882',
-      'championship': 'Campeonato Brasileiro'
+      'championship': 'Campeonato Brasileiro',
+      'fixturesNames': [
+        1,
+        2,
+        3,
+        4
+      ]
     })
     campBR.validate((err) => {
       expect(err.errors.season).to.exists()
@@ -55,7 +77,11 @@ lab.experiment('ChampionshipSchema Validator', () => {
     campBR.validate((err) => {
       expect(err.errors.championship).to.exists()
       expect(err.errors.championship.message).to.be.equal('Path `championship` is required.')
+      expect(err.errors.fixturesNames.message).to.be.equal('Path `fixturesNames` is required.')
       done()
     })
   })
 })
+
+
+/*eslint no-magic-numbers: 0*/
