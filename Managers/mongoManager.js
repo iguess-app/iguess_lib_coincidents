@@ -23,5 +23,7 @@ if (mongo.needConnection) {
     pino.info(`Mongo at ${uri} Connected`)
   });
 
+  mongoose.set('debug', true);
+
   module.exports = db;
 }
