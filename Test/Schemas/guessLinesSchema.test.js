@@ -21,7 +21,7 @@ lab.experiment('GuessLineSchema Validator', () => {
   lab.test('GuessLineSchema userData Wrong', (done) => {
     const userDataWrongSchema = new GuessLine(guessLinesSchemas.userDataWrong)
     userDataWrongSchema.validate((err) => {
-      expect(err.errors.fixtures.message).to.be.equal('Path `fixtures` is required.')
+      expect(err.errors.guessLineActive.message).to.be.equal('Path `guessLineActive` is required.')
       done()
     })
   })

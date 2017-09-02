@@ -11,7 +11,8 @@ lab.experiment('ChampionshipSchema Validator', () => {
     const campBR = new Championship({
       'league': '5872467bed1b02314e08828a',
       'season': '2017',
-      'championship': 'Campeonato Brasileiro'
+      'championship': 'Campeonato Brasileiro',
+      'championshipActive': true
     })
     campBR.validate((err) => {
       expect(err).to.equal(null)
@@ -23,7 +24,8 @@ lab.experiment('ChampionshipSchema Validator', () => {
     const campBR = new Championship({
       'league': '5872467bed1b02314e0882',
       'season': '2017',
-      'championship': 'Campeonato Brasileiro'
+      'championship': 'Campeonato Brasileiro',
+      'championshipActive': true
     })
     campBR.validate((err) => {
       expect(err.errors.league).to.exists()
@@ -39,6 +41,7 @@ lab.experiment('ChampionshipSchema Validator', () => {
     campBR.validate((err) => {
       expect(err.errors.season).to.exists()
       expect(err.errors.season.message).to.be.equal('Path `season` is required.')
+      expect(err.errors.championshipActive.message).to.be.equal('Path `championshipActive` is required.')
       done()
     })
   })
@@ -46,7 +49,8 @@ lab.experiment('ChampionshipSchema Validator', () => {
   lab.test('ChampionshipSchema without championship', (done) => {
     const campBR = new Championship({
       'league': '5872467bed1b02314e0882',
-      'season': '2017'
+      'season': '2017',
+      'championshipActive': true
     })
     campBR.validate((err) => {
       expect(err.errors.championship).to.exists()
