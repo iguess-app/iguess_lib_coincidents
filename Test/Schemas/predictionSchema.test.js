@@ -5,7 +5,6 @@ const expect = Lab.expect
 
 const app = require('../../app')
 const Prediction = app.Schemas.predictionsSchema
-const userErrors = app.Utils.errorUtils.userErrors
 const serverErrors = app.Utils.errorUtils.serverErrors
 
 const predictionSchemas = JSON.parse(fs.readFileSync('Test/Schemas/SchemaFiles/predictionSchemasFile.json'))
