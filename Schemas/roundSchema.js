@@ -79,7 +79,15 @@ const roundSchema = new Schema({
     required: true,
     validate: [validateFixture, String(userErrors.notValidFixture)]
   },
-  games: [gamesSchema]
+  games: [gamesSchema],
+  started: {
+    type: Boolean,
+    required: true
+  },
+  ended: {
+    type: Boolean,
+    required: true
+  }
 }, optionsSchema)
 
 module.exports = db.model('rounds', roundSchema)
