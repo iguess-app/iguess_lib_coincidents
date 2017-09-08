@@ -79,7 +79,10 @@ const roundSchema = new Schema({
     required: true,
     validate: [validateFixture, String(userErrors.notValidFixture)]
   },
-  games: [gamesSchema],
+  games: {
+    type: [gamesSchema],
+    required: true
+  },
   started: {
     type: Boolean,
     required: true
