@@ -6,6 +6,7 @@ const Managers = require('../Managers/export')
 const Utils = require('../Utils/export')
 const validateFixture = require('./subValidations/fixture')
 const championshipFixtureUserKeyValidator = require('./subValidations/championshipFixtureUserKey')
+const championshipEmbeddedSchema = require('./subValidations/championshipEmbeddedSchema')
 const mongo = require('../config').mongo
 
 const Schema = mongoose.Schema
@@ -21,29 +22,6 @@ const optionsSchemaNoIdNoVersion = {
   versionKey: false,
   _id: false
 }
-
-const championshipSchema = new Schema({
-  championshipRef: {
-    type: String,
-    unique: true,
-    required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
-  },
-  league: {
-    type: String,
-    required: true,
-    validate: [mongo.checkObjectId, String(serverErrors.notMongoIdValid)]
-  },
-  season: {
-    type: String,
-    required: true
-  },
-  championship: {
-    type: String,
-    required: true
-  }
-}, optionsSchemaNoIdNoVersion)
-
 
 const fixturesSchema = new Schema({
   fixture: {
@@ -61,7 +39,7 @@ const fixturesSchema = new Schema({
 
 const guessesLinesSchema = new Schema({
   championship: {
-    type: championshipSchema,
+    type: championshipEmbeddedSchema,
     required: true
   },  
   guessLineActive: {
