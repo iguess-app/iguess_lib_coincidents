@@ -18,4 +18,28 @@ lab.experiment('PontuationSchema Validator', () => {
       done()
     })
   })
+
+  lab.test('championshipUserKeyWrongSchema', (done) => {
+    const championshipUserKeyWrongSchema = new Pontuation(pontuationSchemas.championshipUserKeyWrong)
+    championshipUserKeyWrongSchema.validate((err) => {
+      expect(err.errors.championshipUserKey.message).to.be.equal(String(serverErrors.notchampionshipUserKeyValid))
+      done()
+    })
+  })
+
+  lab.test('withoutPontuationByFixtureSchema', (done) => {
+    const withoutPontuationByFixtureSchema = new Pontuation(pontuationSchemas.withoutPontuationByFixture)
+    withoutPontuationByFixtureSchema.validate((err) => {
+      expect(err).to.equal(null)
+      done()
+    })
+  })
+
+  lab.test('without Pontuation By Fixture And Without Total Pontuation', (done) => {
+    const withoutPontuationByFixtureAndWithoutTotalPontuationSchema = new Pontuation(pontuationSchemas.withoutPontuationByFixtureAndWithoutTotalPontuation)
+    withoutPontuationByFixtureAndWithoutTotalPontuationSchema.validate((err) => {
+      expect(err.errors.totalPontuation.message).to.be.equal('Path `totalPontuation` is required.')
+      done()
+    })
+  })
 })
