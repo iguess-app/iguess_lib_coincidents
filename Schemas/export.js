@@ -1,12 +1,13 @@
-const championshipSchema = require('./championshipSchema.js');
-const guessesLeaguesSchema = require('./guessesLeaguesSchema.js');
-const guessesLinesSchema = require('./guessesLinesSchema.js');
-const leagueSchema = require('./leagueSchema.js');
-const profileSchema = require('./profileSchema.js');
-const roundSchema = require('./roundSchema.js');
-const teamSchema = require('./teamSchema.js');
-const notificationsSchema = require('./notificationsSchema.js');
-const predictionsSchema = require('./predictionsSchema.js');
+const championshipSchema = require('./championshipSchema')
+const guessesLeaguesSchema = require('./guessesLeaguesSchema')
+const guessesLinesSchema = require('./guessesLinesSchema')
+const leagueSchema = require('./leagueSchema')
+const profileSchema = require('./profileSchema')
+const roundSchema = require('./roundSchema')
+const teamSchema = require('./teamSchema')
+const notificationsSchema = require('./notificationsSchema')
+const predictionsSchema = require('./predictionsSchema')
+const pontuationsSchema = require('./pontuationsSchema')
 
 module.exports = {
   championshipSchema,
@@ -17,5 +18,6 @@ module.exports = {
   roundSchema,
   teamSchema,
   notificationsSchema,
-  predictionsSchema
+  predictionsSchema,
+  pontuationsSchema
 }
