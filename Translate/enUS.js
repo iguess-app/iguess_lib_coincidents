@@ -23,7 +23,8 @@ const usEnDictionary = {
   guessLineNotFound: 'GuessLine not found',
   sameTeams: 'You cannot repeat the teams that you support',
   alreadyAdd: 'Already add',
-  matchDuplicated: 'You cannot do predictions to the same match at the same request'
+  matchDuplicated: 'You cannot do predictions to the same match at the same request',
+  guessLineInactive: 'This guessLine is not active'
 }
 
 module.exports = usEnDictionary
