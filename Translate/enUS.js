@@ -21,6 +21,7 @@ const usEnDictionary = {
   teamNotFound: 'Team not found',
   championshipNotFound: 'Championship not found',
   guessLineNotFound: 'GuessLine not found',
+  roundNotFound: 'Fixture not found',
   sameTeams: 'You cannot repeat the teams that you support',
   alreadyAdd: 'Already add',
   matchDuplicated: 'You cannot do predictions to the same match at the same request',
