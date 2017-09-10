@@ -3,9 +3,9 @@
 const ObjectId = require('mongoose').Types.ObjectId;
 
 const configObject = {
-  env: process.env.ENV || 'local', 
+  env: process.env.ENV || 'local',
   isEnv: (envSent) => process.env.ENV === envSent,
-  serverPort: Number(process.env.SERVER_PORT) || 8080, 
+  serverPort: Number(process.env.SERVER_PORT) || 8080,
   token: {
     cert: process.env.TOKEN_SEED || 'asdawUGDQ&@ET*@&GUGDASU89yHdausdg231', //Open just before send the project to Prod
     expirationTime: parseInt(process.env.TOKEN_EXPIRATION_TIME) || 3600 //1hour (in Seconds)
@@ -40,4 +40,3 @@ const configObject = {
 const businessRules = require('./businessRules')
 
 module.exports = Object.assign({}, configObject, businessRules)
-console.log(Object.assign({}, configObject, businessRules))
