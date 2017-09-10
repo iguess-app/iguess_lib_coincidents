@@ -4,7 +4,7 @@ const redis = require('redis');
 const md5 = require('md5');
 
 const pino = require('./logManager')
-const config = require('../config');
+const config = require('../config/config');
 
 if (config.redis.needConnection && !config.isEnv('test')) {
 

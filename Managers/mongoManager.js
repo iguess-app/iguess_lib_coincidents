@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const promise = require('bluebird');
 const pino = require('./logManager')
 
-const config = require('../config');
+const config = require('../config/config');
 const mongo = config.mongo;
 
 if (mongo.needConnection) {

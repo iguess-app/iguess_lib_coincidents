@@ -34,42 +34,10 @@ const configObject = {
     holiUrl: process.env.HOLI_URL || 'http://127.0.0.1:9001',
     personalUrl: process.env.PERSONAL_URL || 'http://127.0.0.1:9002',
     guessUrl: process.env.GUESS_URL || 'http://127.0.0.1:9003'
-  },
-  profile: {
-    maxTeamToAppreciateAllowed: 2,
-    userNameMaxSize: 20,
-    nameMaxSize: 20,
-    descriptionMaxSize: 100
-  },
-  guess: {
-    minPossibleScore: 0
-  },
-  holi: {
-    minRoundRobinFixtures: 1,
-    maxRoundRobinFixtures: 50,
-    knockoutTournamentRoundNames: [
-      'Final',
-      'SemiFinals',
-      'Quarterfinals',
-      
-      '8th-finals',
-      'Round of 16',
-      
-      'Round of 32',
-      'Round of 64',
-      'Round of 128',
-      '4th round',
-      '3rd round',
-      '2nd round',
-      '1st round'
-    ]
-  },
-  notificationTypes: {
-    friendShipRequest: 1,
-    guessLeagueRequest: 2,
-    nowFriendsResponse: 3,
-    nowGuessLeagueAdded: 4
   }
 }
 
-module.exports = configObject
+const businessRules = require('./businessRules')
+
+module.exports = Object.assign({}, configObject, businessRules)
+console.log(Object.assign({}, configObject, businessRules))

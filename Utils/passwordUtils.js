@@ -3,7 +3,7 @@
 const bcrypt = require('bcrypt');
 
 const errorUtils = require('./errorUtils.js');
-const config = require('../config');
+const config = require('../config/config');
 const userErrors = errorUtils.userErrors;
 
 const checkPasswordRestrict = (password) => {
