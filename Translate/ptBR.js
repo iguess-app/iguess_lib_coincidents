@@ -26,7 +26,8 @@ const ptBrDictionary = {
   alreadyAdd: 'Já adicionado',
   matchDuplicated: 'Você não pode dar palpites na mesma partida numa única requisição',
   guessLineInactive: 'Essa guessLine não está ativa',
-  userNotAddedAtGuessLine: 'Você não está na lista dessa GuessLine'
+  userNotAddedAtGuessLine: 'Você não está na lista dessa GuessLine',
+  anyGuessLineFound: 'Sem guessLines'
 }
 
 module.exports = ptBrDictionary
