@@ -27,7 +27,8 @@ const usEnDictionary = {
   matchDuplicated: 'You cannot do predictions to the same match at the same request',
   guessLineInactive: 'This guessLine is not active',
   userNotAddedAtGuessLine: 'You are not at guessline\'s list',
-  anyGuessLineFound: 'No guessLines'
+  anyGuessLineFound: 'No guessLines',
+  anyGuessLeagueFound: 'No guessLeagues'
 }
 
 module.exports = usEnDictionary
