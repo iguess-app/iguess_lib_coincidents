@@ -28,7 +28,8 @@ const usEnDictionary = {
   guessLineInactive: 'This guessLine is not active',
   userNotAddedAtGuessLine: 'You are not at guessline\'s list',
   anyGuessLineFound: 'No guessLines',
-  anyGuessLeagueFound: 'No guessLeagues'
+  anyGuessLeagueFound: 'No guessLeagues',
+  admNotQuitGle: 'You are a administrator. If you want to leave the GuessLeague, you need to quit administration first'
 }
 
 module.exports = usEnDictionary
