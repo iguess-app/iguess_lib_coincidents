@@ -29,7 +29,8 @@ const ptBrDictionary = {
   userNotAddedAtGuessLine: 'Você não está na lista dessa GuessLine',
   anyGuessLineFound: 'Sem guessLines',
   anyGuessLeagueFound: 'Sem guessLeagues',
-  admNotQuitGle: 'Você é um administrador. Para sair da GuessLeague é necessário que deixe de ser administrador antes.'
+  admNotQuitGle: 'Você é um administrador. Para sair da GuessLeague é necessário que deixe de ser administrador antes.',
+  notAtGuessLeague: 'Você não esta na GuessLeague'
 }
 
 module.exports = ptBrDictionary
