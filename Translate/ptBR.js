@@ -32,6 +32,7 @@ const ptBrDictionary = {
   admNotQuitGle: 'Você é um administrador. Para sair da GuessLeague é necessário que deixe de ser administrador antes.',
   alreadyAdm: 'Você já é administrador',
   youCantBeTheUserAndUserAdm: 'A userRef deve ser diferente da userRefToAdm',
+  tooFewAdms: 'Você não pode sair da GuessLeague. Antes disso precisa adicionar ao menos uma pessoa como administrador',
   notAtGuessLeague: 'Você não esta na GuessLeague'
 }
 
