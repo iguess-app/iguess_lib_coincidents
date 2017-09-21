@@ -31,6 +31,7 @@ const usEnDictionary = {
   anyGuessLeagueFound: 'No guessLeagues',
   admNotQuitGle: 'You are a administrator. If you want to leave the GuessLeague, you need to quit administration first',
   alreadyAdm: 'You are administrator already',
+  youCantBeTheUserAndUserAdm: 'The userRef must to be different from userRefToAdm',
   notAtGuessLeague: 'You are not at GuessLeague'
 }
 
