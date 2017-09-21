@@ -30,6 +30,7 @@ const ptBrDictionary = {
   anyGuessLineFound: 'Sem guessLines',
   anyGuessLeagueFound: 'Sem guessLeagues',
   admNotQuitGle: 'Você é um administrador. Para sair da GuessLeague é necessário que deixe de ser administrador antes.',
+  alreadyAdm: 'Você já é administrador',
   notAtGuessLeague: 'Você não esta na GuessLeague'
 }
 
