@@ -27,12 +27,13 @@ const usEnDictionary = {
   matchDuplicated: 'You cannot do predictions to the same match at the same request',
   guessLineInactive: 'This guessLine is not active',
   userNotAddedAtGuessLine: 'You are not at guessline\'s list',
+  notAtGuessLine: 'Not at guessLine',
   anyGuessLineFound: 'No guessLines',
   anyGuessLeagueFound: 'No guessLeagues',
   admNotQuitGle: 'You are a administrator. If you want to leave the GuessLeague, you need to quit administration first',
   alreadyAdm: 'You are administrator already',
   youCantBeTheUserAndUserAdm: 'The userRef must to be different from userRefToAdm',
-  tooFewAdms: 'You cannot leave the GuessLeague. You at least need to add someone to administration before',
+  tooFewAdms: 'You cannot leave the GuessLeague. You, at least, need to add someone to administration before',
   notAtGuessLeague: 'You are not at GuessLeague'
 }
 
