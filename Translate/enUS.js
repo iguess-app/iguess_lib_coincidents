@@ -34,7 +34,8 @@ const usEnDictionary = {
   alreadyAdm: 'You are administrator already',
   youCantBeTheUserAndUserAdm: 'The userRef must to be different from userRefToAdm',
   tooFewAdms: 'You cannot leave the GuessLeague. You, at least, need to add someone to administration before',
-  notAtGuessLeague: 'You are not at GuessLeague'
+  notAtGuessLeague: 'You are not at GuessLeague',
+  someWrongAtInvite: 'Something wrong happen at the invite'
 }
 
 module.exports = usEnDictionary

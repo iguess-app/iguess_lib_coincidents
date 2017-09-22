@@ -34,7 +34,8 @@ const ptBrDictionary = {
   alreadyAdm: 'Você já é administrador',
   youCantBeTheUserAndUserAdm: 'A userRef deve ser diferente da userRefToAdm',
   tooFewAdms: 'Você não pode sair da GuessLeague. Antes disso precisa adicionar ao menos uma pessoa como administrador',
-  notAtGuessLeague: 'Você não esta na GuessLeague'
+  notAtGuessLeague: 'Você não esta na GuessLeague',
+  someWrongAtInvite: 'Algo de errado aconteceu no envio do convite'
 }
 
 module.exports = ptBrDictionary
