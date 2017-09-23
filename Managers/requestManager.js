@@ -55,13 +55,14 @@ const requestManager = {
     return requestPromise(options)
   },
 
-  get: (uri, reqHeaders, querystring) => {
+  get: (url, reqHeaders, querystring) => {
     const headers = {}
+    let uri = url
     if (reqHeaders) {
       headers.language = reqHeaders.language
     }
     if (querystring) {
-      _buildQueryString(querystring)
+      uri = url + _buildQueryString(querystring)
     }
 
     const options = {
