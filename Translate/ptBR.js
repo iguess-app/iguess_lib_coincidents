@@ -26,6 +26,7 @@ const ptBrDictionary = {
   sameTeams: 'Vocâ não pode repetir as equipes que você torce',
   alreadyAdd: 'Já adicionado',
   matchDuplicated: 'Você não pode dar palpites na mesma partida numa única requisição',
+  userRefDuplicated: 'Você não pode convidar a mesma pessoa duas vezes',
   guessLineInactive: 'Essa guessLine não está ativa',
   userNotAddedAtGuessLine: 'Você não está na lista dessa GuessLine',
   notAtGuessLine: 'Não está adicionado na guessLine',

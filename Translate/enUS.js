@@ -26,6 +26,7 @@ const usEnDictionary = {
   sameTeams: 'You cannot repeat the teams that you support',
   alreadyAdd: 'Already add',
   matchDuplicated: 'You cannot do predictions to the same match at the same request',
+  userRefDuplicated: 'You cannot invited the same user twice',
   guessLineInactive: 'This guessLine is not active',
   userNotAddedAtGuessLine: 'You are not at guessline\'s list',
   notAtGuessLine: 'Not at guessLine',
