@@ -15,6 +15,7 @@ const ptBrDictionary = {
   friendshipRequest: '{{userName}} quer começar uma amizade',
   guessLeagueRequest: '{{userName}} esta te convidando para participar da GuessLeague {{guessLeagueName}}',
   userNotFound: '{{userName}} não encontrado',
+  userNotFoundImpersonal: 'Usuário não encontrado',
   notFriends: 'Os usuários não são amigos',
   notificationExists: 'Notificação já enviada',
   alreadyFriends: 'Você já são amigos',

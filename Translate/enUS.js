@@ -15,6 +15,7 @@ const usEnDictionary = {
   friendshipRequest: '{{userName}} wants to be your friend',
   guessLeagueRequest: '{{userName}} is inviting you to participate of the {{guessLeagueName}} GuessLeague',
   userNotFound: '{{userName}} not found',
+  userNotFoundImpersonal: 'User not found',
   notFriends: 'The users are not friend',
   notificationExists: 'Notification already sent',
   alreadyFriends: 'You are already friends',
