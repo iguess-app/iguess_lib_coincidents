@@ -12,14 +12,14 @@ const configObject = {
   },
   salt: process.env.SALT || '$2a$10$5PMJupkGGUJ22DxQC4UoUe', //Open just before send the project to Prod
   redis: {
-    needConnection: parseInt(process.env.REDIS_CONNECTION) || 1,
+    needConnection: process.env.REDIS_CONNECTION ? parseInt(process.env.REDIS_CONNECTION) : 1,
     host: process.env.REDIS_HOST || '',
     port: process.env.REDIS_PORT || 6379,
     key: process.env.REDIS_KEY || '',
     defaultExpireTime: parseInt(process.env.REDIS_EXPIRE_TIME) || 60 //1Minute (in Seconds)
   },
   mongo: {
-    needConnection: parseInt(process.env.MONGO_CONNECTION) || 1,
+    needConnection: process.env.MONGO_CONNECTION ? parseInt(process.env.MONGO_CONNECTION) : 1,
     user: process.env.MONGO_USER || '',
     password: process.env.MONGO_KEY || '',
     address: process.env.MONGO_ADDRESS || '',
