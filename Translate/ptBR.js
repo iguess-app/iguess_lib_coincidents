@@ -18,6 +18,7 @@ const ptBrDictionary = {
   userNotFoundImpersonal: 'Usuário não encontrado',
   notFriends: 'Os usuários não são amigos',
   notificationExists: 'Notificação já enviada',
+  notificationNotFound: 'Notificação não encontrada',
   alreadyFriends: 'Você já são amigos',
   teamNotFound: 'Equipe não encontrada',
   championshipNotFound: 'Campeonato não encontrado',

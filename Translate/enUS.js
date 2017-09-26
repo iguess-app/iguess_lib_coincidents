@@ -18,6 +18,7 @@ const usEnDictionary = {
   userNotFoundImpersonal: 'User not found',
   notFriends: 'The users are not friend',
   notificationExists: 'Notification already sent',
+  notificationNotFound: 'Notification not found',
   alreadyFriends: 'You are already friends',
   teamNotFound: 'Team not found',
   championshipNotFound: 'Championship not found',
