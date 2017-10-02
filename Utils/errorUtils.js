@@ -19,7 +19,7 @@ const userErrors = Object.freeze({
 
 const serverErrors = Object.freeze({
   notMongoIdValid: 30000,
-  notchampionshipFixtureUserKeyValid: 30001,
+  notchampionshipMatchUserKeyValid: 30001,
   notchampionshipUserKeyValid: 30002
 })
 
