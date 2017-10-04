@@ -7,23 +7,31 @@ const pino = require('./logManager')
 const config = require('../config/config');
 const mongo = config.mongo;
 
-if (mongo.needConnection) {
-  let uri = `mongodb://${mongo.host}:${mongo.port}/${mongo.database}`;
+const connect = (uri = `mongodb://${mongo.host}:${mongo.port}/${mongo.database}`) => {
 
-  if (mongo.atlas) {
-    uri = `mongodb://${mongo.user}:${mongo.password}@${mongo.address}/${mongo.database}?ssl=true&replicaSet=ZeroCluster-shard-0&authSource=admin`;
+  if (mongo.needConnection) {
+
+    if (mongo.atlas) {
+      uri = `mongodb://${mongo.user}:${mongo.password}@${mongo.address}/${mongo.database}?ssl=true&replicaSet=ZeroCluster-shard-0&authSource=admin`;
+    }
+
+    const options = {
+      promiseLibrary: promise
+    };
+    const db = mongoose.createConnection(uri, options);
+
+    db.on('open', () => {
+      pino.info(`Mongo at ${uri} Connected`)
+    });
+
+    mongoose.set('debug', true);
+
+    return db
   }
 
-  const options = {
-    promiseLibrary: promise
-  };
-  const db = mongoose.createConnection(uri, options);
-
-  db.on('open', () => {
-    pino.info(`Mongo at ${uri} Connected`)
-  });
-
-  mongoose.set('debug', true);
-
-  module.exports = db;
+  return false
 }
+
+module.exports = connect
+
+/*eslint no-param-reassign: 0 */
