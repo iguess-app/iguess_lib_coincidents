@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose')
 const promise = require('bluebird')
-const pino = require('./logManager')
+const log = require('./logManager')
 
 const config = require('../config/config')
 const mongo = config.mongo
@@ -20,10 +20,12 @@ const connect = (uri = `mongodb://${mongo.host}:${mongo.port}/${mongo.database}`
   const db = mongoose.createConnection(uri, options)
 
   db.on('open', () => {
-    pino.info(`Mongo at ${uri} Connected`)
+    log.info(`Mongo at ${uri} Connected`)
   })
 
-  mongoose.set('debug', true)
+  if (log.isLoggableEnv()) {
+    mongoose.set('debug', true)
+  }
 
   return db
 }
