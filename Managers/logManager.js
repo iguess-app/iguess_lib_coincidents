@@ -8,7 +8,7 @@ let log = {}
 const pretty = pino.pretty()
 pretty.pipe(process.stdout)
 
-const isLoggableEnv = () => env === 'dev' || env === 'homolog' || env === 'beta'
+const isLoggableEnv = () => env === 'dev' || env === 'homolog' || env === 'local'
 
 if (isLoggableEnv()) {
   log = pino({
