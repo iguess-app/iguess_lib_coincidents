@@ -16,7 +16,8 @@ const configObject = {
     host: process.env.REDIS_HOST || '',
     port: process.env.REDIS_PORT || 6379,
     key: process.env.REDIS_KEY || '',
-    defaultExpireTime: parseInt(process.env.REDIS_EXPIRE_TIME) || 60 //1Minute (in Seconds)
+    defaultExpireTime: parseInt(process.env.REDIS_EXPIRE_TIME) || 60, //1Minute (in Seconds),
+    sessionTime: 2628e+6 //1 month
   },
   mongo: {
     needConnection: process.env.MONGO_CONNECTION ? parseInt(process.env.MONGO_CONNECTION) : 1,
