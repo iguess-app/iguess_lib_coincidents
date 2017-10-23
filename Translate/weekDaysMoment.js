@@ -2,15 +2,10 @@
 
 const moment = require('moment')
 
-const _getArrayofDays = {
-  'pt-br': ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
-  'en-us': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-}
+moment.updateLocale('pt-br', {
+  weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+})
 
-const getWeekDay = (language) => {
-  moment.updateLocale(language, {
-    weekdays: _getArrayofDays[language]
-  })
-}
-
-module.exports = getWeekDay
+moment.updateLocale('en-us', {
+  weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+})
