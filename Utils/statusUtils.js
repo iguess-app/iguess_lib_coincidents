@@ -1,7 +1,8 @@
 const statusCode = {
   ok: 200,
   created: 201,
-  notFound: 401,
+  unauthorized: 401,
+  notFound: 404,
   forbidden: 403,
   notAcceptable: 406
 }
