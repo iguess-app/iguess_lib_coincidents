@@ -39,7 +39,8 @@ const usEnDictionary = {
   tooFewAdms: 'You cannot leave the GuessLeague. You, at least, need to add someone to administration before',
   notAtGuessLeague: 'You are not at GuessLeague',
   someWrongAtInvite: 'Something wrong happened at the invite',
-  notFriendsAtInvite: 'There are user not friends at inviteads list'
+  notFriendsAtInvite: 'There are user not friends at inviteads list',
+  matchNotFound: 'Match not found'
 }
 
 module.exports = usEnDictionary
