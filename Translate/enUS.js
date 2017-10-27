@@ -40,7 +40,9 @@ const usEnDictionary = {
   notAtGuessLeague: 'You are not at GuessLeague',
   someWrongAtInvite: 'Something wrong happened at the invite',
   notFriendsAtInvite: 'There are user not friends at inviteads list',
-  matchNotFound: 'Match not found'
+  matchNotFound: 'Match not found',
+  someMatchesoneHourOff: 'One of more prediction was not accepted, the matche(s) gone happen less than one hour.',
+  allMatchesoneHourOff: 'No prediction was accepted, the matche(s) gone happen less than one hour.'
 }
 
 module.exports = usEnDictionary

@@ -40,7 +40,9 @@ const ptBrDictionary = {
   notAtGuessLeague: 'Você não esta na GuessLeague',
   someWrongAtInvite: 'Algo de errado aconteceu no envio do convite',
   notFriendsAtInvite: 'Existem usuários que não são amigos na lista de convidados',
-  matchNotFound: 'Jogo não encontrado'
+  matchNotFound: 'Jogo não encontrado',
+  someMatchesoneHourOff: 'Um ou mais palpite não foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
+  allMatchesoneHourOff: 'Nenhum palpite foi aceito, o(s) jogo(s) será(ão) em menos de um hora.'
 }
 
 module.exports = ptBrDictionary
