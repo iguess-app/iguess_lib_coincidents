@@ -12,16 +12,20 @@ const clientOptions = {
     if (options.error) {
       pino.error(options.error.message);
     }
+    connect()
   }
 };
 
 const redisClient = redis.createClient(config.redis.port, config.redis.host, clientOptions);
 
-redisClient.on('connect', () => {
-  if (redisClient.connected === true) {
-    pino.info(`Redis at ${redisClient.address} Connected`)
-  }
-});
+const connect = () => {
+  redisClient.on('connect', () => {
+    if (redisClient.connected === true) {
+      pino.info(`Redis at ${redisClient.address} Connected`)
+    }
+  })
+}
+connect()
 
 redisClient.on('error', (err) => {
   pino.error(err);
