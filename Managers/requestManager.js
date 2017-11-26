@@ -7,11 +7,19 @@ const log = require('../Managers/logManager')
 const env = require('../config/config').env
 const _checkIfEnvIsLoggable = () => env === 'local' || env === 'development' || env === 'homolog' || env === 'staging'
 
-const _logBeforeRequest = (options) => {
+const _log = (response, request) => {
   if (_checkIfEnvIsLoggable()) {
-    log.info(options)
+    log.info({request, response})
   }
 }
+
+const _doTheRequest = (options) => 
+  requestPromise(options)
+    .then((response) => {
+      _log(response, options)
+
+      return response
+    })
 
 const requestManager = {
   post: (uri, reqHeaders, body) => {
@@ -27,9 +35,8 @@ const requestManager = {
       body,
       json: true
     }
-    _logBeforeRequest(options)
 
-    return requestPromise(options)
+    return _doTheRequest(options)
   },
 
   put: (uri, reqHeaders, body) => {
@@ -45,9 +52,8 @@ const requestManager = {
       body,
       json: true
     }
-    _logBeforeRequest(options)
 
-    return requestPromise(options)
+    return _doTheRequest(options)
   },
 
   patch: (uri, reqHeaders, body) => {
@@ -63,9 +69,8 @@ const requestManager = {
       body,
       json: true
     }
-    _logBeforeRequest(options)
 
-    return requestPromise(options)
+    return _doTheRequest(options)
   },
 
   get: (url, reqHeaders, querystring) => {
@@ -84,9 +89,8 @@ const requestManager = {
       headers,
       json: true
     }
-    _logBeforeRequest(options)
 
-    return requestPromise(options)
+    return _doTheRequest(options)
   }
 
 }
@@ -99,14 +103,12 @@ const _buildQueryString = (obj) => {
     const qsObj = {}
     qsObj[key] = values[index]
     const partialQS = qs.stringify(qsObj)
-
     if (acumulator.length) {
       return `${acumulator}&${partialQS}`
     }
 
     return acumulator + partialQS
   }, '?')
-
 
   return qsBuilded
 }
