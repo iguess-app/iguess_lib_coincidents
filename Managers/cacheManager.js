@@ -65,7 +65,7 @@ const CacheManager = {
       })
     })
   },
-  set: (key, value, expireTime) => {
+  set: (key, value, expireTime = config.redis.defaultExpireTime) => {
     if (!isConnected(redisClient)) {
       return null
     }
@@ -73,10 +73,9 @@ const CacheManager = {
       throw new Error('key and value are mandatory fields to set on Cache.')
     }
 
-    const expire = expireTime || config.redis.defaultExpireTime
     const md5Key = _generateKey(key)
 
-    return redisClient.setex(md5Key, expire, JSON.stringify(value))
+    return redisClient.setex(md5Key, expireTime, JSON.stringify(value))
   }
 };
 
