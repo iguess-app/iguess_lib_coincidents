@@ -26,6 +26,7 @@ const requestManager = {
     const headers = {}
     if (reqHeaders) {
       headers.language = reqHeaders.language
+      reqHeaders.token ? headers.token = reqHeaders.token : headers.token
     }
 
     const options = {
@@ -43,6 +44,7 @@ const requestManager = {
     const headers = {}
     if (reqHeaders) {
       headers.language = reqHeaders.language
+      reqHeaders.token ? headers.token = reqHeaders.token : headers.token
     }
 
     const options = {
@@ -60,6 +62,7 @@ const requestManager = {
     const headers = {}
     if (reqHeaders) {
       headers.language = reqHeaders.language
+      reqHeaders.token ? headers.token = reqHeaders.token : headers.token
     }
 
     const options = {
@@ -78,6 +81,7 @@ const requestManager = {
     let uri = url
     if (reqHeaders) {
       headers.language = reqHeaders.language
+      reqHeaders.token ? headers.token = reqHeaders.token : headers.token
     }
     if (querystring) {
       uri = url + _buildQueryString(querystring)
