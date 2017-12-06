@@ -41,7 +41,12 @@ const businessRules = {
     HOME_WINNER: 'HOME',
     AWAY_WINNER: 'AWAY',
     NO_WINNER: 'DRAW'
-  }
+  },
+  associations: [
+    'UEFA',
+    'CONMEBOL',
+    'CONCACAF'
+  ]
 }
 
 module.exports = businessRules
