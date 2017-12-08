@@ -39,6 +39,7 @@ const ptBrDictionary = {
   alreadyAdm: 'Você já é capitão',
   youCantBeTheUserAndUserAdm: 'A userRef deve ser diferente da userRefToAdm',
   tooFewAdms: 'Você não pode sair da GuessLeague. Antes disso precisa adicionar ao menos uma pessoa como capitão',
+  guessLeagueNotFound: 'GuessLeague não encontrada',
   notAtGuessLeague: 'Você não esta na GuessLeague',
   someWrongAtInvite: 'Algo de errado aconteceu no envio do convite',
   notFriendsAtInvite: 'Existem usuários que não são amigos na lista de convidados',
