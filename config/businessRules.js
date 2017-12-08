@@ -7,7 +7,7 @@ const businessRules = {
   },
   guess: {
     minPossibleScore: 0,
-    maxGuessLeagueGroupNameSize: 20
+    maxGuessLeagueGroupNameSize: 30
   },
   holi: {
     minRoundRobinFixtures: 1,
