@@ -22,6 +22,7 @@ const usEnDictionary = {
   notificationNotFound: 'Notification not found',
   alreadyFriends: 'You are already friends',
   teamNotFound: 'Team not found',
+  noTeamForThisLeague: 'No team was found for this league',
   championshipNotFound: 'Championship not found',
   guessLineNotFound: 'GuessLine not found',
   roundNotFound: 'Fixture not found',

@@ -22,6 +22,7 @@ const ptBrDictionary = {
   notificationNotFound: 'Notificação não encontrada',
   alreadyFriends: 'Você já são amigos',
   teamNotFound: 'Equipe não encontrada',
+  noTeamForThisLeague: 'Nenhuma equipe foi encontrada para essa liga',
   championshipNotFound: 'Campeonato não encontrado',
   guessLineNotFound: 'GuessLine não encontrada',
   roundNotFound: 'Rodada não encontrada',
