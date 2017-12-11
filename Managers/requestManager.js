@@ -24,7 +24,7 @@ const _doTheRequest = (options) =>
 
 const requestManager = {
   post: (uri, reqHeaders, body) => {
-    const headers = _itIsMicroserviceReq(url) ? _buildDefaultHeader(reqHeaders) : {}
+    const headers = _itIsMicroserviceReq(uri) ? _buildDefaultHeader(reqHeaders) : {}
 
     const options = {
       method: 'POST',
@@ -38,7 +38,7 @@ const requestManager = {
   },
 
   put: (uri, reqHeaders, body) => {
-    const headers = _itIsMicroserviceReq(url) ? _buildDefaultHeader(reqHeaders) : {}
+    const headers = _itIsMicroserviceReq(uri) ? _buildDefaultHeader(reqHeaders) : {}
 
     const options = {
       method: 'PUT',
@@ -52,7 +52,7 @@ const requestManager = {
   },
 
   patch: (uri, reqHeaders, body) => {
-    const headers = _itIsMicroserviceReq(url) ? _buildDefaultHeader(reqHeaders) : {}
+    const headers = _itIsMicroserviceReq(uri) ? _buildDefaultHeader(reqHeaders) : {}
 
     const options = {
       method: 'PATCH',
