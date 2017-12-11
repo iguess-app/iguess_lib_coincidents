@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 const businessRules = {
   profile: {
     maxTeamToAppreciateAllowed: 2,
@@ -49,10 +47,7 @@ const businessRules = {
     'UEFA',
     'CONMEBOL',
     'CONCACAF'
-  ],
-  apiFootball: {
-    intervalBetweenRequests: parseInt(process.env.INTERVAL_BETWEEN_REQUESTS_APIFOOTBAL) || 15000 //15 seconds (in Seconds)
-  }
+  ]
 }
 
 module.exports = businessRules

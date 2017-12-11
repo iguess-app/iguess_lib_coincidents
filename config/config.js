@@ -39,7 +39,8 @@ const configObject = {
   },
   apiFootball: {
     APIKey: process.env.APIFOOTBAL_API_KEY || '6f60688e08d2657cb247eaa636b1604425ddd76ee4bacfd007f909442ea06404',
-    url: process.env.APIFOOTBAL_URL || 'http://apifootball.com/api'
+    url: process.env.APIFOOTBAL_URL || 'http://apifootball.com/api',
+    intervalBetweenRequests: parseInt(process.env.INTERVAL_BETWEEN_REQUESTS_APIFOOTBAL) || 15000 //15 seconds (in Seconds)
   }
 }
 
