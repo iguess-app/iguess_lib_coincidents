@@ -33,9 +33,8 @@ const configObject = {
     checkObjectId: (id) => ObjectId.isValid(id)
   },
   apis: {
-    holiUrl: process.env.HOLI_URL || 'http://127.0.0.1:9001',
-    personalUrl: process.env.PERSONAL_URL || 'http://127.0.0.1:9002',
-    guessUrl: process.env.GUESS_URL || 'http://127.0.0.1:9003'
+    personalUrl: process.env.PERSONAL_URL || 'http://localhost:9002',
+    guessUrl: process.env.GUESS_URL || 'http://localhost:9003'
   },
   apiFootball: {
     APIKey: process.env.APIFOOTBAL_API_KEY || '6f60688e08d2657cb247eaa636b1604425ddd76ee4bacfd007f909442ea06404',
