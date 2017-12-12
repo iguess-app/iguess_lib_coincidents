@@ -65,6 +65,20 @@ const requestManager = {
     return _doTheRequest(options)
   },
 
+  delete: (uri, reqHeaders, body) => {
+    const headers = _itIsMicroserviceReq(uri) ? _buildDefaultHeader(reqHeaders) : {}
+
+    const options = {
+      method: 'DELETE',
+      uri,
+      headers,
+      body,
+      json: true
+    }
+
+    return _doTheRequest(options)
+  },
+
   get: (url, reqHeaders, querystring) => {
     const headers = _itIsMicroserviceReq(url) ? _buildDefaultHeader(reqHeaders) : {}
     let uri = url
