@@ -16,10 +16,8 @@ const businessRules = {
       'Final',
       'SemiFinals',
       'Quarterfinals',
-      
       '8th-finals',
       'Round of 16',
-      
       'Round of 32',
       'Round of 64',
       'Round of 128',

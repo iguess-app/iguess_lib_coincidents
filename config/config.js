@@ -7,10 +7,10 @@ const configObject = {
   isEnv: (envSent) => process.env.ENV === envSent,
   serverPort: Number(process.env.SERVER_PORT) || 8080,
   token: {
-    cert: process.env.TOKEN_SEED || 'asdawUGDQ&@ET*@&GUGDASU89yHdausdg231', //Open just before send the project to Prod
+    cert: process.env.TOKEN_SEED,
     expirationTime: parseInt(process.env.TOKEN_EXPIRATION_TIME) || 3600 //1hour (in Seconds)
   },
-  salt: process.env.SALT || '$2a$10$5PMJupkGGUJ22DxQC4UoUe', //Open just before send the project to Prod
+  salt: process.env.SALT,
   redis: {
     needConnection: process.env.REDIS_CONNECTION ? parseInt(process.env.REDIS_CONNECTION) : 1,
     host: process.env.REDIS_HOST || '',
@@ -37,7 +37,7 @@ const configObject = {
     guessUrl: process.env.GUESS_URL || 'http://localhost:9003'
   },
   apiFootball: {
-    APIKey: process.env.APIFOOTBAL_API_KEY || '6f60688e08d2657cb247eaa636b1604425ddd76ee4bacfd007f909442ea06404',
+    APIKey: process.env.APIFOOTBAL_API_KEY,
     url: process.env.APIFOOTBAL_URL || 'http://apifootball.com/api',
     intervalBetweenRequests: parseInt(process.env.INTERVAL_BETWEEN_REQUESTS_APIFOOTBAL) || 15000 //15 seconds (in Seconds)
   }

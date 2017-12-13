@@ -29,6 +29,7 @@ connect()
 
 redisClient.on('error', (err) => {
   pino.error(err);
+  connect()
 
   return true;
 });
@@ -36,7 +37,8 @@ redisClient.on('error', (err) => {
 const isConnected = () => {
   if (!redisClient.connected) {
     pino.error(`Redis ${redisClient.address} not connected`)
-
+    connect()
+    
     return false
   }
 
