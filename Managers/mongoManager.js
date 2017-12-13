@@ -10,7 +10,7 @@ const mongo = config.mongo
 const connect = (uri = `mongodb://${mongo.host}:${mongo.port}/${mongo.database}`) => {
 
   if (mongo.atlas) {
-    uri = `mongodb://${mongo.user}:${mongo.password}@${mongo.address}/${mongo.database}?ssl=true&replicaSet=ZeroCluster-shard-0&authSource=admin`
+    uri = mongo.address
   }
 
   const options = {
