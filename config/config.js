@@ -21,9 +21,11 @@ const configObject = {
   },
   mongo: {
     needConnection: process.env.MONGO_CONNECTION ? parseInt(process.env.MONGO_CONNECTION) : 1,
+    personalAddress: process.env.MONGO_PERSONALDB_ADDRESS || '',
+    holiAddress: process.env.MONGO_HOLIDB_ADDRESS || '',
+    guessAddress: process.env.MONGO_GUESSDB_ADDRESS || '',
     user: process.env.MONGO_USER || '',
     password: process.env.MONGO_KEY || '',
-    address: process.env.MONGO_ADDRESS || '',
     database: process.env.MONGO_DB || 'iguess',
     holiDB: process.env.HOLI_DB || 'holiDB',
     atlas: process.env.MONGO_ATLAS ? parseInt(process.env.MONGO_ATLAS) : 0,

@@ -9,11 +9,7 @@ const mongo = config.mongo
 
 const connect = (uri = `mongodb://${mongo.host}:${mongo.port}/${mongo.database}`) => {
 
-  if (mongo.atlas) {
-    uri = mongo.address
-  }
-
-  const options = {
+const options = {
     promiseLibrary: promise
   }
 
