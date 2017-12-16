@@ -6,7 +6,7 @@ const qs = require('querystring')
 const log = require('../Managers/logManager')
 const config = require('../config/config')
 const env = config.env
-const _checkIfEnvIsLoggable = () => env === 'local' || env === 'development' || env === 'homolog' || env === 'staging'
+const _checkIfEnvIsLoggable = () => env === 'local' || env === 'dev' || env === 'homolog' || env === 'staging'
 
 const _log = (response, request) => {
   if (_checkIfEnvIsLoggable()) {
