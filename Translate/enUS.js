@@ -45,7 +45,8 @@ const usEnDictionary = {
   notFriendsAtInvite: 'There are user not friends at inviteads list',
   matchNotFound: 'Match not found',
   someMatchesoneHourOff: 'One of more prediction was not accepted, the matche(s) gone happen less than one hour.',
-  allMatchesoneHourOff: 'No prediction was accepted, the matche(s) gone happen less than one hour.'
+  allMatchesoneHourOff: 'No prediction was accepted, the matche(s) gone happen less than one hour.',
+  noMoreGuessLineAllowed: 'You cannot add guessLines for now.'
 }
 
 module.exports = usEnDictionary

@@ -45,7 +45,8 @@ const ptBrDictionary = {
   notFriendsAtInvite: 'Existem usuários que não são amigos na lista de convidados',
   matchNotFound: 'Jogo não encontrado',
   someMatchesoneHourOff: 'Um ou mais palpite não foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
-  allMatchesoneHourOff: 'Nenhum palpite foi aceito, o(s) jogo(s) será(ão) em menos de um hora.'
+  allMatchesoneHourOff: 'Nenhum palpite foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
+  noMoreGuessLineAllowed: 'Você não pode adicionar mais guessLines'
 }
 
 module.exports = ptBrDictionary
