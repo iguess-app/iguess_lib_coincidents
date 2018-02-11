@@ -46,7 +46,8 @@ const usEnDictionary = {
   matchNotFound: 'Match not found',
   someMatchesoneHourOff: 'One of more prediction was not accepted, the matche(s) gone happen less than one hour.',
   allMatchesoneHourOff: 'No prediction was accepted, the matche(s) gone happen less than one hour.',
-  noMoreGuessLineAllowed: 'You cannot add guessLines for now.'
+  noMoreGuessLineAllowed: 'You cannot add guessLines for now.',
+  noMoreGuessLeagueAllowed: 'You cannot participate to another guessLeague.'
 }
 
 module.exports = usEnDictionary
