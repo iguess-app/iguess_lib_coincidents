@@ -5,6 +5,7 @@ const ObjectId = require('mongoose').Types.ObjectId;
 const configObject = {
   env: process.env.ENV || 'local',
   isEnv: (envSent) => process.env.ENV === envSent,
+  isProd: () => process.env.ENV === 'production',
   serverPort: Number(process.env.SERVER_PORT) || 8080,
   token: {
     cert: process.env.TOKEN_SEED,
