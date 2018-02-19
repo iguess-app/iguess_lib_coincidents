@@ -47,7 +47,8 @@ const ptBrDictionary = {
   someMatchesoneHourOff: 'Um ou mais palpite não foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
   allMatchesoneHourOff: 'Nenhum palpite foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
   noMoreGuessLineAllowed: 'Você não pode adicionar mais guessLines',
-  noMoreGuessLeagueAllowed: 'Você não pode participar de mais guessLeagues.'
+  noMoreGuessLeagueAllowed: 'Você não pode participar de mais guessLeagues.',
+  someWrongWithCreateCustomer: 'Algo de errado está acontecendo ao registrar os dados, tente novamente mais tarde'
 }
 
 module.exports = ptBrDictionary

@@ -47,7 +47,8 @@ const usEnDictionary = {
   someMatchesoneHourOff: 'One of more prediction was not accepted, the matche(s) gone happen less than one hour.',
   allMatchesoneHourOff: 'No prediction was accepted, the matche(s) gone happen less than one hour.',
   noMoreGuessLineAllowed: 'You cannot add guessLines for now.',
-  noMoreGuessLeagueAllowed: 'You cannot participate to another guessLeague.'
+  noMoreGuessLeagueAllowed: 'You cannot participate to another guessLeague.',
+  someWrongWithCreateCustomer: 'Something is wrong at the moment to save your date, try again later'
 }
 
 module.exports = usEnDictionary
