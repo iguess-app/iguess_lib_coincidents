@@ -90,7 +90,7 @@ const CacheManager = {
         return resolve(null)
       }
 
-      return redisClient.del(md5Key)
+      resolve(redisClient.del(md5Key))
     })
   }
 };
