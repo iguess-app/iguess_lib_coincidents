@@ -78,6 +78,20 @@ const CacheManager = {
     const md5Key = _generateKey(key)
 
     return redisClient.setex(md5Key, expireTime, JSON.stringify(value))
+  },  
+  del: (key) => {
+    if (!key) {
+      throw new Error('key is a mandatory field to get on Cache.')
+    }
+    const md5Key = _generateKey(key);
+
+    return new Promise((resolve) => {
+      if (!isConnected(redisClient)) {
+        return resolve(null)
+      }
+
+      return redisClient.del(md5Key)
+    })
   }
 };
 
