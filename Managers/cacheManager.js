@@ -6,13 +6,16 @@ const md5 = require('md5');
 const pino = require('./logManager')
 const config = require('../config/config');
 
+const THREE_SECONDS = 3000
+
 const clientOptions = {
   'auth_pass': config.redis.key,
   'retry_strategy': (options) => {
     if (options.error) {
       pino.error(options.error.message);
     }
-    connect()
+
+    return THREE_SECONDS
   }
 };
 
