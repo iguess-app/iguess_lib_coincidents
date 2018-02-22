@@ -9,7 +9,11 @@ const businessRules = {
     minPossibleScore: 0,
     maxGuessLeagueGroupNameSize: 30,
     maxGuessLinesFreeAllow: 2,
-    maxGuessLeagueFreeAllow: 5
+    maxGuessLeagueFreeAllow: 5,
+    maxTimeToSendPredictBeforeTheMatch: {
+      unit: 'hour',
+      value: 1
+    }
   },
   holi: {
     minRoundRobinFixtures: 1,
