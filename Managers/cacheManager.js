@@ -22,11 +22,13 @@ const clientOptions = {
 const redisClient = redis.createClient(config.redis.port, config.redis.host, clientOptions);
 
 const connect = () => {
-  redisClient.on('connect', () => {
-    if (redisClient.connected === true) {
-      pino.info(`Redis at ${redisClient.address} Connected`)
-    }
-  })
+  if (config.redis.needConnection) {
+    redisClient.on('connect', () => {
+      if (redisClient.connected === true) {
+        pino.info(`Redis at ${redisClient.address} Connected`)
+      }
+    })
+  }
 }
 connect()
 
