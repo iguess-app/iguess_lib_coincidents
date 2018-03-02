@@ -3,7 +3,7 @@
 const pino = require('pino')
 
 const env = require('../config/config').env
-let log = {}
+let log = pino({ safe: true })
 
 const pretty = pino.pretty()
 pretty.pipe(process.stdout)
@@ -11,9 +11,7 @@ pretty.pipe(process.stdout)
 const isPrettyLogEnv = () => env === 'dev' || env === 'homolog' || env === 'local'
 
 if (isPrettyLogEnv()) {
-  log = pino({
-    safe: true
-  }, pretty)
+  log = pino({ safe: true }, pretty)
 }
 
 module.exports = {
