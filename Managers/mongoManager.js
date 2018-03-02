@@ -19,7 +19,7 @@ const options = {
     log.info(`Mongo at ${uri} Connected`)
   })
 
-  if (log.isLoggableEnv()) {
+  if (log.isPrettyLogEnv()) {
     mongoose.set('debug', true)
   }
 

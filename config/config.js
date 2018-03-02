@@ -38,7 +38,8 @@ const configObject = {
   },
   apis: {
     personalUrl: process.env.PERSONAL_URL || 'http://localhost:9002',
-    guessUrl: process.env.GUESS_URL || 'http://localhost:9003'
+    guessUrl: process.env.GUESS_URL || 'http://localhost:9003',
+    paymentsUrl: process.env.PAYMENTS_URL || 'http://localhost:9004',
   },
   apiFootball: {
     APIKey: process.env.APIFOOTBAL_API_KEY,

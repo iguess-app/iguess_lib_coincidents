@@ -6,16 +6,10 @@ const qs = require('querystring')
 const log = require('../Managers/logManager')
 const config = require('../config/config')
 
-const _log = (response, request) => {
-  if (log.isLoggableEnv()) {
-    log.info({request, response})
-  }
-}
-
 const _doTheRequest = (options) => 
   requestPromise(options)
     .then((response) => {
-      _log(response, options)
+     log.info({options, response})
 
       return response
     })
