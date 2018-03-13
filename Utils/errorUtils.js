@@ -1,6 +1,6 @@
 'use strict'
 
-const Boom = require('boom');
+const Boom = require('boom')
 
 const mongoErrors = Object.freeze({
   _idAlreadyUsed: 11000

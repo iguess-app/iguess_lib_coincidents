@@ -1,9 +1,9 @@
 'use strict'
 
-const Jwt = require('jsonwebtoken');
+const Jwt = require('jsonwebtoken')
 
-const config = require('../config/config');
-const tokenConfig = config.token;
+const config = require('../config/config')
+const tokenConfig = config.token
 
 const generate = () => Jwt.sign({
   valid: true

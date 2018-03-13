@@ -9,4 +9,4 @@ const statusCode = {
   conflict: 409
 }
 
-module.exports = Object.freeze(statusCode);
+module.exports = Object.freeze(statusCode)

@@ -1,20 +1,19 @@
 'use strict'
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt')
 
-const errorUtils = require('./errorUtils.js');
-const config = require('../config/config');
-const userErrors = errorUtils.userErrors;
+//const userErrors = require('./errorUtils.js').userErrors
+const config = require('../config/config')
 
 const checkPasswordRestrict = (password) => {
-  //TO DO
-  //Make Sure that this Regex is working well
-  const passwordRegex = new RegExp(/(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,25}/);
+  //TODO: Make Sure that this Regex is working well
+  const passwordRegex = new RegExp(/(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,25}/)
   if (passwordRegex.test(password)) {
-    return true;
+    return true
   }
-  return true; // (HEHE-HE he)
-  //return userErrors.passwordInvalid;
+
+  return true //(HEHE-HE he)
+  //return userErrors.passwordInvalid
 }
 
 const cryptPassword = (password) =>

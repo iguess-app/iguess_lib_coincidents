@@ -5,10 +5,10 @@ const ObjectId = mongoose.Types.ObjectId
 
 const makeObject = (queryResult) => {
   if (queryResult) {
-    return queryResult.toObject();
+    return queryResult.toObject()
   }
 
-  throw new Error('Arquivo não encontrado no DB');
+  throw new Error('Arquivo não encontrado no DB')
 }
 
 const makeJSON = (queryResult) => queryResult.toJSON()

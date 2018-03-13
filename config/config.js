@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-const ObjectId = require('mongoose').Types.ObjectId;
+const ObjectId = require('mongoose').Types.ObjectId
 
 const configObject = {
   env: process.env.ENV || 'local',

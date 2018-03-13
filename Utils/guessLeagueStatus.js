@@ -5,4 +5,4 @@ const guessLeagueStatus = {
   QUITTED: 'quitted'
 }
 
-module.exports = Object.freeze(guessLeagueStatus);
+module.exports = Object.freeze(guessLeagueStatus)

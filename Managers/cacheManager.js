@@ -1,10 +1,10 @@
 'use strict'
 
-const redis = require('redis');
-const md5 = require('md5');
+const redis = require('redis')
+const md5 = require('md5')
 
 const pino = require('./logManager')
-const config = require('../config/config');
+const config = require('../config/config')
 
 const THREE_SECONDS = 3000
 let CacheManager = {}
@@ -14,14 +14,14 @@ if (config.redis.needConnection) {
     'auth_pass': config.redis.key,
     'retry_strategy': (options) => {
       if (options.error) {
-        pino.error(options.error.message);
+        pino.error(options.error.message)
       }
 
       return THREE_SECONDS
     }
-  };
+  }
 
-  const redisClient = redis.createClient(config.redis.port, config.redis.host, clientOptions);
+  const redisClient = redis.createClient(config.redis.port, config.redis.host, clientOptions)
 
   redisClient.on('connect', () => {
     if (redisClient.connected === true) {
@@ -30,10 +30,10 @@ if (config.redis.needConnection) {
   })
 
   redisClient.on('error', (err) => {
-    pino.error(err);
+    pino.error(err)
 
-    return true;
-  });
+    return true
+  })
 
   const isConnected = () => {
     if (!redisClient.connected) {
@@ -50,7 +50,7 @@ if (config.redis.needConnection) {
       if (!key) {
         throw new Error('key is a mandatory field to get on Cache.')
       }
-      const md5Key = _generateKey(key);
+      const md5Key = _generateKey(key)
 
       return new Promise((resolve) => {
         if (!isConnected(redisClient)) {
@@ -83,7 +83,7 @@ if (config.redis.needConnection) {
       if (!key) {
         throw new Error('key is a mandatory field to get on Cache.')
       }
-      const md5Key = _generateKey(key);
+      const md5Key = _generateKey(key)
 
       return new Promise((resolve) => {
         if (!isConnected(redisClient)) {
