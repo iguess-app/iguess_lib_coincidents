@@ -1,17 +1,17 @@
 'use strict'
 
-const americanEnglish = require('./enUS.js')
-const brazilianPortuguese = require('./ptBR.js')
+const americanEnglishDictionary = require('./enUS.js')
+const brazilianPortugueseDictionary = require('./ptBR.js')
+
+const dictionaryObject = {
+  'en-us': americanEnglishDictionary,
+  'pt-br': brazilianPortugueseDictionary
+}
 
 const selectLanguage = (language) => {
-  switch (language) {
-    case 'en-us':
-      return americanEnglish
-    case 'pt-br':
-      return brazilianPortuguese
-    default:
-      return americanEnglish
-  }
+  const dictionarySelected = dictionaryObject[language]
+
+  return dictionarySelected ? dictionarySelected : americanEnglishDictionary
 }
 
 module.exports = {
