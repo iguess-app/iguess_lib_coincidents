@@ -1,8 +1,8 @@
 'use strict'
 
-const Managers = require('./Managers/export');
-const Translate = require('./Translate/export');
-const Utils = require('./Utils/export');
+const Managers = require('./Managers')
+const Translate = require('./Translate')
+const Utils = require('./Utils')
 const Config = require('./config/config')
 
 module.exports = {
