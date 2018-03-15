@@ -46,6 +46,10 @@ const configObject = {
     url: process.env.APIFOOTBAL_URL || 'http://apifootball.com/api',
     intervalBetweenRequests: parseInt(process.env.INTERVAL_BETWEEN_REQUESTS_APIFOOTBAL) || 15000, //15 seconds (in Seconds)
     timezone: 'Europe/Berlin'
+  },
+  updateMatchResultRoutine: {
+    dateFromForced: process.env.DATE_FROM_FORCED,
+    dateToForced: process.env.DATE_TO_FORCED
   }
 }
 
