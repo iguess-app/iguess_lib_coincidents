@@ -49,7 +49,8 @@ const usEnDictionary = {
   noMoreGuessLineAllowed: 'You cannot add guessLines for now.',
   noMoreGuessLeagueAllowed: 'You cannot participate to another guessLeague.',
   someWrongWithAtMoip: 'Something is wrong at the moment to save your date, try again later',
-  cardAlreadyAdded: 'Card already added'
+  cardAlreadyAdded: 'Card already added',
+  notFoundLeagues: 'Found No Leagues'
 }
 
 module.exports = usEnDictionary

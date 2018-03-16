@@ -49,7 +49,8 @@ const ptBrDictionary = {
   noMoreGuessLineAllowed: 'Você não pode adicionar mais guessLines',
   noMoreGuessLeagueAllowed: 'Você não pode participar de mais guessLeagues.',
   someWrongWithAtMoip: 'Algo de errado está acontecendo ao registrar os dados, tente novamente mais tarde',
-  cardAlreadyAdded: 'Cartão ja adicionado'
+  cardAlreadyAdded: 'Cartão ja adicionado',
+  notFoundLeagues: 'Nenhuma liga encontrada'  
 }
 
 module.exports = ptBrDictionary
