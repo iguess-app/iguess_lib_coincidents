@@ -48,8 +48,12 @@ const configObject = {
     timezone: 'Europe/Berlin'
   },
   updateMatchResultRoutine: {
-    dateFromForced: process.env.DATE_FROM_FORCED, //Expected format: YYYY-MM-DD
-    dateToForced: process.env.DATE_TO_FORCED //Expected format: YYYY-MM-DD
+    dateFromForced: process.env.MATCH_RESULT_DATE_FROM_FORCED, //Expected format: YYYY-MM-DD
+    dateToForced: process.env.MATCH_RESULT_DATE_TO_FORCED //Expected format: YYYY-MM-DD
+  },
+  updatePontuationRoutine: {
+    dateFromForced: process.env.PONTUATION_DATE_FROM_FORCED, //Expected format: ISO_DATE
+    dateToForced: process.env.PONTUATION_DATE_TO_FORCED //Expected format: ISO_DATE
   }
 }
 
