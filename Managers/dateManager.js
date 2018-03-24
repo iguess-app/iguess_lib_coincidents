@@ -19,12 +19,11 @@ const convertAPIFootballToUTC = (date, dateFormat = '', dateOutput = '') => {
   return moment.tz(APIFootballTimeObj, UTC_ALIAS).format(dateOutput)
 }
 
-
-const getUTCToday = (dateOutput = '') => moment().utc().format(dateOutput)
+const getUTCNow = (dateOutput = '') => moment().utc().format(dateOutput)
 
 module.exports = {
   getDate,
-  getUTCToday,
+  getUTCNow,
   convertAPIFootballToUTC
 }
 
