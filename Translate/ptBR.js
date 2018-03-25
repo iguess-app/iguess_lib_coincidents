@@ -59,4 +59,9 @@ const ptBrDictionaryWords = {
   yesterday: 'Ontem'
 }
 
-module.exports = Object.assign(ptBrDictionaryMessages, ptBrDictionaryWords)
+const languageInfo = {
+  language: 'pt-br',
+  humanName: 'Português do Brasil'
+}
+
+module.exports = Object.assign(ptBrDictionaryMessages, ptBrDictionaryWords, languageInfo)

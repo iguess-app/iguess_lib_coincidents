@@ -59,4 +59,9 @@ const usEnDictionaryWords = {
   yesterday: 'Yesterday'
 }
 
-module.exports = Object.assign(usEnDictionaryMessages, usEnDictionaryWords)
+const languageInfo = {
+  language: 'en-us',
+  humanName: 'American English'
+}
+
+module.exports = Object.assign(usEnDictionaryMessages, usEnDictionaryWords, languageInfo)
