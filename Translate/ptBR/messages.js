@@ -1,6 +1,4 @@
-'use strict'
-
-const ptBrDictionaryMessages = {
+module.exports = {
   sessionExpired: 'Sua sessão expirou, faça login novamente',
   passwordAlert: 'A Senha deve conter ao menos 8 caracteres, 1 caracter especial, 1 Letra Maiúscula, 1 número e 1 letra Minúscula',
   alreadyUsed: 'Email ou UserName já está em uso',
@@ -52,16 +50,3 @@ const ptBrDictionaryMessages = {
   cardAlreadyAdded: 'Cartão ja adicionado',
   notFoundLeagues: 'Nenhuma liga encontrada'  
 }
-
-const ptBrDictionaryWords = {
-  today: 'Hoje',
-  tommorrow: 'Amanhã',
-  yesterday: 'Ontem'
-}
-
-const languageInfo = {
-  language: 'pt-br',
-  humanName: 'Português do Brasil'
-}
-
-module.exports = Object.assign(ptBrDictionaryMessages, ptBrDictionaryWords, languageInfo)

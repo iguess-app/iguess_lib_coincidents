@@ -1,6 +1,4 @@
-'use strict'
-
-const usEnDictionaryMessages = {
+module.exports = {
   sessionExpired: 'Your session expired. Please sign in again',
   passwordAlert: 'Password must be at least 8 characters, 1 special char, 1 Capital Letter, 1 Number and 1 lowerCase',
   alreadyUsed: 'Email or UserName already used',
@@ -52,16 +50,3 @@ const usEnDictionaryMessages = {
   cardAlreadyAdded: 'Card already added',
   notFoundLeagues: 'Found No Leagues'
 }
-
-const usEnDictionaryWords = {
-  today: 'Today',
-  tommorrow: 'Tommorrow',
-  yesterday: 'Yesterday'
-}
-
-const languageInfo = {
-  language: 'en-us',
-  humanName: 'American English'
-}
-
-module.exports = Object.assign(usEnDictionaryMessages, usEnDictionaryWords, languageInfo)

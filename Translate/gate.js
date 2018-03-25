@@ -1,7 +1,7 @@
 'use strict'
 
-const americanEnglishDictionary = require('./enUS.js')
-const brazilianPortugueseDictionary = require('./ptBR.js')
+const americanEnglishDictionary = require('./enUS')
+const brazilianPortugueseDictionary = require('./ptBR')
 
 const dictionaryObject = {
   'en-us': americanEnglishDictionary,
