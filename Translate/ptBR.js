@@ -25,7 +25,7 @@ const ptBrDictionary = {
   noTeamForThisLeague: 'Nenhuma equipe foi encontrada para essa liga',
   championshipNotFound: 'Campeonato não encontrado',
   guessLineNotFound: 'GuessLine não encontrada',
-  roundNotFound: 'Rodada não encontrada',
+  matchesNotFound: 'Nenhuma partida encontrada',
   sameTeams: 'Vocâ não pode repetir as equipes que você torce',
   alreadyAdd: 'Já adicionado',
   matchDuplicated: 'Você não pode dar palpites na mesma partida numa única requisição',

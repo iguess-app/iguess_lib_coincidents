@@ -5,15 +5,8 @@ const moment = require('moment-timezone')
 const config = require('../config/config')
 
 const UTC_ALIAS = 'UTC'
-const DAY_ALIAS = 'day'
 const FORMAT_TO_FORCE_DATE_WITHOUT_HOUR = 'YYYY-MM-DDZ'
 const API_FOOTBALL_TIME_ZONE = config.apiFootball.timezone
-
-const dateDictionary = {
-  YESTERDAY: -1,
-  TODAY: 0,
-  TOMMORROW: 1
-}
 
 const getDate = (date, dateFormat = '', dateOutput = '', timeZone = UTC_ALIAS, language = 'en-us') => {
   moment.locale(language)
@@ -29,22 +22,31 @@ const convertAPIFootballToUTC = (date, dateFormat = '', dateOutput = '') => {
 
 const getUTCNow = (dateOutput = '') => moment().utc().format(dateOutput)
 
-const getISODateWithMidNight = (chosenDay) => {
-  const dateWithoutHour = moment.tz(UTC_ALIAS).format(FORMAT_TO_FORCE_DATE_WITHOUT_HOUR)
-  const isoDateWihiMidNight = moment(dateWithoutHour, FORMAT_TO_FORCE_DATE_WITHOUT_HOUR)
-    .add(dateDictionary[chosenDay], DAY_ALIAS)
-    .utc()
-    .format()
+const finalDayObj = {
+  hour: 23,
+  minute: 59
+}
 
-  return isoDateWihiMidNight
+const getISODateFinalDay = (timeZone = UTC_ALIAS, date) => {
+  const dateWithoutHour = moment.tz(date, timeZone).format(FORMAT_TO_FORCE_DATE_WITHOUT_HOUR)
+  const isoDateWithFinalHour = moment.tz(dateWithoutHour, FORMAT_TO_FORCE_DATE_WITHOUT_HOUR, timeZone).add(finalDayObj).format()
+
+  return isoDateWithFinalHour
+}
+
+const getISODateInitDay = (timeZone = UTC_ALIAS, date) => {
+  const dateWithoutHour = moment.tz(date, timeZone).format(FORMAT_TO_FORCE_DATE_WITHOUT_HOUR)
+  const isoDateWithMidNight = moment.tz(dateWithoutHour, FORMAT_TO_FORCE_DATE_WITHOUT_HOUR, timeZone).format()
+
+  return isoDateWithMidNight
 }
 
 module.exports = {
   getDate,
   getUTCNow,
   convertAPIFootballToUTC,
-  getISODateWithMidNight,
-  dateDictionary
+  getISODateFinalDay,
+  getISODateInitDay
 }
 
 /*eslint max-params: 0 */

@@ -52,8 +52,7 @@ const configObject = {
     dateToForced: process.env.MATCH_RESULT_DATE_TO_FORCED //Expected format: YYYY-MM-DD
   },
   updatePontuationRoutine: {
-    dateFromForced: process.env.PONTUATION_DATE_FROM_FORCED, //Expected format: ISO_DATE
-    dateToForced: process.env.PONTUATION_DATE_TO_FORCED //Expected format: ISO_DATE
+    dayForced: process.env.PONTUATION_DAY_FROM_FORCED, //Expected format: ISO_DATE
   }
 }
 
