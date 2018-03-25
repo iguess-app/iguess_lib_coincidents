@@ -1,6 +1,6 @@
 'use strict'
 
-const ptBrDictionary = {
+const ptBrDictionaryMessages = {
   sessionExpired: 'Sua sessão expirou, faça login novamente',
   passwordAlert: 'A Senha deve conter ao menos 8 caracteres, 1 caracter especial, 1 Letra Maiúscula, 1 número e 1 letra Minúscula',
   alreadyUsed: 'Email ou UserName já está em uso',
@@ -53,4 +53,10 @@ const ptBrDictionary = {
   notFoundLeagues: 'Nenhuma liga encontrada'  
 }
 
-module.exports = ptBrDictionary
+const ptBrDictionaryWords = {
+  today: 'Hoje',
+  tommorrow: 'Amanhã',
+  yesterday: 'Ontem'
+}
+
+module.exports = Object.assign(ptBrDictionaryMessages, ptBrDictionaryWords)
