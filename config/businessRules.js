@@ -40,12 +40,9 @@ const businessRules = {
     nowGuessLeagueAdded: 4
   },
   pontuationRules: {
-    HIT_ONLY_THE_WINNER: 2,
-    HIT_THE_SCOREBOARD: 5,
-    HIT_NOTHING: 0,
-    HOME_WINNER: 'HOME',
-    AWAY_WINNER: 'AWAY',
-    NO_WINNER: 'DRAW'
+    MAX_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 2,
+    MIN_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 5,
+    HIT_NOTHING: 0
   },
   associations: [
     'UEFA',

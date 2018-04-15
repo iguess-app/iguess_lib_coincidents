@@ -94,3 +94,5 @@ module.exports = {
 }
 
 /*eslint max-params: 0 */
+
+//TODO: Procurar sobre startOf e endOf para não precisar usar o add para pegar final/comeco do dia
