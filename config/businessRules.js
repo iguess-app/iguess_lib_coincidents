@@ -41,7 +41,7 @@ const businessRules = {
   },
   pontuationRules: {
     MAX_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 2,
-    MIN_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 5,
+    MIN_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 10,
     HIT_NOTHING: 0
   },
   associations: [
