@@ -40,8 +40,8 @@ const businessRules = {
     nowGuessLeagueAdded: 4
   },
   pontuationRules: {
-    MAX_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 2,
-    MIN_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 10,
+    MAX_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 10,
+    MIN_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 2,
     HIT_NOTHING: 0
   },
   associations: [
