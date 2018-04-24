@@ -47,6 +47,12 @@ const configObject = {
     intervalBetweenRequests: parseInt(process.env.INTERVAL_BETWEEN_REQUESTS_APIFOOTBAL) || 15000, //15 seconds (in Seconds)
     timezone: process.env.APIFOOTBAL_TIMEZONE || 'Europe/London'
   },
+  footballApi: {
+    APIKey: process.env.FOOTBALL_API_KEY,
+    url: process.env.FOOTBALLL_URL || 'http://api.football-api.com/2.0/matches',
+    intervalBetweenRequests: parseInt(process.env.INTERVAL_BETWEEN_REQUESTS_APIFOOTBAL) || 15000, //15 seconds (in Seconds)
+    timezone: process.env.FOOTBALL_API_KEY || 'UTC'
+  },
   updateMatchResultRoutine: {
     dateFromForced: process.env.MATCH_RESULT_DATE_FROM_FORCED, //Expected format: YYYY-MM-DD
     dateToForced: process.env.MATCH_RESULT_DATE_TO_FORCED //Expected format: YYYY-MM-DD
