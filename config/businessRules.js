@@ -1,8 +1,10 @@
 const businessRules = {
   profile: {
     maxTeamToAppreciateAllowed: 2,
-    userNameMaxSize: 20,
-    nameMaxSize: 20,
+    userNameMinSize: 4,
+    userNameMaxSize: 25,
+    nameMinSize: 3,    
+    nameMaxSize: 25,
     descriptionMaxSize: 100
   },
   guess: {
