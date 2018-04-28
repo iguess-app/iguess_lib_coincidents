@@ -32,7 +32,7 @@ module.exports = {
   userNotAddedAtGuessLine: 'You are not at guessline\'s list',
   notAtGuessLine: 'Not at guessLine',
   anyGuessLineFound: 'No guessLines',
-  anyGuessLeagueFound: 'No guessLeagues',
+  noGuessLeagueFound: 'No guessLeagues',
   admNotQuitGle: 'You are a captain. If you want to leave the GuessLeague, you need to quit captain first',
   alreadyAdm: 'You are captain already',
   youCantBeTheUserAndUserAdm: 'The userRef must to be different from userRefToAdm',

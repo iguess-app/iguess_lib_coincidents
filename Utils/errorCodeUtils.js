@@ -32,7 +32,7 @@ module.exports = {
   userNotAddedAtGuessLine: 20031,
   notAtGuessLine: 20032,
   anyGuessLineFound: 20033,
-  anyGuessLeagueFound: 20034,
+  noGuessLeagueFound: 20034,
   admNotQuitGle: 20035,
   alreadyAdm: 20036,
   youCantBeTheUserAndUserAdm: 20037,
