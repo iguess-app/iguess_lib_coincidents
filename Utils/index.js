@@ -13,5 +13,5 @@ module.exports = {
   queryUtils,
   statusUtils,
   guessLeagueStatus,
-  errorCodeUtils
+  errorCode: errorCodeUtils
 }
