@@ -32,9 +32,18 @@ const _errDictionary = () => ({
 
 const treatErrors = (err, dictionary) => _errDictionary()[err.code](dictionary)
 
+const boom = (statusCodeName, msg, errorCode) => {
+  const error = Boom[statusCodeName](msg)
+  error.output.errorCode = errorCode
+  error.output.payload.errorCode = errorCode
+
+  return error
+}
+
 module.exports = {
   mongoErrors,
   userErrors,
   treatErrors,
-  serverErrors
+  serverErrors,
+  boom
 }

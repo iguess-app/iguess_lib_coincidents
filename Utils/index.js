@@ -1,9 +1,10 @@
-const errorUtils = require('./errorUtils.js')
-const passwordUtils = require('./passwordUtils.js')
-const profileUtils = require('./profileUtils.js')
-const queryUtils = require('./queryUtils.js')
-const statusUtils = require('./statusUtils.js')
-const guessLeagueStatus = require('./guessLeagueStatus.js')
+const errorUtils = require('./errorUtils')
+const passwordUtils = require('./passwordUtils')
+const profileUtils = require('./profileUtils')
+const queryUtils = require('./queryUtils')
+const statusUtils = require('./statusUtils')
+const guessLeagueStatus = require('./guessLeagueStatus')
+const errorCodeUtils = require('./errorCodeUtils')
 
 module.exports = {
   errorUtils,
@@ -11,5 +12,6 @@ module.exports = {
   profileUtils,
   queryUtils,
   statusUtils,
-  guessLeagueStatus
+  guessLeagueStatus,
+  errorCodeUtils
 }
