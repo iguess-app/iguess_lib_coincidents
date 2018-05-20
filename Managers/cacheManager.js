@@ -48,7 +48,9 @@ if (config.redis.needConnection) {
   CacheManager = {
     get: (key) => {
       if (!key) {
-        throw new Error('key is a mandatory field to get on Cache.')
+        const errMsg = 'key is a mandatory field to get on Cache.'
+        pino.error(errMsg)
+        throw new Error(errMsg)
       }
       const md5Key = _generateKey(key)
 
