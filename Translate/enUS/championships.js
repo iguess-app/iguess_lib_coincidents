@@ -15,5 +15,6 @@ module.exports = {
   brazilianB: 'Brazilian Championship - 2nd Div',
   brazilianCup: 'Brazilian Cup',
   paulista: 'Paulista Championship',
+  nordesteCup: 'Nordeste Cup',
   argentine: 'Argentine Championship'
 }
