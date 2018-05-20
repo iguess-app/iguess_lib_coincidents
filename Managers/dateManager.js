@@ -36,7 +36,8 @@ const convertAPIFootballToUTC = (date, dateFormat = '', dateOutput = '') => {
 
 const getUTCNow = (dateOutput = '') => moment().utc().format(dateOutput)
 
-const addOneDayMore = (date, dateFormat = '', dateOutput = '') => moment.tz(date, dateFormat).add(manipulateSupportObj.tommorrow).format(dateOutput)
+const addOneDayMore = (date, dateFormat = '', dateOutput = '', timezone = UTC_ALIAS) => 
+  moment.tz(date, dateFormat, timezone).add(manipulateSupportObj.tommorrow).format(dateOutput)
 
 const getISODateFinalDay = (timezone = UTC_ALIAS, date) => {
   const dateWithoutHour = moment.tz(date, timezone).format(FORMAT_TO_FORCE_DATE_WITHOUT_HOUR)
