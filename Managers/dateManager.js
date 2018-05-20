@@ -36,6 +36,8 @@ const convertAPIFootballToUTC = (date, dateFormat = '', dateOutput = '') => {
 
 const getUTCNow = (dateOutput = '') => moment().utc().format(dateOutput)
 
+const addOneDayMore = (date, dateFormat = '', dateOutput = '') => moment.tz(date, dateFormat).add(manipulateSupportObj.tommorrow).format(dateOutput)
+
 const getISODateFinalDay = (timezone = UTC_ALIAS, date) => {
   const dateWithoutHour = moment.tz(date, timezone).format(FORMAT_TO_FORCE_DATE_WITHOUT_HOUR)
   const isoDateWithFinalHour = moment.tz(dateWithoutHour, FORMAT_TO_FORCE_DATE_WITHOUT_HOUR, timezone).add(manipulateSupportObj.finalDayObj).format()
@@ -90,7 +92,8 @@ module.exports = {
   convertAPIFootballToUTC,
   getISODateFinalDay,
   getISODateInitDay,
-  getNicknameDay
+  getNicknameDay,
+  addOneDayMore
 }
 
 /*eslint max-params: 0 */
