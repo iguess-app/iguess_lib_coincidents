@@ -6,13 +6,16 @@ const qs = require('querystring')
 const log = require('../Managers/logManager')
 const config = require('../config/config')
 
-const _doTheRequest = (options) => 
-  requestPromise(options)
+const _doTheRequest = (request) => {
+  log.info({request})
+
+  return requestPromise(request)
     .then((response) => {
-     log.info({options, response})
+     log.info({request, response})
 
       return response
     })
+}
 
 const requestManager = {
   post: (uri, reqHeaders, body) => {
