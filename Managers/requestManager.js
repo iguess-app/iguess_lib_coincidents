@@ -126,7 +126,8 @@ const _buildDefaultHeader = (reqHeaders = {}) => ({
   'os_version': reqHeaders.os_version,
   'app_version': reqHeaders.app_version,
   'phone_model': reqHeaders.phone_model,
-  'phone_fabricator': reqHeaders.phone_fabricator
+  'phone_fabricator': reqHeaders.phone_fabricator,
+  'mock': reqHeaders.mock
 })
 
 module.exports = requestManager

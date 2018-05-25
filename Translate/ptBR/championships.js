@@ -1,5 +1,5 @@
 module.exports = {
-  worldCup: 'Copa do Mundo',
+  worldCup: 'Copa do Mundo da Russia',
   
   championsLeague: 'Champions League',
   spanish: 'La Liga',
