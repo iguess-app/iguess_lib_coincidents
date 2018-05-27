@@ -48,5 +48,7 @@ module.exports = {
   noMoreGuessLeagueAllowed: 'Você não pode participar de mais guessLeagues.',
   someWrongWithAtMoip: 'Algo de errado está acontecendo ao registrar os dados, tente novamente mais tarde',
   cardAlreadyAdded: 'Cartão ja adicionado',
-  notFoundLeagues: 'Nenhuma liga encontrada'  
+  notFoundLeagues: 'Nenhuma liga encontrada',
+  daysLeftForTheMatchDay: 'Em {{days}} dia(s)',
+  subInfoDateAtMatchDay: '{{month}} {{day}}, {{weekDay}}'
 }
