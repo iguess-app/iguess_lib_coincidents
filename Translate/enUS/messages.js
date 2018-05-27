@@ -50,5 +50,5 @@ module.exports = {
   cardAlreadyAdded: 'Card already added',
   notFoundLeagues: 'Found No Leagues',
   daysLeftForTheMatchDay: '{{days}} day(s) left',
-  subInfoDateAtMatchDay: '{{day}} de {{month}}, {{weekDay}}'
+  subInfoDateAtMatchDay: '{{month}} {{day}}, {{weekDay}}'
 }
