@@ -8,9 +8,9 @@ let log = pino({ safe: true })
 const pretty = pino.pretty()
 pretty.pipe(process.stdout)
 
-const isPrettyLogEnv = config.isLocal()
+const isPrettyLogEnv = () => config.isLocal()
 
-if (isPrettyLogEnv) {
+if (isPrettyLogEnv()) {
   log = pino({ safe: true }, pretty)
 }
 
