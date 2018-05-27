@@ -49,6 +49,6 @@ module.exports = {
   someWrongWithAtMoip: 'Algo de errado está acontecendo ao registrar os dados, tente novamente mais tarde',
   cardAlreadyAdded: 'Cartão ja adicionado',
   notFoundLeagues: 'Nenhuma liga encontrada',
-  daysLeftForTheMatchDay: 'Em {{days}} dia(s)',
+  daysLeftForTheMatchDay: 'Em {{days}} dias',
   subInfoDateAtMatchDay: '{{day}} de {{month}}, {{weekDay}}'
 }
