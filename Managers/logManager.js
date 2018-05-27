@@ -2,15 +2,15 @@
 
 const pino = require('pino')
 
-const env = require('../config/config').env
+const config = require('../config/config')
 let log = pino({ safe: true })
 
 const pretty = pino.pretty()
 pretty.pipe(process.stdout)
 
-const isPrettyLogEnv = () => env === 'homolog' || env === 'local'
+const isPrettyLogEnv = config.isLocal()
 
-if (isPrettyLogEnv()) {
+if (isPrettyLogEnv) {
   log = pino({ safe: true }, pretty)
 }
 

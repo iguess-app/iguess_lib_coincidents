@@ -7,6 +7,7 @@ const configObject = {
   isEnv: (envSent) => process.env.ENV === envSent,
   isProd: () => process.env.ENV === 'production',
   isTest: () => process.env.ENV === 'test',
+  isLocal: () => process.env.ENV === 'local',
   serverPort: Number(process.env.SERVER_PORT) || 8080,
   token: {
     cert: process.env.TOKEN_SEED,
