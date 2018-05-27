@@ -50,5 +50,6 @@ module.exports = {
   cardAlreadyAdded: 'Cartão ja adicionado',
   notFoundLeagues: 'Nenhuma liga encontrada',
   daysLeftForTheMatchDay: 'Em {{days}} dias',
+  daysAgoOnTheMatchDay: 'Há {{days}} dias',
   subInfoDateAtMatchDay: '{{day}} de {{month}}, {{weekDay}}'
 }
