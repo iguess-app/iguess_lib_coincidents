@@ -49,7 +49,7 @@ module.exports = {
   someWrongWithAtMoip: 'Something is wrong at the moment to save your date, try again later',
   cardAlreadyAdded: 'Card already added',
   notFoundLeagues: 'Found No Leagues',
-  daysLeftForTheMatchDay: '{{days}} days left',
+  daysLeftForTheMatchDay: '{{days}} days to go',
   daysAgoOnTheMatchDay: '{{days}} days ago',
   subInfoDateAtMatchDay: '{{month}} {{day}}, {{weekDay}}'
 }
