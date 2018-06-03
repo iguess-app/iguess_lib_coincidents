@@ -51,5 +51,5 @@ module.exports = {
   notFoundLeagues: 'Found No Leagues',
   daysLeftForTheMatchDay: '{{days}} days to go',
   daysAgoOnTheMatchDay: '{{days}} days ago',
-  subInfoDateAtMatchDay: '{{month}} {{day}}, {{weekDay}}'
+  subInfoDateAtMatchDay: '{{weekDay}}, {{month}} {{day}}'
 }
