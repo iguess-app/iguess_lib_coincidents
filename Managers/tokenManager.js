@@ -18,7 +18,7 @@ const generate = (dataToJwt) => {
   return Jwt.sign(objectToJwt, tokenConfig.cert, optionsToJwt)
 }
 
-const isValid = (token) =>
+const decodeJwt = (token) =>
   new Promise((resolve, reject) => {
     Jwt.verify(token, tokenConfig.cert, (err, decoded) => {
       if (err) {
@@ -30,5 +30,5 @@ const isValid = (token) =>
 
 module.exports = {
   generate,
-  isValid
+  decodeJwt
 }

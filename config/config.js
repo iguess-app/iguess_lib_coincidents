@@ -11,7 +11,7 @@ const configObject = {
   serverPort: Number(process.env.SERVER_PORT) || 8080,
   token: {
     cert: process.env.TOKEN_SEED,
-    expirationTime: parseInt(process.env.TOKEN_EXPIRATION_TIME) || 3600 //1hour (in Seconds)
+    expirationTime: parseInt(process.env.TOKEN_EXPIRATION_TIME) || 5.256e+6 //2 months
   },
   salt: process.env.SALT,
   redis: {
