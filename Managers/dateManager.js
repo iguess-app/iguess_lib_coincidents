@@ -14,7 +14,7 @@ const manipulateSupportObj = {
     hour: 23,
     minute: 59
   },
-  tommorrow: {
+  tomorrow: {
     day: 1
   },
   yesterday: {
@@ -37,7 +37,7 @@ const convertAPIFootballToUTC = (date, dateFormat = '', dateOutput = '') => {
 const getUTCNow = (dateOutput = '') => moment().utc().format(dateOutput)
 
 const addOneDayMore = (date, dateFormat = '', dateOutput = '', timezone = UTC_ALIAS) => 
-  moment.tz(date, dateFormat, timezone).add(manipulateSupportObj.tommorrow).format(dateOutput)
+  moment.tz(date, dateFormat, timezone).add(manipulateSupportObj.tomorrow).format(dateOutput)
 
 const getISODateFinalDay = (timezone = UTC_ALIAS, date) => {
   const dateWithoutHour = moment.tz(date, timezone).format(FORMAT_TO_FORCE_DATE_WITHOUT_HOUR)
@@ -57,8 +57,8 @@ const getNicknameDay = (timezone = UTC_ALIAS, date) => {
   switch (true) {
     case _isToday(date, timezone):
       return 'today'
-    case _isTommorrow(date, timezone):
-      return 'tommorrow'
+    case _isTomorrow(date, timezone):
+      return 'tomorrow'
     case _isYesterday(date, timezone):
       return 'yesterday'
     default:
@@ -73,9 +73,9 @@ const _isToday = (date, timezone) => {
   return moment(date).isBetween(startOfTheDayIsoDate, endOfTheDayIsoDate, null, MOMENT_INCLUSIVITY_ALIAS)
 }
 
-const _isTommorrow = (date, timezone) => {
-  const startOfTheDayIsoDate = moment(getISODateInitDay(timezone)).add(manipulateSupportObj.tommorrow).format()
-  const endOfTheDayIsoDate = moment(getISODateFinalDay(timezone)).add(manipulateSupportObj.tommorrow).format()
+const _isTomorrow = (date, timezone) => {
+  const startOfTheDayIsoDate = moment(getISODateInitDay(timezone)).add(manipulateSupportObj.tomorrow).format()
+  const endOfTheDayIsoDate = moment(getISODateFinalDay(timezone)).add(manipulateSupportObj.tomorrow).format()
 
   return moment(date).isBetween(startOfTheDayIsoDate, endOfTheDayIsoDate, null, MOMENT_INCLUSIVITY_ALIAS)
 }

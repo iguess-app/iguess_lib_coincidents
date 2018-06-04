@@ -1,5 +1,5 @@
 module.exports = {
   today: 'Today',
-  tommorrow: 'Tommorrow',
+  tomorrow: 'Tomorrow',
   yesterday: 'Yesterday'
 }
