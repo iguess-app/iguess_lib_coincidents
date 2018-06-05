@@ -2,18 +2,17 @@
 
 const bcrypt = require('bcrypt')
 
-//const userErrors = require('./errorUtils.js').userErrors
+const userErrors = require('./errorUtils.js').userErrors
 const config = require('../config/config')
 
+const MIN_SIZE_PASSWORD = 8
+
 const checkPasswordRestrict = (password) => {
-  //TODO: Make Sure that this Regex is working well
-  const passwordRegex = new RegExp(/(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,25}/)
-  if (passwordRegex.test(password)) {
-    return true
+  if (password.length < MIN_SIZE_PASSWORD || password.includes(' ')) {
+    return userErrors.passwordInvalid
   }
 
-  return true //(HEHE-HE he)
-  //return userErrors.passwordInvalid
+  return true
 }
 
 const cryptPassword = (password) =>
