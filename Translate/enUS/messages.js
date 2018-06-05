@@ -1,6 +1,6 @@
 module.exports = {
   sessionExpired: 'Your session expired. Please sign in again',
-  passwordAlert: 'Password must be at least 8 characters, 1 special char, 1 Capital Letter, 1 Number and 1 lowerCase',
+  passwordAlert: 'Password should contain at least 8 chars with no spaces',
   alreadyUsed: 'Email or UserName already used',
   userNameAlreadyUsed: 'The userName already exists',
   emailAlreadyUsed: 'The email already exists',
