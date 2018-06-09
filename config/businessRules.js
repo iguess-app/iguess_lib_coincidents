@@ -10,8 +10,8 @@ const businessRules = {
   guess: {
     minPossibleScore: 0,
     maxGuessLeagueGroupNameSize: 30,
-    maxGuessLinesFreeAllow: 2,
-    maxGuessLeagueFreeAllow: 5,
+    maxGuessLinesFreeAllow: 3,
+    maxGuessLeagueFreeAllow: 2000,
     maxTimeToSendPredictBeforeTheMatch: {
       unit: 'hour',
       value: 1
