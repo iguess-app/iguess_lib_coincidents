@@ -48,5 +48,6 @@ module.exports = {
   noMoreGuessLeagueAllowed: 20047,
   someWrongWithAtMoip: 20048,
   cardAlreadyAdded: 20049,
-  notFoundLeagues: 20050
+  notFoundLeagues: 20050,
+  softTokenExpired: 20051
 }
