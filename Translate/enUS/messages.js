@@ -52,5 +52,5 @@ module.exports = {
   daysLeftForTheMatchDay: '{{days}} days to go',
   daysAgoOnTheMatchDay: '{{days}} days ago',
   subInfoDateAtMatchDay: '{{weekDay}}, {{month}} {{day}}',
-  softTokenExpired: 'The token expired =('
+  softTokenExpired: 'We not found the token, perhaps it was expired =('
 }
