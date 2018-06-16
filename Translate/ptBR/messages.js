@@ -43,7 +43,7 @@ module.exports = {
   notFriendsAtInvite: 'Existem usuários que não são amigos na lista de convidados',
   matchNotFound: 'Jogo não encontrado',
   someMatchesoneHourOff: 'Um ou mais palpite não foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
-  allMatchesoneHourOff: 'Nenhum palpite foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
+  allMatchesoneHourOff: 'O palpite não foi aceito, já passou 1h antes do jogo.', //TODO: Mudar dps para lista de novo
   noMoreGuessLineAllowed: 'Você não pode adicionar mais guessLines',
   noMoreGuessLeagueAllowed: 'Você não pode participar de mais guessLeagues.',
   someWrongWithAtMoip: 'Algo de errado está acontecendo ao registrar os dados, tente novamente mais tarde',

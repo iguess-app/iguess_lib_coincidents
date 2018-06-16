@@ -43,7 +43,7 @@ module.exports = {
   notFriendsAtInvite: 'There are user not friends at inviteads list',
   matchNotFound: 'Match not found',
   someMatchesoneHourOff: 'One of more prediction was not accepted, the matche(s) gone happen less than one hour.',
-  allMatchesoneHourOff: 'No prediction was accepted, the matche(s) gone happen less than one hour.',
+  allMatchesoneHourOff: 'Predict not accepted, it is necessary to send one hour before start.', //TODO: Mudar dps para lista de novo
   noMoreGuessLineAllowed: 'You cannot add guessLines for now.',
   noMoreGuessLeagueAllowed: 'You cannot participate to another guessLeague.',
   someWrongWithAtMoip: 'Something is wrong at the moment to save your date, try again later',
