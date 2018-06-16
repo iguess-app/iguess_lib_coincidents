@@ -49,5 +49,6 @@ module.exports = {
   someWrongWithAtMoip: 20048,
   cardAlreadyAdded: 20049,
   notFoundLeagues: 20050,
-  softTokenExpired: 20051
+  softTokenExpired: 20051,
+  kickMySelf: 20052
 }

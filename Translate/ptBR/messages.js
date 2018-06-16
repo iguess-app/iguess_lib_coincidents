@@ -42,15 +42,16 @@ module.exports = {
   someWrongAtInvite: 'Algo de errado aconteceu no envio do convite',
   notFriendsAtInvite: 'Existem usuários que não são amigos na lista de convidados',
   matchNotFound: 'Jogo não encontrado',
-  someMatchesoneHourOff: 'Um ou mais palpite não foi aceito, o(s) jogo(s) será(ão) em menos de um hora.',
-  allMatchesoneHourOff: 'O palpite não foi aceito, já passou 1h antes do jogo.', //TODO: Mudar dps para lista de novo
+  someMatchesoneHourOff: 'Um ou mais palpite não foi aceito, o(s) jogo(s) será(ão) em menos de um hora',
+  allMatchesoneHourOff: 'O palpite não foi aceito, já passou 1h antes do jogo', //TODO: Mudar dps para lista de novo
   noMoreGuessLineAllowed: 'Você não pode adicionar mais guessLines',
-  noMoreGuessLeagueAllowed: 'Você não pode participar de mais guessLeagues.',
+  noMoreGuessLeagueAllowed: 'Você não pode participar de mais guessLeagues',
   someWrongWithAtMoip: 'Algo de errado está acontecendo ao registrar os dados, tente novamente mais tarde',
   cardAlreadyAdded: 'Cartão ja adicionado',
   notFoundLeagues: 'Nenhuma liga encontrada',
   daysLeftForTheMatchDay: 'Em {{days}} dias',
   daysAgoOnTheMatchDay: 'Há {{days}} dias',
   subInfoDateAtMatchDay: '{{day}} de {{month}}, {{weekDay}}',
-  softTokenExpired: 'O token não foi encontrado, talvez tenha expirado =('
+  softTokenExpired: 'O token não foi encontrado, talvez tenha expirado =(',
+  kickMySelf: 'Você não pode expulsar a si mesmo da liga'
 }

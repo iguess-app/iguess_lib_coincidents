@@ -42,8 +42,8 @@ module.exports = {
   someWrongAtInvite: 'Something wrong happened at the invite',
   notFriendsAtInvite: 'There are user not friends at inviteads list',
   matchNotFound: 'Match not found',
-  someMatchesoneHourOff: 'One of more prediction was not accepted, the matche(s) gone happen less than one hour.',
-  allMatchesoneHourOff: 'Predict not accepted, it is necessary to send one hour before start.', //TODO: Mudar dps para lista de novo
+  someMatchesoneHourOff: 'One of more prediction was not accepted, the matche(s) gone happen less than one hour',
+  allMatchesoneHourOff: 'Predict not accepted, it is necessary to send one hour before start', //TODO: Mudar dps para lista de novo
   noMoreGuessLineAllowed: 'You cannot add guessLines for now.',
   noMoreGuessLeagueAllowed: 'You cannot participate to another guessLeague.',
   someWrongWithAtMoip: 'Something is wrong at the moment to save your date, try again later',
@@ -52,5 +52,6 @@ module.exports = {
   daysLeftForTheMatchDay: '{{days}} days to go',
   daysAgoOnTheMatchDay: '{{days}} days ago',
   subInfoDateAtMatchDay: '{{weekDay}}, {{month}} {{day}}',
-  softTokenExpired: 'We not found the token, perhaps it was expired =('
+  softTokenExpired: 'We not found the token, perhaps it was expired =(',
+  kickMySelf: 'You cannot kick yourself'
 }
