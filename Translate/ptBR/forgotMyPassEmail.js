@@ -1,5 +1,5 @@
 module.exports = {
-  forgotMyPassSubject: 'Hey mate, forgot your password body!?',
+  forgotMyPassSubject: 'Fala ai?! Esqueceu sua senha?',
   titleH1: ' Redefinir minha senha ',
   descriptionPart1: ' Você solicitou uma redefinição de senha para @{{userName}}. Copie e cole o número abaixo na área de “esqueci minha senha” no link ',
   descriptionHighLight: '“Já tenho o token para redefinição”',
