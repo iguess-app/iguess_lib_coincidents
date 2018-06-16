@@ -1,6 +1,11 @@
 module.exports = {
-  forgotMyPassSubject: 'Parece que esqueceu seu senha né!?',
-  forgotMyPassBody: `Tudo bem, a gente te ajuda! 
-    Esse é seu token: {{token}}. Copia o token volta lá no app e reseta a senha o/ <br><br>
-    Se você não pediu para resetar a senha, fica tranquilo. É só deixar o token expirar!`
+  titleH1: ' Redefinir minha senha ',
+  descriptionPart1: ' Você solicitou uma redefinição de senha para @{{userName}}. Copie e cole o número abaixo na área de “esqueci minha senha” no link ',
+  descriptionHighLight: '“Já tenho o token para redefinição”',
+  descriptionPart2: '. Se você não fez essa solicitação, ignore este e-mail.',
+  yourTokenIs: ' Seu token é: ',
+  afterToken: ' Copie o código acima e cole na sessão de “esqueci minha senha” no link ',
+  afterTokenHighLight: ' “Já tenho o token para redefinição”. ',
+  doubtsBottom: ' Ficou com alguma dúvida? ',
+  talkWithUsBottom: ' Fale conosco nas redes sociais '
 }
