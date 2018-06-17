@@ -1,7 +1,7 @@
 module.exports = {
-  forgotMyPassSubject: 'Have you forgotten your password buddy!?',
+  forgotMyPassSubject: 'Have you forgotten your password mate!?',
   titleH1: ' Reset my password ',
-  descriptionPart1: ' You ask to redefine the password to @{{userName}}. Copy and paste the following number at reset area ',
+  descriptionPart1: ' You asked to redefine the password to @{{userName}}. Copy and paste the following number at reset area ',
   descriptionHighLight: '“Already have the reset token”',
   descriptionPart2: '. If you did not ask for the reset, just ignore this e-mail.',
   yourTokenIs: ' Your token is: ',
