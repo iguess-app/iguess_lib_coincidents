@@ -42,6 +42,7 @@ const businessRules = {
     nowGuessLeagueAdded: 4
   },
   pontuationRules: {
+    PONTUATION_HITTING_EXACTLY_THE_SCOREBOARD: 12,
     MAX_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 10,
     MIN_PONTUATION_HITTING_THE_WINNER_OR_DRAW: 2,
     HIT_NOTHING: 0
