@@ -37,7 +37,7 @@ const convertAPIFootballToUTC = (date, dateFormat = '', dateOutput = '') => {
 const getUTCNow = (dateOutput = '') => moment().utc().format(dateOutput)
 
 const setOneDayLess = (date, dateFormat = '', dateOutput = '', timezone = UTC_ALIAS) => 
-  moment.tz(date, dateFormat, timezone).subtract(manipulateSupportObj.yesterday).format(dateOutput)
+  moment.tz(date, dateFormat, timezone).add(manipulateSupportObj.yesterday).format(dateOutput)
 
 const addOneDayMore = (date, dateFormat = '', dateOutput = '', timezone = UTC_ALIAS) => 
   moment.tz(date, dateFormat, timezone).add(manipulateSupportObj.tomorrow).format(dateOutput)
