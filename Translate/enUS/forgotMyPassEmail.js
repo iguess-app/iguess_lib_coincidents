@@ -1,5 +1,5 @@
 module.exports = {
-  forgotMyPassSubject: 'Have you forgotten your password mate!?',
+  forgotMyPassSubject: 'Hey Mate, need a new password!?',
   titleH1: ' Reset your password ',
   descriptionPart1: ' Hi @{{userName}}, someone recently asked to change your password for iguess app. Copy and paste the following token at reset area ',
   descriptionHighLight: '“Already have the reset token”',
